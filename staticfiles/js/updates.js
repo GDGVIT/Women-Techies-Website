@@ -1,4 +1,3 @@
-const baseURL = 'https://dsc-eventsreg.herokuapp.com/updates/';
 const packageName = 'updates';
 
 // form fields
@@ -64,7 +63,7 @@ const handleUpdates = (e) => {
   };
 
 
-  fetch(`${baseURL}/${packageName}/`, settings)
+  fetch(`${config.URLBuilder(packageName)}`, settings)
     .then((response) => {
       console.log('Successfully submitted form');
       console.log(response);
