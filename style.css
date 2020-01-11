@@ -5,12 +5,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    min-height: -webkit-fill-available;
 }
 .container{
     position: relative;
     overflow: hidden;
-    min-height: -webkit-fill-available;
+    height: 100%;
 }
 .main{
     position: relative;
