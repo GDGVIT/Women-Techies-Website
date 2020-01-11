@@ -58,7 +58,6 @@ const handleUpdates = (e) => {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',
-			'Accept': 'application/json',
     },
     crossDomain: true,
     data,
