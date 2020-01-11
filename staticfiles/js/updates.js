@@ -43,7 +43,7 @@ const handleUpdates = (e) => {
   e.preventDefault();
   const data = {
     name: updatesInputName.value,
-    email: updatesInputEmail.value,
+    emailAddress: updatesInputEmail.value,
     phoneNumber: updatesInputPhoneNumber.value,
     registrationNumber: updatesInputRegistrationNumber.value,
 		eventName: "WomenTechies20"
