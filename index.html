@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <img src="./assets/Rectangle 1.png" alt="" class="rect">
         <img src="./assets/Ellipse 1.svg" alt="" class="circle">
         <img src="./assets/Polygon 1.svg" alt="" class="triangleR">
         <img src="./assets/Polygon 2.svg" alt="" class="triangleB">
-        <img src="./assets/logo-orange.png" alt="" class="mainlogo" style="height: 8vw; max-height: 100px; margin: 20px 0 0 20px;">
+        <img src="./assets/logo-orange.png" alt="" class="mainlogo"
+            style="height: 8vw; max-height: 100px; margin: 20px 0 0 20px;">
         <div class="main">
             <h1 style="text-align: center;">Sign Up for Updates</h1>
             <p style="text-align: center;">VIT's only women-centric hackathon is <strong>coming soon</strong></p>
@@ -31,4 +34,10 @@
 		<script src="./staticfiles/js/config.js"> </script>
 		<script src="./staticfiles/js/updates.js"> </script>
 </body>
+<script>
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+</script>
+
 </html>

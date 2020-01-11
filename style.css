@@ -5,12 +5,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    height: 100vh;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
 }
 .container{
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
 }
 .main{
     position: relative;
@@ -18,11 +19,11 @@ body{
 }
 .main > p{
     font-size: 4.5vw;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 .main > h1{
     font-size: 7vw;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 form{
     position: relative;
@@ -30,17 +31,21 @@ form{
 }
 form > p{
     font-size: 4vw;
+    margin-bottom: 24px;
 }
 form > input{
     display: block;
-    margin-bottom: 6vh;
+    margin-bottom: 16px;
     border: 1px black solid;
     border-radius: 5px;
     width: calc(100% - 20px);
-    height: 5vh;
+    height: 40px;
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
+}
+form > input:nth-child(5){
+    margin-bottom: 24px;
 }
 form > input:focus{
     outline: none;
@@ -129,12 +134,21 @@ form > input:focus{
 }
 
 @media(min-width: 992px){
+    body{
+        min-height: fit-content;
+        height: 100vh;
+    }
+    .container{
+        min-height: fit-content;
+        height: 100vh;
+    }
     .main{
         margin: 0 30%;
     }
     .main > p{
         font-size: 1.5vw;
         font-weight: 10;
+        margin-bottom: 30px;
     }
     .main > h1{
         font-size: 2vw;
@@ -145,6 +159,9 @@ form > input:focus{
         margin-bottom: 20px;
         font-size: 1.7vw;
         font-weight: bold;
+    }
+    form > input{
+        margin-bottom: 4.2vh;
     }
     .rect{
         transform: scale(0.9);
