@@ -58,6 +58,7 @@ const handleUpdates = (e) => {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',
+			'Accept': 'application/json',
     },
     crossDomain: true,
     data,
@@ -65,9 +66,10 @@ const handleUpdates = (e) => {
 
 
   fetch(`${config.baseURL}/participants/register`, settings)
-    .then((response) => {
+		.then(response => response.json())
+    .then((data) => {
       console.log('Successfully submitted form');
-      console.log(response);
+      console.log(data);
     }).catch((err) => {
       alert('Error on submission');
       console.error(err);
