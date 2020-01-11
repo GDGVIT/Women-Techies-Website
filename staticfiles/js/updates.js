@@ -46,7 +46,7 @@ const handleUpdates = (e) => {
     emailAddress: updatesInputEmail.value,
     phoneNumber: updatesInputPhoneNumber.value,
     registrationNumber: updatesInputRegistrationNumber.value,
-		eventName: "WomenTechies20"
+    eventName: 'WomenTechies20',
   };
   if (!isValid(data)) {
     alert('Invalid fields');
@@ -64,7 +64,7 @@ const handleUpdates = (e) => {
 
 
   fetch(`${config.baseURL}/participants/register`, settings)
-		.then(response => response.json())
+    .then((response) => response.json())
     .then((data) => {
       console.log('Successfully submitted form');
       console.log(data);
