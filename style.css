@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    height: 100vh;
+}
+.container{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+.main{
+    position: relative;
+    margin: 0 20%;
+}
+.main > p{
+    font-size: 4.5vw;
+    margin-bottom: 30px;
+}
+.main > h1{
+    font-size: 7vw;
+}
+form{
+    position: relative;
+    margin: 10px 10px;
+}
+form > p{
+    font-size: 4vw;
+}
+form > input{
+    display: block;
+    margin-bottom: 6vh;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    height: 5vh;
+    padding-left: 10px;
+}
+form > input:focus{
+    outline: none;
+}
+.submit{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 15px 40px;
+    background-color:#F7295E;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.rect{
+    position: absolute;
+    top: 20%;
+    left: -250px;
+    transform: scale(0.6);
+    animation-name: expand;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.circle{
+    position: absolute;
+    right:-90px;
+    bottom: -140px;
+    transform: scale(0.4);
+    animation-name: expand4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+.triangleR{
+    position: absolute;
+    right: -160px;
+    transform: scale(0.5);
+    animation-name: expand5;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+.triangleB{
+    position: absolute;
+    bottom: -220px;
+    left: -120px;
+    transform: scale(0.5);
+    animation-name: expand5;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes expand5 {
+    0%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(0.55);
+    }
+    100%{
+        transform: scale(0.5);
+    }
+}
+@keyframes expand4 {
+    0%{
+        transform: scale(0.4);
+    }
+    50%{
+        transform: scale(0.45);
+    }
+    100%{
+        transform: scale(0.4);
+    }
+}
+@keyframes expand {
+    0%{
+        transform: scale(0.6);
+    }
+    50%{
+        transform: scale(0.65);
+    }
+    100%{
+        transform: scale(0.6);
+    }
+}
+
+@media(min-width: 992px){
+    .main{
+        margin: 0 30%;
+    }
+    .main > p{
+        font-size: 1.5vw;
+        font-weight: 10;
+    }
+    .main > h1{
+        font-size: 2vw;
+        font-weight: bolder;
+        margin-bottom: 5px;
+    }
+    form > p{
+        margin-bottom: 20px;
+        font-size: 1.7vw;
+        font-weight: bold;
+    }
+    .rect{
+        transform: scale(0.9);
+        left: -240px;
+        animation-name: expand;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+    }
+    .circle{
+        right: 40px;
+        transform: scale(0.9);
+        animation-name: expand;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+    }
+    .triangleR{
+        position: absolute;
+        right: -160px;
+        top: 100px;
+        transform: scale(0.9);
+        animation-name: expand;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+    }
+    .triangleB{
+        position: absolute;
+        bottom: -250px;
+        left: 50px;
+        transform: scale(0.9);
+        animation-name: expand;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes expand {
+        0%{
+            transform: scale(0.9);
+        }
+        50%{
+            transform: scale(1.0);
+        }
+        100%{
+            transform: scale(0.9);
+        }
+    }
+}
