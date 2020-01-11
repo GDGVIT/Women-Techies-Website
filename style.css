@@ -22,6 +22,7 @@ body{
 }
 .main > h1{
     font-size: 7vw;
+    margin-bottom: 10px;
 }
 form{
     position: relative;
@@ -138,7 +139,7 @@ form > input:focus{
     .main > h1{
         font-size: 2vw;
         font-weight: bolder;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
     form > p{
         margin-bottom: 20px;
