@@ -59,7 +59,7 @@ const handleUpdates = (e) => {
       'Content-Type': 'application/json',
     },
     crossDomain: true,
-    data: JSON.stringify(data),
+    body: JSON.stringify(data),
   };
 
 
