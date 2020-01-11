@@ -19,13 +19,15 @@
             <p style="text-align: center;">VIT's only women-centric hackathon is <strong>coming soon</strong></p>
             <form action="" method="post">
                 <p style="text-align: center;">Fill in your details</p>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="E-mail">
-                <input type="text" placeholder="Phone No.">
-                <input type="text" placeholder="Registration No.">
-                <button type="submit" class="submit">Submit</button>
+                <input type="text" placeholder="Name" id="updatesInputName" required>
+                <input type="email" placeholder="E-mail" id="updatesInputEmail" required>
+                <input type="tel" placeholder="Phone No." id="updatesInputPhoneNumber" required>
+                <input type="text" placeholder="Registration No." id="updatesInputRegistrationNumber" required>
+                <button type="submit" class="submit" id="updatesSubmitBtn">Submit</button>
             </form>
         </div>
     </div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+		<script src="./staticfiles/js/updates.js"> </script>
 </body>
 </html>
