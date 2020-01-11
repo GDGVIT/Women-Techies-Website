@@ -38,10 +38,13 @@ form > input{
     width: calc(100% - 20px);
     height: 5vh;
     padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
 }
 form > input:focus{
     outline: none;
 }
+
 .submit{
     position: relative;
     left: 50%;
