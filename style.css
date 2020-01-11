@@ -18,11 +18,11 @@ body{
 }
 .main > p{
     font-size: 4.5vw;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 .main > h1{
     font-size: 7vw;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 form{
     position: relative;
@@ -30,17 +30,21 @@ form{
 }
 form > p{
     font-size: 4vw;
+    margin-bottom: 24px;
 }
 form > input{
     display: block;
-    margin-bottom: 6vh;
+    margin-bottom: 16px;
     border: 1px black solid;
     border-radius: 5px;
     width: calc(100% - 20px);
-    height: 5vh;
+    height: 40px;
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
+}
+form > input:nth-child(5){
+    margin-bottom: 24px;
 }
 form > input:focus{
     outline: none;
@@ -135,6 +139,7 @@ form > input:focus{
     .main > p{
         font-size: 1.5vw;
         font-weight: 10;
+        margin-bottom: 30px;
     }
     .main > h1{
         font-size: 2vw;
@@ -145,6 +150,9 @@ form > input:focus{
         margin-bottom: 20px;
         font-size: 1.7vw;
         font-weight: bold;
+    }
+    form > input{
+        height: 6vh;
     }
     .rect{
         transform: scale(0.9);
