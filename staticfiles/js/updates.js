@@ -9,7 +9,7 @@ const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
 
 // form validator
 const constraints = {
-  email: {
+  emailAddress: {
     presence: true,
     email: true,
   },
