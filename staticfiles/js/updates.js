@@ -42,7 +42,6 @@ const handleUpdates = (e) => {
   console.log('[Event] updatesSubmitBtn clicked');
   e.preventDefault();
   const data = {
-
     name: updatesInputName.value,
     email: updatesInputEmail.value,
     phoneNumber: updatesInputPhoneNumber.value,
@@ -60,7 +59,7 @@ const handleUpdates = (e) => {
       'Content-Type': 'application/json',
     },
     crossDomain: true,
-    data,
+    data: JSON.stringify(data),
   };
 
 
