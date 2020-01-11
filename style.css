@@ -162,6 +162,8 @@ form > input:focus{
     }
     form > input{
         margin-bottom: 4.2vh;
+        height: 5vh;
+        margin-bottom: 6vh;
     }
     .rect{
         transform: scale(0.9);
