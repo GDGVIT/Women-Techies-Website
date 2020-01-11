@@ -5,6 +5,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
 }
 .container{
     position: relative;
@@ -159,7 +161,7 @@ form > input:focus{
         font-weight: bold;
     }
     form > input{
-        height: 6vh;
+        margin-bottom: 4.2vh;
     }
     .rect{
         transform: scale(0.9);
