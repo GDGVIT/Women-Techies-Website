@@ -5,12 +5,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    height: 100vh;
+    min-height: -webkit-fill-available;
 }
 .container{
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    min-height: -webkit-fill-available;
 }
 .main{
     position: relative;
@@ -133,6 +133,14 @@ form > input:focus{
 }
 
 @media(min-width: 992px){
+    body{
+        min-height: fit-content;
+        height: 100vh;
+    }
+    .container{
+        min-height: fit-content;
+        height: 100vh;
+    }
     .main{
         margin: 0 30%;
     }
