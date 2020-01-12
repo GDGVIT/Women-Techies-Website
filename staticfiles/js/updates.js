@@ -144,7 +144,7 @@ const handleUpdates = (e) => {
       }
       else {
         console.log('Successfully submitted form');
-        mes = "Seccessfully Submitted form!";
+        mes = "Successfully Submitted form!";
         if (window.innerWidth > 992) {
           message.style.fontSize = "0.9vw"
         }
