@@ -189,7 +189,7 @@ const handleUpdates = (e) => {
       updatesSubmitBtn.innerHTML = "Submit"
       if (window.innerWidth < 992) {
         console.log(document.querySelector(".popup").style.height)
-        message.style.top = (40 * (window.innerHeight / 100)) - ((50 * (window.innerWidth / 100)) / 4.2) + "px";
+        message.style.top = (40 * (window.innerHeight / 100)) +((50*(window.innerWidth/100))/2) - (73 * (50*(window.innerWidth/100)/100)) + "px";
       }
       else {
         message.style.top = (50 * (window.innerHeight / 100)) - ((20 * (window.innerWidth / 100)) / 4.2) + "px";
