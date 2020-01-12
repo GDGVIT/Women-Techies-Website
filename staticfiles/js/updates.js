@@ -210,7 +210,7 @@ const handleUpdates = (e) => {
           document.querySelector(".popup").style.display = "none";
           document.querySelector(".container").style.opacity = "1";
           document.querySelector("form").reset();
-        }, 5000);
+        }, 3000);
       }
       else {
         window.addEventListener("click", () => {
