@@ -217,10 +217,10 @@ const handleUpdates = (e) => {
           message.style.display = "none";
           document.querySelector(".popup").style.display = "none";
           document.querySelector(".container").style.opacity = "1";
-          document.querySelector("form").reset();
         })
       }
       console.log(data);
+      document.querySelector("form").reset();
       
     }).catch((err) => {
       alert('Error on submission');
