@@ -92,7 +92,7 @@ const handleUpdates = (e) => {
       message.style.top = (50 * (window.innerHeight / 100)) + ((50*(window.innerWidth/100))/2) - (54 * (50*(window.innerWidth/100)/100)) + "px";
     }
     else {
-      message.style.top = (50 * (window.innerHeight / 100)) - ((20 * (window.innerWidth / 100)) / 4.2) + "px";
+      message.style.top = (50 * (window.innerHeight / 100)) - (73*(20*(window.innerWidth)/100)/100) + (10*(window.innerWidth/100)) + "px";
     }
     message.innerHTML = mes;
     message.style.color = "white";
@@ -192,7 +192,7 @@ const handleUpdates = (e) => {
         message.style.top = (50 * (window.innerHeight / 100)) + ((50*(window.innerWidth/100))/2) - (54 * (50*(window.innerWidth/100)/100)) + "px";
       }
       else {
-        message.style.top = (50 * (window.innerHeight / 100)) - ((20 * (window.innerWidth / 100)) / 4.2) + "px";
+        message.style.top = (50 * (window.innerHeight / 100)) - (73*(20*(window.innerWidth)/100)/100) + (10*(window.innerWidth/100)) + "px";
       }
       message.innerHTML = mes;
       message.style.color = "white";
