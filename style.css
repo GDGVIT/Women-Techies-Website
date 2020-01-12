@@ -118,7 +118,7 @@ form > input:focus{
     font-size: 3vw;
     position: absolute;
     left: 50%;
-    top: 35%;
+    top: 34.5%;
     transform: translateX(-50%);
     z-index: 2;
     opacity: 0;
