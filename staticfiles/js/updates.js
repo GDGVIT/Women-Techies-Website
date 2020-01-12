@@ -40,6 +40,7 @@ const isValid = (data) => {
 
 const handleUpdates = (e) => {
   console.log('[Event] updatesSubmitBtn clicked');
+  
   e.preventDefault();
   const data = {
     name: updatesInputName.value,
@@ -52,7 +53,9 @@ const handleUpdates = (e) => {
     alert('Invalid fields');
     return;
   }
-
+  else{
+    updatesSubmitBtn.innerHTML = '<img src="./assets/loading.gif" alt="" height = "20" width = "20">'
+  }
   const settings = {
     method: 'post',
     headers: {
@@ -67,9 +70,19 @@ const handleUpdates = (e) => {
     .then((response) => response.json())
     .then((data) => {
       console.log('Successfully submitted form');
+      updatesSubmitBtn.innerHTML = "Submit"
+      const message = document.querySelector(".message");
+      message.innerHTML = "Successfully submitted form!";
+      message.style.color = "green";
+      message.style.fontSize = "1.0vw";
       console.log(data);
     }).catch((err) => {
       alert('Error on submission');
+      updatesSubmitBtn.innerHTML = "Submit"
+      const message = document.querySelector(".message");
+      message.innerHTML = "Error on submission";
+      message.style.color = "red";
+      message.style.fontSize = "1.0vw";
       console.error(err);
     });
 };
