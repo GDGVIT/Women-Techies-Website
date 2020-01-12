@@ -74,15 +74,13 @@ const handleUpdates = (e) => {
       const message = document.querySelector(".message");
       message.innerHTML = "Successfully submitted form!";
       message.style.color = "green";
-      message.style.fontSize = "1.0vw";
       console.log(data);
     }).catch((err) => {
       alert('Error on submission');
-      updatesSubmitBtn.innerHTML = "Submit"
+      updatesSubmitBtn.innerHTML = "Submit";
       const message = document.querySelector(".message");
       message.innerHTML = "Error on submission";
       message.style.color = "red";
-      message.style.fontSize = "1.0vw";
       console.error(err);
     });
 };
