@@ -122,6 +122,18 @@ form > input:focus{
     z-index: 2;
     opacity: 0;
 }
+.submit{
+    display: block;
+    margin-bottom: 20px;
+}
+.twitter{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 @keyframes expand5 {
     0%{
         transform: scale(0.5);
@@ -266,4 +278,9 @@ form > input:focus{
             transform: translate(-50%,-70%) scale(0.9);
         }
     }
+    .submit{
+        display: block;
+        margin-bottom: 40px;
+    }
+    
 }
