@@ -86,11 +86,17 @@ const handleUpdates = (e) => {
         opacity: 0.1,
         duration: 0.5
       });
-      t1.to(".popup", {
+      t1.fromTo(".popup", {
+        display: "none",
+        opacity: 0
+      },{
+        display: "block",
         opacity: 1,
         duration: 0.1
       });
-      t1.to(".popup",{
+      t1.fromTo(".popup",{
+        width: 0
+      },{
         width: "20vw",
         duration: 1,
         ease: "power4.out"
@@ -99,7 +105,11 @@ const handleUpdates = (e) => {
       
       message.innerHTML = mes;
       message.style.color = "white";
-      t1.to(".message", {
+      t1.fromTo(".message", {
+        display: "none",
+        opacity: 0,
+      },{
+        display: "block",
         opacity: 1,
         duration: 0.1
       },"-=0.5")
