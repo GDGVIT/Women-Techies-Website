@@ -101,8 +101,27 @@ form > input:focus{
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
+.popup{
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-70%);
+    z-index: 1;
+    height: auto;
+    width: 0vw;
+    /* animation-name: popup;
+    animation-duration: 1s;
+    animation-iteration-count: 5; */
+}
 .message{
-    font-size: 3.5vw;
+    font-size: 3vw;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0;
 }
 @keyframes expand5 {
     0%{

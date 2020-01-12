@@ -77,7 +77,12 @@ const handleUpdates = (e) => {
       else{
         console.log('Successfully submitted form');
         mes = "Seccessfully Submitted form!";
-        message.style.fontSize = "0.9vw"
+        if(window.innerWidth > 992){
+          message.style.fontSize = "0.9vw"
+        }
+        else{
+          message.style.fontSize = "2.2vw"
+        }
       }
       var t1 = gsap.timeline();
       t1.fromTo(".container", {
@@ -94,13 +99,25 @@ const handleUpdates = (e) => {
         opacity: 1,
         duration: 0.1
       });
-      t1.fromTo(".popup",{
-        width: 0
-      },{
-        width: "20vw",
-        duration: 1,
-        ease: "power4.out"
-      });
+      if(window.innerWidth > 992){
+        t1.fromTo(".popup",{
+          width: 0
+        },{
+          width: "20vw",
+          duration: 1,
+          ease: "power4.out"
+        });
+      }
+      else{
+        t1.fromTo(".popup",{
+          width: 0
+        },{
+          width: "50vw",
+          duration: 1,
+          ease: "power4.out"
+        });
+      }
+      
       updatesSubmitBtn.innerHTML = "Submit"
       
       message.innerHTML = mes;
@@ -113,19 +130,20 @@ const handleUpdates = (e) => {
         opacity: 1,
         duration: 0.1
       },"-=0.5")
-      setTimeout(() => {
-        message.style.display = "none";
-        document.querySelector(".popup").style.display = "none";
-        document.querySelector(".container").style.opacity = "1";
-      }, 5000);
-      
-      /* t1.to(".message",{
-        opacity: 0,
-        duration: 0.1
-      })
-      t1.to{
-
-      } */
+      if(window.innerWidth > 992){
+        setTimeout(() => {
+          message.style.display = "none";
+          document.querySelector(".popup").style.display = "none";
+          document.querySelector(".container").style.opacity = "1";
+        }, 5000);
+      }
+      else{
+        window.addEventListener("click", ()=>{
+          message.style.display = "none";
+          document.querySelector(".popup").style.display = "none";
+          document.querySelector(".container").style.opacity = "1";
+        })
+      }
       console.log(data);
       
     }).catch((err) => {
@@ -133,7 +151,7 @@ const handleUpdates = (e) => {
       updatesSubmitBtn.innerHTML = "Submit";
       const message = document.querySelector(".message");
       message.innerHTML = "Error on submission";
-      message.style.color = "red";
+      message.style.color = "white";
       console.error(err);
     });
 };
