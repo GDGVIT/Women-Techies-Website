@@ -209,6 +209,7 @@ const handleUpdates = (e) => {
           message.style.display = "none";
           document.querySelector(".popup").style.display = "none";
           document.querySelector(".container").style.opacity = "1";
+          document.querySelector("form").reset();
         }, 5000);
       }
       else {
@@ -216,10 +217,11 @@ const handleUpdates = (e) => {
           message.style.display = "none";
           document.querySelector(".popup").style.display = "none";
           document.querySelector(".container").style.opacity = "1";
+          document.querySelector("form").reset();
         })
       }
       console.log(data);
-
+      
     }).catch((err) => {
       alert('Error on submission');
       updatesSubmitBtn.innerHTML = "Submit";
