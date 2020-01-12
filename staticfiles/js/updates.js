@@ -54,7 +54,7 @@ const handleUpdates = (e) => {
     return;
   }
   else{
-    updatesSubmitBtn.innerHTML = '<img src="./assets/loading.gif" alt="" height = "20" width = "20">'
+    updatesSubmitBtn.innerHTML = '<img src="./assets/loading.gif" alt="" height = "30" width = "25">'
   }
   const settings = {
     method: 'post',
@@ -69,12 +69,22 @@ const handleUpdates = (e) => {
   fetch(`${config.baseURL}/participants/register`, settings)
     .then((response) => response.json())
     .then((data) => {
-      console.log('Successfully submitted form');
+      if(data.message = "Error: Document already exists"){
+        updatesSubmitBtn.innerHTML = "Submit";
+        const message = document.querySelector(".message");
+        message.innerHTML = "Already Registered!";
+        message.style.color = "green";
+      }
+      else{
+        console.log('Successfully submitted form');
       updatesSubmitBtn.innerHTML = "Submit"
       const message = document.querySelector(".message");
       message.innerHTML = "Successfully submitted form!";
       message.style.color = "green";
+      }
+      
       console.log(data);
+      
     }).catch((err) => {
       alert('Error on submission');
       updatesSubmitBtn.innerHTML = "Submit";
