@@ -69,20 +69,53 @@ const handleUpdates = (e) => {
   fetch(`${config.baseURL}/participants/register`, settings)
     .then((response) => response.json())
     .then((data) => {
-      if(data.message = "Error: Document already exists"){
-        updatesSubmitBtn.innerHTML = "Submit";
-        const message = document.querySelector(".message");
-        message.innerHTML = "Already Registered!";
-        message.style.color = "green";
+      let mes = "";
+      const message = document.querySelector(".message");
+      if(data.message == "Error: Document already exists"){
+        mes = "Already Registered!";
       }
       else{
         console.log('Successfully submitted form');
-      updatesSubmitBtn.innerHTML = "Submit"
-      const message = document.querySelector(".message");
-      message.innerHTML = "Successfully submitted form!";
-      message.style.color = "green";
+        mes = "Seccessfully Submitted form!";
+        message.style.fontSize = "0.9vw"
       }
+      var t1 = gsap.timeline();
+      t1.fromTo(".container", {
+        opacity: 1
+      },{
+        opacity: 0.1,
+        duration: 0.5
+      });
+      t1.to(".popup", {
+        opacity: 1,
+        duration: 0.1
+      });
+      t1.to(".popup",{
+        width: "20vw",
+        duration: 1,
+        ease: "power4.out"
+      });
+      updatesSubmitBtn.innerHTML = "Submit"
       
+      message.innerHTML = mes;
+      message.style.color = "white";
+      t1.to(".message", {
+        opacity: 1,
+        duration: 0.1
+      },"-=0.5")
+      setTimeout(() => {
+        message.style.display = "none";
+        document.querySelector(".popup").style.display = "none";
+        document.querySelector(".container").style.opacity = "1";
+      }, 5000);
+      
+      /* t1.to(".message",{
+        opacity: 0,
+        duration: 0.1
+      })
+      t1.to{
+
+      } */
       console.log(data);
       
     }).catch((err) => {
