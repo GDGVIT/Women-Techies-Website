@@ -125,7 +125,7 @@ const handleUpdates = (e) => {
         message.style.top = (40*(window.innerHeight/100)) - ((50*(window.innerWidth/100))/4.2) + "px";
       }
       else{
-        message.style.top = (50*(window.innerHeight/100)) - ((20*(window.innerWidth/100))/4) + "px";
+        message.style.top = (50*(window.innerHeight/100)) - ((20*(window.innerWidth/100))/4.2) + "px";
       }
       message.innerHTML = mes;
       message.style.color = "white";
