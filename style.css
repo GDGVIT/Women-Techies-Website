@@ -132,7 +132,13 @@ form > input:focus{
     left: 50%;
     transform: translateX(-50%);
 }
-
+.twitter-share-button{
+    opacity: 0;
+    background: rgb(164, 27, 227);
+}
+iframe{
+    background-color: rgb(164, 27, 227);
+}
 
 @keyframes expand5 {
     0%{
