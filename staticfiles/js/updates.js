@@ -50,11 +50,6 @@ const handleUpdates = (e) => {
     eventName: 'WomenTechies20',
   };
   if (!isValid(data)) {
-window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
     let mes = "Invalid Fields";
     const message = document.querySelector(".message");
     var t1 = gsap.timeline();
