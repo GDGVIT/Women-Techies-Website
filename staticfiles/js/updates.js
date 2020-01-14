@@ -50,8 +50,6 @@ const handleUpdates = (e) => {
     eventName: 'WomenTechies20',
   };
   if (!isValid(data)) {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
     let mes = "Invalid Fields";
     const message = document.querySelector(".message");
     var t1 = gsap.timeline();
@@ -87,7 +85,8 @@ const handleUpdates = (e) => {
         ease: "power4.out"
       });
     }
-
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
     updatesSubmitBtn.innerHTML = "Submit"
     if (window.innerWidth < 992) {
       console.log(document.querySelector(".popup").style.height)
