@@ -6,7 +6,8 @@ const updatesInputEmail = document.getElementById('updatesInputEmail');
 const updatesInputPhoneNumber = document.getElementById('updatesInputPhoneNumber');
 const updatesInputRegistrationNumber = document.getElementById('updatesInputRegistrationNumber');
 const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
-
+const heighta = window.innerHeight;
+const widtha = window.innerWidth;
 // form validator
 const constraints = {
   emailAddress: {
@@ -88,7 +89,7 @@ const handleUpdates = (e) => {
     updatesSubmitBtn.innerHTML = "Submit"
     if (window.innerWidth < 992) {
       console.log(document.querySelector(".popup").style.height)
-      message.style.top = (50 * (window.innerHeight / 100)) + ((50*(window.innerWidth/100))/2) - (54 * (50*(window.innerWidth/100)/100)) + "px";
+      message.style.top = (50 * (heighta / 100)) + ((50*(widtha/100))/2) - (54 * (50*(widtha/100)/100)) + "px";
     }
     else {
       message.style.top = (50 * (window.innerHeight / 100)) - (73*(20*(window.innerWidth)/100)/100) + (10*(window.innerWidth/100)) + "px";
