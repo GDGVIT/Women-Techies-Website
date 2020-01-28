@@ -198,18 +198,19 @@ nav{
         background: white;
         z-index: 100;
     }
-    .line{
+    .line1, .line2{
         position: absolute;
         left: 50%;
         width: 30px;
         height: 2px;
         background-color: black;
         transform: translateX(-50%);
+        transition: ease 0.2s;
     }
-    .line:nth-child(1){
+    .line1{
         top: 20px;
     }
-    .line:nth-child(2){
+    .line2{
         top: 30px;
     }
     .nav-items{
@@ -235,6 +236,9 @@ nav{
     .open{
         clip-path: circle(1000px at 90.7% 3.5%);
         -webkit-clip-path: circle(1000px at 90.7% 3.5%);
+    }
+    .merge{
+        top: 25px;
     }
     /* Nav-Mobile: End */
 
