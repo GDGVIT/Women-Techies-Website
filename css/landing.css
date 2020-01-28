@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root{
+    --main-text-color: rgb(112,115,128);
+    --about-color: rgb(164,27,228);
+    --hackathon-color: rgb(252,37,126);
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+.mobile{
+    display: none;
+}
+/* Nav: Start */
+
+.dsclogo{
+    position: relative;
+    width: 15vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+nav{
+    position: fixed;
+    height: 100vh;
+    width: 20vw;
+}
+.nav-inner{
+    position: relative;
+    margin: 18vh 0 auto 2.8vw;
+    display: grid;
+    grid-template-rows: repeat(9, auto);
+    height: 50vh;
+}
+.nav-inner > div > a{
+    color: var(--main-text-color);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* Nav: End */
+
+.main{
+    position: relative;
+    height: 200vh;
+    margin-left: 20vw;
+}
+
+/* One: Start */
+.one{
+    position: relative;
+    height: 100vh;
+}
+.women-techies-logo{
+    position: absolute;
+    margin: 25vh 0 0 100px;
+    width: 30vw;
+    min-width: 250px;
+}
+.women-img{
+    position: absolute;
+    width: 40vw;
+    bottom: -20px;
+    right: 20px;
+}
+.top{
+    position: absolute;
+    clip-path: polygon(90% 0, 100% 0, 100% 10%);
+    background-color: rgb(255, 167, 87);
+    z-index: 10;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+.middle{
+    position: absolute;
+    clip-path: polygon(80% 0, 100% 0, 100% 20%);
+    background-color: rgb(255, 197, 145);
+    z-index: 9;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+.bottom{
+    position: absolute;
+    clip-path: polygon(70% 0, 100% 0, 100% 30%);
+    background-color: rgb(255, 221, 190);
+    z-index: 8;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* One: End */
+
+.rest{
+    position: relative;
+    height: 100vh;
+}
+.rest > div{
+    position: relative;
+    height: 100vh;
+}
+
+/* Two: Start */
+
+.two{
+    position: relative;
+    height: 100%;
+    color: var(--about-color);
+}
+.content-two{
+    position: relative;
+    margin: 0 0 0 5vw;
+    top: 30%;
+    transform: translate(0,-50%);
+}
+.content-two > p{
+    color: var(--main-text-color);
+    width: 80%;
+}
+.text-img{
+    position: absolute;
+    overflow: hidden;
+    height: fit-content;
+}
+.text-img > h1{
+    position: absolute;
+    top: calc(50% - 6vh);
+}
+.text-img > p{
+    position: absolute;
+    top: 50%;
+    float: left;
+    color: var(--main-text-color);
+    width: 50%;
+}
+.text-img > img{
+    position: relative;
+    overflow: hidden;
+    left: 50%;
+    width: 53%;
+}
+
+/* Two: Start */
+
+
+
+
+
+
+@media(max-width: 992px){
+    nav:nth-child(1){
+        display: none;
+    }
+    .mobile{
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 60px;
+        z-index: 12;
+    }
+    .main{
+        margin-left: 0;
+        margin-top: 60px;
+        height: calc(200vh - 60px);
+    }
+    /* Nav-Mobile: Start */
+
+    .dsclogo-mobile{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+        width: 40vw;
+        z-index: 10;
+    }
+    .ham{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        height: 50px;
+        width: 50px;
+        background: white;
+        z-index: 100;
+    }
+    .line{
+        position: absolute;
+        left: 50%;
+        width: 40px;
+        height: 5px;
+        background-color: black;
+        transform: translateX(-50%);
+    }
+    .line:nth-child(1){
+        top: 15px;
+    }
+    .line:nth-child(2){
+        top: 30px;
+    }
+    .nav-items{
+        position: fixed;
+        padding-top: 80px;
+        background: rgba(255, 255, 255, 0.856);
+        height: calc(100vh);
+        width: 100vw;
+        display: grid;
+        grid-template-rows: repeat(11, auto);
+        align-items: center;
+        justify-items: center;
+        clip-path: circle(10px at 90.7% 3.5%);
+        -webkit-clip-path: circle(10px at 90.7% 3.5%);
+        transition: ease-out 1s;
+    }
+    .nav-items > div > a{
+        color: var(--main-text-color);
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 700;
+    }
+    .open{
+        clip-path: circle(1000px at 90.7% 3.5%);
+        -webkit-clip-path: circle(1000px at 90.7% 3.5%);
+    }
+    /* Nav-Mobile: End */
+
+    /* One-Mobile: Start */
+
+    .one{
+        position: relative;
+        height: calc(100vh - 60px);
+    }
+    .women-techies-logo{
+        position: absolute;
+        margin: 0;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        min-width: 0;
+        width: 60vw;
+    }
+    .top{
+        clip-path: polygon(90% 0, 100% 0, 100% 5%);
+    }
+    .middle{
+        clip-path: polygon(80% 0, 100% 0, 100% 10%);
+    }
+    .bottom{
+        clip-path: polygon(70% 0, 100% 0, 100% 15%);
+    }
+    .women-img{
+        width: 100%;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* One-Mobile: End */
+    .rest{
+        height: calc(100vh - 60px);
+    }
+    .rest > div{
+        height: calc(100vh - 60px);
+    }
+    /* Two-Mobile: Start */
+    .content-two{
+        height: 100%;
+        top: 0;
+        transform: none;
+        margin: 60px 5vw 0 5vw;
+    }
+    .header{
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+    .content-two > p{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .text-img{
+        position: relative;
+        overflow: auto;
+        height: auto;
+    }
+    .text-img > h1{
+        position: relative;
+        top: auto;
+    }
+    .text-img > p{
+        position: relative;
+        top: auto;
+        width: 100%;
+        color: var(--main-text-color);
+    }
+    .text-img > img{
+        position: relative;
+        overflow: hidden;
+        left: 0;
+        width: 100%;
+    }
+
+    /*Two-Mobile: End */
+
+}
+
