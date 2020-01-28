@@ -17,7 +17,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    height: calc(var(--vh, 1vh) * 100);
+    /* height: calc(var(--vh, 1vh) * 100); */
 }
 .mobile{
     display: none;
@@ -138,7 +138,7 @@ nav{
 }
 .text-img > span{
     position: absolute;
-    top: calc(50% - 4vh);
+    top: calc(50% - 40px);
 }
 .text-img > p{
     position: absolute;
@@ -278,15 +278,25 @@ nav{
     }
 
     /* One-Mobile: End */
+
+
     .rest{
-        height: calc(100vh - 60px);
+        height: 100vh;
     }
     .rest > div{
-        height: calc(100vh - 60px);
+        height: calc(100vh);
     }
+
+
     /* Two-Mobile: Start */
+    .two{
+        position: relative;
+        
+    }
     .content-two{
-        height: 100%;
+        position: absolute;
+        margin-top: 60px;
+        height: fit-content;
         top: 0;
         transform: none;
         margin: 60px 5vw 0 5vw;
