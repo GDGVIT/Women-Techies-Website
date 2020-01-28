@@ -135,9 +135,9 @@ nav{
     overflow: hidden;
     height: fit-content;
 }
-.text-img > h1{
+.text-img > span{
     position: absolute;
-    top: calc(50% - 6vh);
+    top: calc(50% - 2vh);
 }
 .text-img > p{
     position: absolute;
@@ -171,6 +171,7 @@ nav{
         width: 100vw;
         height: 60px;
         z-index: 12;
+        background-color: white;
     }
     .main{
         margin-left: 0;
@@ -200,13 +201,13 @@ nav{
     .line{
         position: absolute;
         left: 50%;
-        width: 40px;
-        height: 5px;
+        width: 30px;
+        height: 2px;
         background-color: black;
         transform: translateX(-50%);
     }
     .line:nth-child(1){
-        top: 15px;
+        top: 20px;
     }
     .line:nth-child(2){
         top: 30px;
@@ -221,7 +222,7 @@ nav{
         grid-template-rows: repeat(11, auto);
         align-items: center;
         justify-items: center;
-        clip-path: circle(10px at 90.7% 3.5%);
+        clip-path: circle(10px at 99.7% -10%);
         -webkit-clip-path: circle(10px at 90.7% 3.5%);
         transition: ease-out 1s;
     }
@@ -296,7 +297,7 @@ nav{
         overflow: auto;
         height: auto;
     }
-    .text-img > h1{
+    .text-img > span{
         position: relative;
         top: auto;
     }
