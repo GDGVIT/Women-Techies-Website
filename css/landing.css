@@ -216,7 +216,7 @@ nav{
 }
 .content-four{
     position: relative;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
     margin-left: 4vw;
 }
@@ -228,20 +228,22 @@ nav{
     position: relative;
     display: grid;
     grid-template-columns: 60% 40%;
-    align-items: center;
+    /* align-items: center; */
 }
 .grid-four > div > img{
     position: relative;
-    width: 115%;
+    width: 110%;
     left: 0;
 }
 .grid-four > p{
     font-size: 1.2rem;
+    font-weight: 500;
     color: var(--main-text-color);
 }
 .grid-four > p > span{
     display: block;
     color: var(--about-color);
+    font-weight: bolder;
     font-size: 2rem;
     margin-bottom: 10px;
 }
