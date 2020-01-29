@@ -5,7 +5,10 @@ button.addEventListener("click", ()=>{
     navItems.classList.toggle("open");
     lines[0].classList.toggle("merge");
     lines[1].classList.toggle("merge");
-    console.log(window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0)
 });
+
+let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
+const vh = window.innerHeight;
+
 
 

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --main-text-color: rgb(112,115,128);
     --about-color: rgb(164,27,228);
@@ -303,6 +307,27 @@ nav{
     text-align: center;
 }
 /* Six: End */
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+   
+::-webkit-scrollbar-track {
+    background: #ddd;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: orange; 
+}
+
+
+
+
+
 
 
 @media(max-width: 850px){
