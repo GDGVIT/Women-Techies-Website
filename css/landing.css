@@ -53,7 +53,7 @@ nav{
 
 .main{
     position: relative;
-    height: 500vh;
+    height: 600vh;
     margin-left: 15vw;
 }
 .main > div{
@@ -266,6 +266,43 @@ nav{
 
 
 /* Five: End */
+
+/* Six: Start */
+
+.six{
+    color: var(--about-color);
+}
+.content-six{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    height: fit-content;
+    margin: 0 4vw 0 4vw;
+}
+.content-six > h1{
+    text-align: center;
+}
+.grid-six{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    justify-items: center;
+}
+.content-six > h1{
+    text-align: center;
+    margin-bottom: 8%;
+}
+.ele > img{
+    border-radius: 300px;
+    height: 20vh;
+    border: 10px solid var(--hackathon-color);
+    margin-bottom: 40px;
+}
+.ele > h2, .ele > p{
+    color: var(--main-text-color);
+    text-align: center;
+}
+/* Six: End */
 
 
 @media(max-width: 850px){
@@ -507,6 +544,43 @@ nav{
         width: 100%;
     }
     /* Four-Mobile: End */
+
+
+    /* Six-Mobile: Start */
+
+    .content-six{
+        position: relative;
+        top: 55%;
+        transform: translateY(-50%);
+        height: fit-content;
+        margin: 0 5vw 0 5vw;
+    }
+    .content-six > h1{
+        text-align: center;
+    }
+    .grid-six{
+        position: relative;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 25vh);
+        justify-items: center;
+    }
+    .content-six > h1{
+        text-align: center;
+        margin-bottom: 8%;
+    }
+    .ele > img{
+        border-radius: 300px;
+        height: 10vh;
+        border: 10px solid var(--hackathon-color);
+        margin-bottom: 10px;
+    }
+    .ele > h2, .ele > p{
+        color: var(--main-text-color);
+        text-align: center;
+    }
+
+    /* Six-Mobile: End */
 
 }
 
