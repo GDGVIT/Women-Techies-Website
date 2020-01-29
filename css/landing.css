@@ -397,8 +397,7 @@ nav{
     .nav-items{
         position: fixed;
         background: rgba(255, 255, 255, 0.88);
-        height: calc((var(--vh, 1vh) * 200) - 60px);
-        padding-top: 60px;
+        height: 100vh;
         width: 100vw;
         display: grid;
         grid-template-rows: repeat(12, auto);
