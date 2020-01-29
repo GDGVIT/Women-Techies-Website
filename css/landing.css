@@ -272,12 +272,12 @@ nav{
     }
     .nav-items{
         position: fixed;
-        padding-top: 80px;
+        padding-top: 60px;
         background: rgba(255, 255, 255, 0.856);
-        height: calc(100vh);
+        height: calc(100vh - 60px);
         width: 100vw;
         display: grid;
-        grid-template-rows: repeat(11, auto);
+        grid-template-rows: repeat(9, auto);
         align-items: center;
         justify-items: center;
         clip-path: circle(10px at 99.7% -10%);
