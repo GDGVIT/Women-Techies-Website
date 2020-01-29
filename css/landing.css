@@ -229,8 +229,10 @@ nav{
     }
     .main{
         margin-left: 0;
-        margin-top: 60px;
-        height: calc(200vh - 60px);
+        height: 300vh;
+    }
+    .main > div{
+        height: 100vh;
     }
     /* Nav-Mobile: Start */
 
@@ -300,7 +302,12 @@ nav{
 
     .one{
         position: relative;
-        height: calc(100vh - 60px);
+        height: calc(100vh);
+    }
+    .content-one{
+        position: relative;
+        height: calc(100% - 60px);
+        padding-top: 60px;
     }
     .women-techies-logo{
         position: absolute;
@@ -312,13 +319,19 @@ nav{
         width: 60vw;
     }
     .top{
-        clip-path: polygon(90% 0, 100% 0, 100% 5%);
+        height: 50px;
+        width: 50px;
+        clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .middle{
-        clip-path: polygon(80% 0, 100% 0, 100% 10%);
+        height: 100px;
+        width: 100px;
+        clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .bottom{
-        clip-path: polygon(70% 0, 100% 0, 100% 15%);
+        height: 150px;
+        width: 150px;
+        clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .women-img{
         width: 100%;
@@ -329,27 +342,16 @@ nav{
 
     /* One-Mobile: End */
 
-
-    .rest{
-        height: 100vh;
-    }
-    .rest > div{
-        height: calc(100vh);
-    }
-
-
     /* Two-Mobile: Start */
     .two{
         position: relative;
-        
     }
     .content-two{
         position: absolute;
-        margin-top: 60px;
+        top: 50%;
+        transform: translateY(-50%);
         height: fit-content;
-        top: 0;
-        transform: none;
-        margin: 60px 5vw 0 5vw;
+        margin: 0 5vw 0 5vw;
     }
     .header{
         display: block;
@@ -391,10 +393,12 @@ nav{
     }
     .content-three{
         position: relative;
-        top: inherit;
-        margin: 60px 5vw 0 5vw;
+        /* padding-top: 60px; */
+        margin: 0px 5vw 0 5vw;
         transform: none;
         height: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
     }
     .logo-topright{
         display: none;
@@ -404,6 +408,7 @@ nav{
         top: inherit;
         left: inherit;
         transform: none;
+        height: fit-content;
     }
     .text-3 > button{
         width: 50%;
