@@ -53,7 +53,7 @@ nav{
 
 .main{
     position: relative;
-    height: 400vh;
+    height: 500vh;
     margin-left: 15vw;
 }
 .main > div{
@@ -248,6 +248,24 @@ nav{
     margin-bottom: 10px;
 }
 /* Four: End */
+
+/* Five: Start */
+
+.five{
+    color: var(--hackathon-color);
+}
+.content-five{
+    position: relative;
+    top: 25%;
+    transform: translateY(-50%);
+    height: fit-content;
+}
+.content-five > h1{
+    text-align: center;
+}
+
+
+/* Five: End */
 
 
 @media(max-width: 850px){
@@ -479,7 +497,7 @@ nav{
     }
     .grid-four > p > span{
         font-size: 1.5rem;
-        
+
     }
     .grid-four > p{
         font-size: 1.1rem;
