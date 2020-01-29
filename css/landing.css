@@ -17,7 +17,6 @@ body{
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    height: calc(var(--vh, 1vh) * 100);
 }
 .mobile{
     display: none;
@@ -233,7 +232,7 @@ nav{
     }
     .main > div{
         height: 100vh;
-        /* height: calc(var(--vh, 1vh) * 100); */
+        height: calc(var(--vh, 1vh) * 100);
     }
     /* Nav-Mobile: Start */
 
