@@ -17,6 +17,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     height: 100%;
+    height: calc(var(--vh, 1vh) * 300);
 }
 .mobile{
     display: none;
@@ -229,10 +230,11 @@ nav{
     .main{
         margin-left: 0;
         height: 300vh;
+        height: calc(var(--vh, 1vh) * 300);
     }
     .main > div{
         height: 100vh;
-        /* height: calc(var(--vh, 1vh) * 100); */
+        height: calc(var(--vh, 1vh) * 100);
     }
     /* Nav-Mobile: Start */
 
@@ -274,7 +276,7 @@ nav{
         padding-top: 60px;
         height: calc(100vh - 60px);
         background: rgba(255, 255, 255, 1);
-        /* height: calc((var(--vh, 1vh) * 100) - 60px); */
+        height: calc((var(--vh, 1vh) * 100) - 60px);
         width: 100vw;
         display: grid;
         grid-template-rows: repeat(9, auto);
