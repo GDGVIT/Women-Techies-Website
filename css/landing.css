@@ -406,8 +406,7 @@ nav{
         
     }
     .nice{
-        height: calc(100vh - 60px);
-        padding-top: 60px;
+        height: calc(100vh);
         display: grid;
         grid-template-rows: repeat(12, auto);
         align-items: center;
