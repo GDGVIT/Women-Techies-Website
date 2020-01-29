@@ -17,7 +17,6 @@ body{
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    height: calc(var(--vh, 1vh) * 300);
 }
 .mobile{
     display: none;
@@ -56,6 +55,10 @@ nav{
     position: relative;
     height: 300vh;
     margin-left: 15vw;
+}
+.main > div{
+    position: relative;
+    height: 100vh;
 }
 
 /* One: Start */
@@ -105,14 +108,7 @@ nav{
 
 /* One: End */
 
-.rest{
-    position: relative;
-    height: 200vh;
-}
-.rest > div{
-    position: relative;
-    height: 100vh;
-}
+
 
 /* Two: Start */
 
@@ -215,6 +211,13 @@ nav{
 
 
 @media(max-width: 850px){
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: 100%;
+        height: calc(var(--vh, 1vh) * 300);
+    }
     nav:nth-child(1){
         display: none;
     }
