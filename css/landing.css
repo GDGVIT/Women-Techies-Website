@@ -53,7 +53,7 @@ nav{
 
 .main{
     position: relative;
-    height: 300vh;
+    height: 400vh;
     margin-left: 15vw;
 }
 .main > div{
@@ -80,30 +80,30 @@ nav{
 }
 .top{
     position: absolute;
-    clip-path: polygon(90% 0, 100% 0, 100% 15%);
+    clip-path: polygon(0% 0, 100% 0, 100% 100%);
     background-color: rgb(255, 167, 87);
     z-index: 10;
     right: 0;
-    height: 100%;
-    width: 100%;
+    height: 7vw;
+    width: 7vw;
 }
 .middle{
     position: absolute;
-    clip-path: polygon(85% 0, 100% 0, 100% 22%);
+    clip-path: polygon(0% 0, 100% 0, 100% 100%);
     background-color: rgb(255, 197, 145);
     z-index: 9;
     right: 0;
-    height: 100%;
-    width: 100%;
+    height: 11vw;
+    width: 11vw;
 }
 .bottom{
     position: absolute;
-    clip-path: polygon(80% 0, 100% 0, 100% 30%);
+    clip-path: polygon(0% 0, 100% 0, 100% 100%);
     background-color: rgb(255, 221, 190);
     z-index: 8;
     right: 0;
-    height: 100%;
-    width: 100%;
+    height: 15vw;
+    width: 15vw;
 }
 
 /* One: End */
@@ -129,7 +129,6 @@ nav{
 }
 .text-img{
     position: absolute;
-    overflow: hidden;
     height: fit-content;
 }
 .text-img > span{
@@ -143,7 +142,11 @@ nav{
     color: var(--main-text-color);
     width: 50%;
 }
-.text-img > img{
+.img-overflow{
+    position: relative;
+    overflow: hidden;
+}
+.img-overflow > img{
     position: relative;
     overflow: hidden;
     left: 50%;
@@ -206,8 +209,43 @@ nav{
 
 /* Three: End */
 
+/* Four: Start */
 
-
+.four{
+    color: var(--about-color);
+}
+.content-four{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 4vw;
+}
+.content-four > h1{
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.grid-four{
+    position: relative;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+.grid-four > div > img{
+    position: relative;
+    width: 115%;
+    left: 0;
+}
+.grid-four > p{
+    font-size: 1.2rem;
+    color: var(--main-text-color);
+}
+.grid-four > p > span{
+    display: block;
+    color: var(--about-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+/* Four: End */
 
 
 @media(max-width: 850px){
