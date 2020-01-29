@@ -54,7 +54,7 @@ nav{
 
 .main{
     position: relative;
-    height: 200vh;
+    height: 300vh;
     margin-left: 15vw;
 }
 
@@ -107,7 +107,7 @@ nav{
 
 .rest{
     position: relative;
-    height: 100vh;
+    height: 200vh;
 }
 .rest > div{
     position: relative;
@@ -159,6 +159,56 @@ nav{
 }
 /* Two: Start */
 
+/* Three: Start*/
+
+.logo-topright{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 8vw;
+}
+.content-three{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.women-look{
+    position: relative;
+    float: left;
+    width: 40%;
+}
+.text-3{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.text-3 > p:nth-child(1){
+    color: var(--hackathon-color);
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.text-3 > p{
+    margin-bottom: 40px;
+    font-size: 1.3rem;
+}
+.text-3 > button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--hackathon-color);
+    color: white;
+    font-weight: bolder;
+    width: 22%;
+    height: 16%;
+}
+
+
+/* Three: End */
 
 
 
@@ -333,6 +383,34 @@ nav{
     }
 
     /*Two-Mobile: End */
+
+    /*Three-Mobile: Start */
+
+    .women-look{
+        display: none;
+    }
+    .content-three{
+        position: relative;
+        top: inherit;
+        margin: 60px 5vw 0 5vw;
+        transform: none;
+        height: fit-content;
+    }
+    .logo-topright{
+        display: none;
+    }
+    .text-3{
+        position: relative;
+        top: inherit;
+        left: inherit;
+        transform: none;
+    }
+    .text-3 > button{
+        width: 50%;
+        height: 12%;
+        font-size: 1.1rem;
+    }
+    /*Three-Mobile: End */
 
 }
 
