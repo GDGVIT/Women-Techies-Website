@@ -7,7 +7,7 @@ button.addEventListener("click", ()=>{
     navItems.classList.toggle("open");
     lines[0].classList.toggle("merge");
     lines[1].classList.toggle("merge");
-    body.style.overflow = "hidden";
+    body.classList.toggle("overflow");
 });
 navItems.addEventListener("click", ()=>{
     setTimeout(()=>{
