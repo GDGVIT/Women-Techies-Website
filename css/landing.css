@@ -412,7 +412,7 @@ nav{
         justify-items: center;
         overflow: hidden;
     }
-    .nav-items > div > a{
+    .nice > div > a{
         color: var(--main-text-color);
         text-decoration: none;
         cursor: pointer;

@@ -6,13 +6,6 @@ button.addEventListener("click", ()=>{
     navItems.classList.toggle("open");
     lines[0].classList.toggle("merge");
     lines[1].classList.toggle("merge");
-    i++;
-});
-window.addEventListener("resize", () => {
-    if (window.innerWidth < 992 && i%2 == 1) {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
 });
 navItems.addEventListener("click", ()=>{
     setTimeout(()=>{
