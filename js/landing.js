@@ -17,20 +17,18 @@ button.addEventListener("click", ()=>{
 let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
 const vh = window.innerHeight;
 let width = window.innerWidth;
-navlinks[0].addEventListener("click", ()=>{move(0)})
-navlinks[1].addEventListener("click", ()=>{move(1)})
-navlinks[2].addEventListener("click", ()=>{move(2)})
-navlinks[3].addEventListener("click", ()=>{move(3)})
-navlinks[4].addEventListener("click", ()=>{move(4)})
-navlinks[5].addEventListener("click", ()=>{move(5)})
+navlinks[0].addEventListener("click", (e)=>{setTimeout(()=>{openclose();},1400);});
+navlinks[1].addEventListener("click", ()=>{setTimeout(()=>{openclose();},1400);})
+navlinks[4].addEventListener("click", ()=>{setTimeout(()=>{openclose();},1400);})
+navlinks[3].addEventListener("click", ()=>{setTimeout(()=>{openclose();},1400);})
+navlinks[2].addEventListener("click", ()=>{setTimeout(()=>{openclose();},1400);})
+navlinks[5].addEventListener("click", ()=>{setTimeout(()=>{openclose();},1400);})
 
 /* gsap.to(window, {duration: 1, scrollTo:{y:ids[5], offsetY:70}}); */
-function move(pos){
+/* function move(pos){
     gsap.to(window, {duration: 0.1, ease: "power0", scrollTo: ids[pos]});
-    setTimeout(()=>{
-        openclose();
-    },1400);
-}
+    
+} */
 
 
 
