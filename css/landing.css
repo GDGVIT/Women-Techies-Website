@@ -5,7 +5,7 @@ html {
 }
 
 :root{
-    --main-text-color: rgb(112,115,128);
+    --main-text-color: black;
     --about-color: rgb(164,27,228);
     --hackathon-color: rgb(252,37,126);
 }
@@ -70,18 +70,29 @@ nav{
     position: relative;
     height: 100vh;
 }
+.content-one{
+    position: relative;
+    height: 100%;
+}
 .women-techies-logo{
     position: absolute;
     margin: 23vh 0 0 100px;
     width: 25vw;
     min-width: 250px;
 }
-.women-img{
+.img-overflow-1{
     position: absolute;
     width: 40vw;
-    bottom: -20px;
-    right: 20px;
+    bottom: 0;
+    right: 10px;
+    overflow: hidden;
 }
+.women-img{
+    position: relative;
+    width: 100%;
+    bottom: -20px;
+}
+
 .top{
     position: absolute;
     clip-path: polygon(0% 0, 100% 0, 100% 100%);
@@ -125,26 +136,27 @@ nav{
     position: relative;
     margin: 0 0 0 5vw;
     top: 30%;
-    transform: translate(0,-50%);
 }
 .content-two > p{
     color: var(--main-text-color);
     width: 80%;
 }
 .text-img{
-    position: absolute;
-    height: fit-content;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items:center;
+    align-items: center;
 }
-.text-img > span{
-    position: absolute;
-    top: calc(50% - 40px);
+.header{
+    display: block;
+    color: var(--about-color);
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
 }
 .text-img > p{
-    position: absolute;
-    top: 50%;
-    float: left;
     color: var(--main-text-color);
-    width: 50%;
 }
 .img-overflow{
     position: relative;
@@ -152,9 +164,7 @@ nav{
 }
 .img-overflow > img{
     position: relative;
-    overflow: hidden;
-    left: 50%;
-    width: 53%;
+    width: 100%;
 }
 .header{
     font-size: 1.9rem;
@@ -240,8 +250,9 @@ nav{
     left: 0;
 }
 .grid-four > p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
+    width: 90%;
     color: var(--main-text-color);
 }
 .grid-four > p > span{
@@ -399,7 +410,7 @@ nav{
     }
     .nav-items{
         position: fixed;
-        background: rgba(255, 255, 255, 1);
+        background: rgba(255, 255, 255, 0.9);
         height: 100vh;
         width: 100vw;
         padding-top: 70px ;
@@ -462,9 +473,17 @@ nav{
         width: 150px;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
+    .img-overflow-1{
+        position: absolute;
+        width: 100vw;
+        bottom: 0;
+        overflow: hidden;
+        right: inherit;
+        left: inherit;
+    }
     .women-img{
-        width: 100%;
-        bottom: 0px;
+        width: 110%;
+        bottom: -20px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -476,9 +495,9 @@ nav{
         position: relative;
     }
     .content-two{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        padding-top: 60px;
+        top: 0;
+        position: relative;
         height: fit-content;
         margin: 0 5vw 0 5vw;
     }
@@ -489,12 +508,11 @@ nav{
     }
     .content-two > p{
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 2vh;
     }
     .text-img{
-        position: relative;
-        overflow: auto;
-        height: auto;
+        grid-template-columns: none;
+        grid-template-rows: 60% 40%;
     }
     .text-img > span{
         position: relative;
@@ -505,13 +523,6 @@ nav{
         top: auto;
         width: 100%;
         color: var(--main-text-color);
-        font-size: 1.3rem;
-    }
-    .text-img > img{
-        position: relative;
-        overflow: hidden;
-        left: 0;
-        width: 100%;
     }
 
     /*Two-Mobile: End */
@@ -540,10 +551,12 @@ nav{
         transform: none;
         height: fit-content;
     }
+    .text-3 > p{
+        font-size: 4vw;
+    }
     .text-3 > button{
-        width: 50%;
-        height: 12%;
-        font-size: 1.1rem;
+        width: 50vw;
+        height: 6vh;
     }
     /*Three-Mobile: End */
 
@@ -565,11 +578,13 @@ nav{
 
     }
     .grid-four > p{
-        font-size: 1.1rem;
-        margin-bottom: 30px;
+        font-size: 4vw;
+        margin-bottom: 2vh;
     }
     .grid-four > div > img{
-        width: 100%;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
     }
     /* Four-Mobile: End */
 
