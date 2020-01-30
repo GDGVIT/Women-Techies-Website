@@ -14,6 +14,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: none;
+    
 }
 
 body{
@@ -345,6 +346,9 @@ nav{
 
 
 @media(max-width: 850px){
+    html{
+        scroll-behavior: initial;
+    }
     body{
         margin: 0;
         padding: 0;

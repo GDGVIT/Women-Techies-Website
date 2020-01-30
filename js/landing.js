@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollToPlugin);
+
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
 const navInner = document.querySelectorAll(".nav-inner a")
@@ -27,7 +27,6 @@ function openclose(){
             })
         }
     }
-    console.log(i)
 }
 button.addEventListener("click", ()=>{
     openclose();
@@ -55,7 +54,6 @@ if(width > 850){
             navInner[k].style.color = "black";
             k--;
             navInner[k].style.color = colors[k];
-    
         }
     })
 }
