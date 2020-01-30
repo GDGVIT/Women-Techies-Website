@@ -26,7 +26,7 @@ navlinks[5].addEventListener("click", ()=>{move(5)})
 
 /* gsap.to(window, {duration: 1, scrollTo:{y:ids[5], offsetY:70}}); */
 function move(pos){
-    gsap.to(window, {ease: "power0", scrollTo: ids[pos]});
+    gsap.to(window, {duration: 0.1, ease: "power0", scrollTo: ids[pos]});
     setTimeout(()=>{
         openclose();
     },1400);
