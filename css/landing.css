@@ -45,12 +45,15 @@ nav{
     grid-template-rows: repeat(9, auto);
     height: 60vh;
 }
-.nav-inner > div > a{
+.nav-inner > a{
     color: var(--main-text-color);
     text-decoration: none;
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: 900;
+}
+.nav-inner > a:nth-child(1){
+    color: orange;
 }
 
 /* Nav: End */
@@ -373,6 +376,10 @@ nav{
         height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
     }
+    
+    .nav-items > a:nth-child(1){
+       color: orange;
+    }
     /* Nav-Mobile: Start */
 
     .dsclogo-mobile{
@@ -410,7 +417,7 @@ nav{
     }
     .nav-items{
         position: fixed;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 1);
         height: 100vh;
         width: 100vw;
         padding-top: 70px ;
