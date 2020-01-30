@@ -423,7 +423,7 @@ nav{
         transition: clip-path ease-out 1s;
         
     }
-    .nav-items > div > a{
+    .nav-items > a{
         color: var(--main-text-color);
         text-decoration: none;
         cursor: pointer;
