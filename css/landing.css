@@ -396,7 +396,7 @@ nav{
     }
     .nav-items{
         position: fixed;
-        background: rgba(255, 255, 255, 0.88);
+        background: rgba(255, 255, 255, 1);
         height: 200vh;
         width: 100vw;
         
