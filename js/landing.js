@@ -19,10 +19,13 @@ navItems.addEventListener("click", ()=>{
         navItems.classList.toggle("open");
     }, 900);
 })
+const nice = document.querySelector(".nice");
+
 
 
 let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
 const vh = window.innerHeight;
+nice.style.height = vh + "px";
 
 
 
