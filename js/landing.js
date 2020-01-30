@@ -1,24 +1,36 @@
+gsap.registerPlugin(ScrollToPlugin);
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
 const lines = document.querySelectorAll(".ham div");
+const navlinks = document.querySelectorAll(".nav-items div");
 const body = document.querySelector("body");
-let i = 0;
-button.addEventListener("click", ()=>{
+const ids = ["#one","#two","#three","#four","#five","#six"];
+function openclose(){
     navItems.classList.toggle("open");
     lines[0].classList.toggle("merge");
     lines[1].classList.toggle("merge");
     body.classList.toggle("overflow");
+}
+button.addEventListener("click", ()=>{
+    openclose();
 });
-navItems.addEventListener("click", ()=>{
-    setTimeout(()=>{
-        navItems.classList.toggle("open");
-    }, 900);
-})
-const nice = document.querySelector(".nice");
-
 let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
 const vh = window.innerHeight;
-/* nice.style.height = vh + "px"; */
+let width = window.innerWidth;
+navlinks[0].addEventListener("click", ()=>{move(0)})
+navlinks[1].addEventListener("click", ()=>{move(1)})
+navlinks[2].addEventListener("click", ()=>{move(2)})
+navlinks[3].addEventListener("click", ()=>{move(3)})
+navlinks[4].addEventListener("click", ()=>{move(4)})
+navlinks[5].addEventListener("click", ()=>{move(5)})
+
+/* gsap.to(window, {duration: 1, scrollTo:{y:ids[5], offsetY:70}}); */
+function move(pos){
+    gsap.to(window, {ease: "power0", scrollTo: ids[pos]});
+    setTimeout(()=>{
+        openclose();
+    },1400);
+}
 
 
 

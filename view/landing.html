@@ -14,15 +14,15 @@
     <nav>
         <img src="../assets/dsc-logo.svg" alt="" class="dsclogo">
         <div class="nav-inner">
-            <div class="1"><a href="#">Home</a></div>
-            <div class="1"><a href="#">About DSC</a></div>
-            <div class="1"><a href="#">Hackathon</a></div>
-            <div class="1"><a href="#">Our Vision</a></div>
-            <div class="1"><a href="#">Timeline</a></div>
-            <div class="1"><a href="#">Speakers</a></div>
-            <div class="1"><a href="#">Sponsors</a></div>
-            <div class="1"><a href="#">Contact Us</a></div>
-            <div class="1"><a href="#">FAQs and Docs</a></div>
+            <div class="Home"><a href="#">Home</a></div>
+            <div class="About"><a href="#two">About DSC</a></div>
+            <div class="Hackathon"><a href="#">Hackathon</a></div>
+            <div class="Vision"><a href="#">Our Vision</a></div>
+            <div class="Timeline"><a href="#">Timeline</a></div>
+            <div class="Speakers"><a href="#">Speakers</a></div>
+            <div class="Sponsors"><a href="#">Sponsors</a></div>
+            <div class="Contact"><a href="#">Contact Us</a></div>
+            <div class="FAQs"><a href="#">FAQs and Docs</a></div>
         </div>
     </nav>
     <div class="mobile">
@@ -32,23 +32,20 @@
             <div class="line2"></div>
         </div>
             <div class="nav-items">
-                <div></div>
-                <div></div>
-                <div class="1"><a href="#">Home</a></div>
-                <div class="1"><a href="#two">About DSC</a></div>
-                <div class="1"><a href="#">Hackathon</a></div>
-                <div class="1"><a href="#">Our Vision</a></div>
-                <div class="1"><a href="#">Timealine</a></div>
-                <div class="1"><a href="#">Speakers</a></div>
-                <div class="1"><a href="#">Sponsors</a></div>
-                <div class="1"><a href="#">Contact Us</a></div>
-                <div class="1"><a href="#">FAQs and Docs</a></div>
-                <div></div>
+                <div class="Home"><a>Home</a></div>
+                <div class="About"><a>About DSC</a></div>
+                <div class="Hackathon"><a>Hackathon</a></div>
+                <div class="OurVision"><a>Our Vision</a></div>
+                <div class="Timeline"><a>Timeline</a></div>
+                <div class="Speakers"><a>Speakers</a></div>
+                <div class="Sponsors"><a>Sponsors</a></div>
+                <div class="Contact"><a>Contact Us</a></div>
+                <div class="FAQs"><a>FAQs and Docs</a></div>
             </div>
         
     </div>
     <div class="main">
-        <div class="one">
+        <div class="one" id="one">
             <div class="content-one">
                 <div class="topright">
                     <div class="top"></div>
@@ -87,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="three">
+        <div class="three" id="three">
             <img src="../assets/logo-orange-b.png" alt="" class="logo-topright">
             <div class="content-three">
                 <img src="../assets/women-look.png" alt="" class="women-look" width="100px">
@@ -107,7 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="four">
+        <div class="four" id="four">
             <img src="../assets/logo-orange-b.png" alt="" class="logo-topright">
             <div class="content-four">
                 <div class="grid-four">
@@ -120,13 +117,13 @@
                 </div>
             </div>
         </div>
-        <div class="five">
+        <div class="five" id="five">
             <img src="../assets/logo-orange-b.png" alt="" class="logo-topright">
             <div class="content-five">
                 <h1>Timeline</h1>
             </div>
         </div>
-        <div class="six">
+        <div class="six" id="six">
             <img src="../assets/logo-orange-b.png" alt="" class="logo-topright">
             <div class="content-six">
                 <h1>Speakers</h1>
@@ -152,6 +149,7 @@
     </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/ScrollToPlugin.min.js"></script>
     <script src="../js/landing.js"></script>
     <script>
         if (window.innerWidth < 992) {
