@@ -9,7 +9,7 @@ const ids = ["#one","#two","#three","#four","#five","#six"];
 const colors = ["orange","rgb(164,27,228)","rgb(252,37,126)","rgb(164,27,228)","rgb(252,37,126)","rgb(164,27,228)"]
 const t1 = gsap.timeline();
 let i = 0;
-let a = false;
+let a = -1;
 function openclose(){
     navItems.classList.toggle("open");
     lines[0].classList.toggle("merge");
@@ -35,12 +35,12 @@ button.addEventListener("click", ()=>{
 
 let vh = window.innerHeight;
 let width = window.innerWidth;
-navlinks[0].addEventListener("click", ()=>{a = true;});
-navlinks[1].addEventListener("click", ()=>{setTimeout(()=>{openclose()},1400)});
-navlinks[4].addEventListener("click", ()=>{setTimeout(()=>{openclose()},1400)});
-navlinks[3].addEventListener("click", ()=>{setTimeout(()=>{openclose()},1400)});
-navlinks[2].addEventListener("click", ()=>{setTimeout(()=>{openclose()},1400)});
-navlinks[5].addEventListener("click", ()=>{setTimeout(()=>{openclose()},1400)});
+navlinks[0].addEventListener("click", ()=>{a = 0;});
+navlinks[1].addEventListener("click", ()=>{a = 1;});
+navlinks[4].addEventListener("click", ()=>{a = 2;});
+navlinks[3].addEventListener("click", ()=>{a = 3;});
+navlinks[2].addEventListener("click", ()=>{a = 4;});
+navlinks[5].addEventListener("click", ()=>{a = 5;});
 k = 0;
 if(width > 850){
     window.addEventListener("scroll", (e)=>{
@@ -74,9 +74,9 @@ else{
             navlinks[k].style.color = colors[k];
     
         }
-        if(a){
-              if(scrollpos < vh) {openclose();
-a= false;
+        if(a != -1){
+              if(scrollpos < (a + 0.7)*vh && scrollpos > a*vh) {openclose();
+a= -1;
 }
 }
 
