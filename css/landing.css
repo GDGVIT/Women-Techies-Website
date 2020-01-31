@@ -627,7 +627,9 @@ nav{
     /* Five-Mobile: End */
 
     /* Six-Mobile: Start */
-
+    #six{
+        height: fit-content;
+    }
     .content-six{
         position: relative;
         top: inherit;
