@@ -545,7 +545,9 @@ nav{
     /*Two-Mobile: End */
 
     /*Three-Mobile: Start */
-
+    #three{
+        height: fit-content;
+    }
     .women-look{
         display: none;
     }
@@ -617,7 +619,8 @@ nav{
         position: relative;
         top: inherit;
         transform: none;
-        margin: 60px 5vw 0 5vw;
+        margin: 0px 5vw 0 5vw;
+        padding-top: 60px;
     }
 
 
