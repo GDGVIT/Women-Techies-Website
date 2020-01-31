@@ -504,6 +504,7 @@ nav{
     /* Two-Mobile: Start */
     .two{
         position: relative;
+        height: fit-content;
     }
     .content-two{
         padding-top: 60px;
