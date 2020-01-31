@@ -37,9 +37,9 @@ let vh = window.innerHeight;
 let width = window.innerWidth;
 navlinks[0].addEventListener("click", ()=>{a = 0;});
 navlinks[1].addEventListener("click", ()=>{a = 1;});
-navlinks[4].addEventListener("click", ()=>{a = 2;});
+navlinks[4].addEventListener("click", ()=>{a = 4;});
 navlinks[3].addEventListener("click", ()=>{a = 3;});
-navlinks[2].addEventListener("click", ()=>{a = 4;});
+navlinks[2].addEventListener("click", ()=>{a = 2;});
 navlinks[5].addEventListener("click", ()=>{a = 5;});
 k = 0;
 if(width > 850){
