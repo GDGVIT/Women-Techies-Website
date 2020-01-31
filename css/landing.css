@@ -8,6 +8,8 @@ html {
     --main-text-color: black;
     --about-color: rgb(164,27,228);
     --hackathon-color: rgb(252,37,126);
+    --text-font-size: 5vw;
+    --heading-font-size: 7vw;
 }
 
 *{
@@ -502,7 +504,7 @@ nav{
     /* One-Mobile: End */
 
     /* Two-Mobile: Start */
-    .two{
+    #two{
         position: relative;
         height: fit-content;
     }
@@ -515,26 +517,29 @@ nav{
     }
     .header{
         display: block;
-        font-size: 1.2rem;
+        font-size: var(--heading-font-size);
         font-weight: bolder;
     }
     .content-two > p{
+        font-size: var(--text-font-size);
         width: 100%;
         margin-bottom: 2vh;
     }
     .text-img{
+        display: block;
         grid-template-columns: none;
-        grid-template-rows: 60% 40%;
     }
     .text-img > span{
         position: relative;
         top: auto;
+        font-size: var(--heading-font-size);
     }
     .text-img > p{
         position: relative;
         top: auto;
         width: 100%;
         color: var(--main-text-color);
+        font-size: var(--text-font-size);
     }
 
     /*Two-Mobile: End */
@@ -563,22 +568,28 @@ nav{
         transform: none;
         height: fit-content;
     }
+    .heading-three{
+        font-size: var(--heading-font-size);
+    }
     .text-3 > p{
-        font-size: 5.2vw;
+        font-size: var(--text-font-size);
     }
     .text-3 > button{
+        position: relative;
         width: 50vw;
         height: 6vh;
     }
     /*Three-Mobile: End */
 
     /* Four-Mobile: Start */
-
+    .four{
+        height: fit-content;
+    }
     .content-four{
         position: relative;
-        padding-top: 10vh;
-        top: 50%;
-        transform: translateY(-50%);
+        padding-top: 60px;
+        top: inherit;
+        transform: none;
         margin: 0 5vw 0 5vw;
     }
     .grid-four{
@@ -586,11 +597,11 @@ nav{
         display: block;
     }
     .grid-four > p > span{
-        font-size: 1.5rem;
+        font-size: var(--heading-font-size);
 
     }
     .grid-four > p{
-        font-size: 4vw;
+        font-size: var(--text-font-size);
         margin-bottom: 2vh;
     }
     .grid-four > div > img{
@@ -600,13 +611,25 @@ nav{
     }
     /* Four-Mobile: End */
 
+    /* Five-Mobile: End */
+
+    .content-five{
+        position: relative;
+        top: inherit;
+        transform: none;
+        margin: 60px 5vw 0 5vw;
+    }
+
+
+    /* Five-Mobile: End */
 
     /* Six-Mobile: Start */
 
     .content-six{
         position: relative;
-        top: 55%;
-        transform: translateY(-50%);
+        top: inherit;
+        transform: none;
+        padding-top: 60px;
         height: fit-content;
         margin: 0 5vw 0 5vw;
     }
