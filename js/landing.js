@@ -75,7 +75,7 @@ else{
     
         }
         if(a){
-              if(scrollpos == 0.4*vh) openclose();
+              if(scrollpos < vh) openclose();
 }
 
     })
