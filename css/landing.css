@@ -545,12 +545,12 @@ nav{
     }
     .content-three{
         position: relative;
-        /* padding-top: 60px; */
+        padding-top: 60px;
         margin: 0px 5vw 0 5vw;
         transform: none;
         height: fit-content;
-        top: 50%;
-        transform: translateY(-50%);
+        top: inherit;
+
     }
     .logo-topright{
         display: none;
