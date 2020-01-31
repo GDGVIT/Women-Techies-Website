@@ -9,6 +9,7 @@ const ids = ["#one","#two","#three","#four","#five","#six"];
 const colors = ["orange","rgb(164,27,228)","rgb(252,37,126)","rgb(164,27,228)","rgb(252,37,126)","rgb(164,27,228)"]
 const t1 = gsap.timeline();
 let i = 0;
+let a = false;
 function openclose(){
     navItems.classList.toggle("open");
     lines[0].classList.toggle("merge");
@@ -34,7 +35,7 @@ button.addEventListener("click", ()=>{
 
 let vh = window.innerHeight;
 let width = window.innerWidth;
-navlinks[0].addEventListener("click", ()=>{setTimeout(()=>{openclose()},1400)});
+navlinks[0].addEventListener("click", ()=>{a = true;});
 navlinks[1].addEventListener("click", ()=>{setTimeout(()=>{openclose()},1400)});
 navlinks[4].addEventListener("click", ()=>{setTimeout(()=>{openclose()},1400)});
 navlinks[3].addEventListener("click", ()=>{setTimeout(()=>{openclose()},1400)});
@@ -73,6 +74,10 @@ else{
             navlinks[k].style.color = colors[k];
     
         }
+        if(a){
+              if(scrollpos == 0.4*vh) openclose();
+}
+
     })
 }
 
