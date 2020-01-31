@@ -75,7 +75,7 @@ else{
     
         }
         if(a != -1){
-              if(scrollpos < (a + 0.7)*vh && scrollpos > a*vh) {openclose();
+              if(scrollpos < (a + 0.8)*vh && scrollpos > a*vh) {openclose();
 a= -1;
 }
 }
