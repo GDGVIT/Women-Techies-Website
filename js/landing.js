@@ -41,7 +41,7 @@ function openclose() {
     navItems.classList.toggle("open");
     lines[0].classList.toggle("merge");
     lines[1].classList.toggle("merge");
-    /* body.classList.toggle("overflow"); */
+    body.classList.toggle("overflow");
     if (i == 9) {
         i = 0;
     }
