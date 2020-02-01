@@ -10,8 +10,8 @@ html {
     --hackathon-color: rgb(252,37,126);
     --text-font-size: 5vw;
     --heading-font-size: 7vw;
-    --desk-text-size: 1.3rem;
-    --desk-heading-size: 2rem;
+    --desk-text-size: 2.25vh;
+    --desk-heading-size: 3.5vh;
 }
 
 *{
@@ -263,7 +263,7 @@ nav{
     left: 0;
 }
 .grid-four > p{
-    font-size: 1.3rem;
+    font-size: var(--desk-text-size);
     font-weight: 500;
     width: 90%;
     color: var(--main-text-color);
@@ -272,8 +272,8 @@ nav{
     display: block;
     color: var(--about-color);
     font-weight: bolder;
-    font-size: 2rem;
     margin-bottom: 10px;
+    font-size: var(--desk-heading-size);
 }
 /* Four: End */
 
