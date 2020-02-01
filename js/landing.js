@@ -1,29 +1,47 @@
+if (location.hash) {
+    setTimeout(function () {
 
+        window.scrollTo(0, 0);
+    }, 1);
+}
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
 const navInner = document.querySelectorAll(".nav-inner a")
 const lines = document.querySelectorAll(".ham div");
 const navlinks = document.querySelectorAll(".nav-items a");
 const body = document.querySelector("body");
-const ids = ["#one", "#two", "#three", "#four", "#five", "#six"];
 const colors = ["orange", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)"]
 const t1 = gsap.timeline();
-
-let one = document.querySelector("#one").clientHeight;
-let two = document.querySelector("#two").clientHeight;
-let three = document.querySelector("#three").clientHeight;
-let four = document.querySelector("#four").clientHeight;
-let five = document.querySelector("#five").clientHeight;
-let six = document.querySelector("#six").clientHeight;
-let heights = [0, one, one + two, one + two + three, one + two + three + four, one + two + three + four + five, one + two + three + four + five + six];
-console.log(heights)
+let heights = [0, 0, 0, 0, 0, 0, 0];
+heights[0] = 0;
+heights[1] = document.querySelector("#one").clientHeight;
+heights[2] = document.querySelector("#two").clientHeight;
+heights[3] = document.querySelector("#three").clientHeight;
+heights[4] = document.querySelector("#four").clientHeight;
+heights[5] = document.querySelector("#five").clientHeight;
+heights[6] = document.querySelector("#six").clientHeight;
+let height_color = [0, 0, 0, 0, 0, 0, 0];
+let height_openclose = [0, 0, 0, 0, 0, 0, 0];
+for (j = 0; j <= 6; j++) {
+    for (o = 0; o <= j; o++) {
+        height_color[j] += heights[o];
+        if (o == j) {
+            height_openclose[j] += 0.8 * heights[o]
+        }
+        else {
+            height_openclose[j] += heights[o]
+        }
+    }
+}
+console.log(height_openclose)
+console.log(height_color)
 let i = 0;
 let a = -1;
 function openclose() {
     navItems.classList.toggle("open");
     lines[0].classList.toggle("merge");
     lines[1].classList.toggle("merge");
-    body.classList.toggle("overflow");
+    /* body.classList.toggle("overflow"); */
     if (i == 9) {
         i = 0;
     }
@@ -68,29 +86,27 @@ if (width > 850) {
     })
 }
 else {
-    k = 1;
+    k = 0;
     let vh = window.innerHeight;
 
     window.addEventListener("scroll", (e) => {
         let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
         scrollpos += 0.4 * vh;
-        if (scrollpos > heights[k + 1]) {
+        if (scrollpos > height_color[k + 1]) {
             navlinks[k].style.color = "black";
             k++;
             navlinks[k].style.color = colors[k];
         }
-        if (scrollpos < heights[k]) {
+        if (scrollpos < height_color[k]) {
             navlinks[k].style.color = "black";
             k--;
             navlinks[k].style.color = colors[k];
 
         }
-        if (scrollpos > heights[k] && scrollpos < heights[k + 1]) {
-            if (a != -1) {
-                if (scrollpos < (a + 0.8) * vh && scrollpos > a * vh) {
-                    openclose();
-                    a = -1;
-                }
+        if (a != -1) {
+            if (scrollpos < height_openclose[a + 1] && scrollpos > height_color[a]) {
+                openclose();
+                a = -1;
             }
         }
     })
