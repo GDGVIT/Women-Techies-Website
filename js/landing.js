@@ -10,9 +10,9 @@ const navInner = document.querySelectorAll(".nav-inner a")
 const lines = document.querySelectorAll(".ham div");
 const navlinks = document.querySelectorAll(".nav-items a");
 const body = document.querySelector("body");
-const colors = ["orange", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)"]
+const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)","rgb(255, 167, 87)"]
 const t1 = gsap.timeline();
-let heights = [0, 0, 0, 0, 0, 0, 0];
+let heights = [0, 0, 0, 0, 0, 0, 0, 0];
 heights[0] = 0;
 heights[1] = document.querySelector("#one").clientHeight;
 heights[2] = document.querySelector("#two").clientHeight;
@@ -20,9 +20,9 @@ heights[3] = document.querySelector("#three").clientHeight;
 heights[4] = document.querySelector("#four").clientHeight;
 heights[5] = document.querySelector("#five").clientHeight;
 heights[6] = document.querySelector("#six").clientHeight;
-let height_color = [0, 0, 0, 0, 0, 0, 0];
-let height_openclose = [0, 0, 0, 0, 0, 0, 0];
-for (j = 0; j <= 6; j++) {
+let height_color = [0, 0, 0, 0, 0, 0, 0, 0];
+let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0];
+for (j = 0; j <= 7; j++) {
     for (o = 0; o <= j; o++) {
         height_color[j] += heights[o];
         if (o == j) {
@@ -66,8 +66,12 @@ navlinks[4].addEventListener("click", () => { a = 4; });
 navlinks[3].addEventListener("click", () => { a = 3; });
 navlinks[2].addEventListener("click", () => { a = 2; });
 navlinks[5].addEventListener("click", () => { a = 5; });
+navlinks[6].addEventListener("click", () => { a = 6; });
 k = 0;
 if (width > 850) {
+    window.addEventListener("resize", ()=>{
+        vh = window.innerHeight;
+    })
     window.addEventListener("scroll", (e) => {
         let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
         scrollpos += 0.5 * vh;
@@ -85,7 +89,7 @@ if (width > 850) {
 }
 else {
     k = 0;
-    let vh = window.innerHeight;
+    vh = window.innerHeight;
     window.addEventListener("scroll", (e) => {
         let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
         scrollpos += 0.4 * vh;

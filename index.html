@@ -20,7 +20,7 @@
             <a href="#four">Our Vision</a>
             <a href="#five">Timeline</a>
             <a href="#six">Speakers</a>
-            <a>Sponsors</a>
+            <a href="#seven">Sponsors</a>
             <a>Contact Us</a>
             <a>FAQs and Docs</a>
         </div>
@@ -38,7 +38,7 @@
             <a href="#four">Our Vision</a>
             <a href="#five">Timeline</a>
             <a href="#six">Speakers</a>
-            <a>Sponsors</a>
+            <a href="#seven">Sponsors</a>
             <a>Contact Us</a>
             <a>FAQs and Docs</a>
         </div>
@@ -154,6 +154,39 @@
                 </div>
             </div>
         </div>
+        <div class="seven" id="seven">
+            <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
+            <div class="content-seven">
+                <div class="grid-whole">
+                    <h1>Sponsors</h1>
+                    <div></div>
+                    <div class="grid-seven">
+                        <div class="ele-seven">
+                            <img src="https://pbs.twimg.com/profile_images/971907981829988352/t77v6802_400x400.jpg" alt="">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="https://pbs.twimg.com/profile_images/971907981829988352/t77v6802_400x400.jpg" alt="">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="https://pbs.twimg.com/profile_images/971907981829988352/t77v6802_400x400.jpg" alt="">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="https://pbs.twimg.com/profile_images/971907981829988352/t77v6802_400x400.jpg" alt="">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="https://pbs.twimg.com/profile_images/971907981829988352/t77v6802_400x400.jpg" alt="">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="https://pbs.twimg.com/profile_images/971907981829988352/t77v6802_400x400.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="buttons-seven">
+                        <button>Sponsor Us</button>
+                        <button>Download Brochure</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
@@ -163,6 +196,12 @@
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
+        window.addEventListener("resize", ()=>{
+            if(window.innerWidth > 850){
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            }
+        })
     </script>
 </body>
 

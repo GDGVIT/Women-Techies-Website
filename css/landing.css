@@ -100,7 +100,6 @@ nav{
     width: 100%;
     bottom: -5vh;
 }
-
 .top{
     position: absolute;
     clip-path: polygon(0% 0, 100% 0, 100% 100%);
@@ -332,6 +331,66 @@ nav{
     text-align: center;
 }
 /* Six: End */
+
+
+/* Seven: Start */
+
+.content-seven{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 4vw 0 4vw;
+    color: rgb(255, 167, 87);
+}
+.grid-whole > h1{
+    text-align: center;
+    margin-bottom: 4vh;
+}
+.grid-whole{
+    position: relative;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.grid-seven{
+    position: relative;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: repeat(3, 33%);
+    align-items: center;
+    justify-items: center;
+    height: fit-content;
+}
+.ele-seven > img{
+    border-radius: 300px;
+    height: 14vh;
+    margin: 4vh 0 4vh 0;
+}
+.buttons-seven{
+    position: relative;
+}
+.buttons-seven > button{
+    width: 80%;
+    height: 15%;
+    max-height: 50px;
+    left: 50%;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(255, 167, 87);
+    color: white;
+    font-weight: bolder;
+}
+.buttons-seven > button:nth-child(1){
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%,-50%);
+}
+.buttons-seven > button:nth-child(2){
+    position: absolute;
+    top: 70%;
+    transform: translate(-50%,-50%);
+}
+/* Seven: End */
 
 
 
