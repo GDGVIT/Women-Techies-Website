@@ -20,6 +20,7 @@ heights[3] = document.querySelector("#three").clientHeight;
 heights[4] = document.querySelector("#four").clientHeight;
 heights[5] = document.querySelector("#five").clientHeight;
 heights[6] = document.querySelector("#six").clientHeight;
+heights[7] = document.querySelector("#seven").clientHeight;
 let height_color = [0, 0, 0, 0, 0, 0, 0, 0];
 let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0];
 for (j = 0; j <= 7; j++) {
