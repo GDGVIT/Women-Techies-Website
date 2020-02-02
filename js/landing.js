@@ -33,8 +33,6 @@ for (j = 0; j <= 6; j++) {
         }
     }
 }
-console.log(height_openclose)
-console.log(height_color)
 let i = 0;
 let a = -1;
 function openclose() {
@@ -88,7 +86,6 @@ if (width > 850) {
 else {
     k = 0;
     let vh = window.innerHeight;
-
     window.addEventListener("scroll", (e) => {
         let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
         scrollpos += 0.4 * vh;
