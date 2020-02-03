@@ -132,7 +132,6 @@ const handleUpdates = (e) => {
   const settings = {
     method: 'post',
     crossDomain: true,
-		credentials: 'include',
 					headers: {
                   'Content-Type': 'application/json',
 									'g-recaptcha-response': token
