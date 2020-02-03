@@ -239,7 +239,8 @@ const handleUpdates = (e) => {
     });
 
 			}).catch(err => {
-
+							console.log("Error loading captcha")
+							console.error(err)
 			})
 		})
 }
