@@ -238,9 +238,6 @@ const handleUpdates = (e) => {
       console.error(err);
     });
 
-			}).catch(err => {
-							console.log("Error loading captcha")
-							console.error(err)
 			})
 		})
 }
