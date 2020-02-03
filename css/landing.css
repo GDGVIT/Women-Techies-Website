@@ -395,7 +395,7 @@ nav{
 
 /* Eight: End */
 .eight{
-    color: rgb(255, 167, 87);
+    color: var(--hackathon-color);
 }
 .content-eight{
     position: relative;

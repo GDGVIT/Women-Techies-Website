@@ -10,9 +10,9 @@ const navInner = document.querySelectorAll(".nav-inner a")
 const lines = document.querySelectorAll(".ham div");
 const navlinks = document.querySelectorAll(".nav-items a");
 const body = document.querySelector("body");
-const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)","rgb(255, 167, 87)"]
+const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)","rgb(255, 167, 87)","rgb(252,37,126)"]
 const t1 = gsap.timeline();
-let heights = [0, 0, 0, 0, 0, 0, 0, 0];
+let heights = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 heights[0] = 0;
 heights[1] = document.querySelector("#one").clientHeight;
 heights[2] = document.querySelector("#two").clientHeight;
@@ -21,9 +21,10 @@ heights[4] = document.querySelector("#four").clientHeight;
 heights[5] = document.querySelector("#five").clientHeight;
 heights[6] = document.querySelector("#six").clientHeight;
 heights[7] = document.querySelector("#seven").clientHeight;
-let height_color = [0, 0, 0, 0, 0, 0, 0, 0];
-let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0];
-for (j = 0; j <= 7; j++) {
+heights[8] = document.querySelector("#eight").clientHeight;
+let height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+for (j = 0; j <= 8; j++) {
     for (o = 0; o <= j; o++) {
         height_color[j] += heights[o];
         if (o == j) {
@@ -68,6 +69,7 @@ navlinks[3].addEventListener("click", () => { a = 3; });
 navlinks[2].addEventListener("click", () => { a = 2; });
 navlinks[5].addEventListener("click", () => { a = 5; });
 navlinks[6].addEventListener("click", () => { a = 6; });
+navlinks[7].addEventListener("click", () => { a = 7; });
 k = 0;
 if (width > 850) {
     window.addEventListener("resize", ()=>{
