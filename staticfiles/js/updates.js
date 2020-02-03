@@ -123,19 +123,27 @@ const handleUpdates = (e) => {
   else {
     updatesSubmitBtn.innerHTML = '<img src="./assets/loading.gif" alt="" height = "30" width = "25">'
   }
+
+	  grecaptcha.ready(() => {
+      grecaptcha.execute('6Lf5ddUUAAAAAKIJ5kmvXFeoqZ-VFtKgSBzaUXTk', {
+        action: '/'
+			}).then((token) => {
+
   const settings = {
     method: 'post',
-    headers: {
-      'Content-Type': 'application/json',
-    },
     crossDomain: true,
+		credentials: 'include',
+					headers: {
+                  'Content-Type': 'application/json',
+									'g-recaptcha-response': token
+					},
     body: JSON.stringify(data),
   };
-
 
   fetch(`${config.baseURL}/participants/register`, settings)
     .then((response) => response.json())
     .then((data) => {
+      
       let mes = "";
       const message = document.querySelector(".message");
 
@@ -221,7 +229,6 @@ const handleUpdates = (e) => {
       }
       console.log(data);
       document.querySelector("form").reset();
-      
     }).catch((err) => {
       alert('Error on submission');
       updatesSubmitBtn.innerHTML = "Submit";
@@ -230,7 +237,12 @@ const handleUpdates = (e) => {
       message.style.color = "white";
       console.error(err);
     });
-};
+
+			}).catch(err => {
+
+			})
+		})
+}
 window.onload = () => {
   console.log(`[Package] ${packageName}`);
   updatesSubmitBtn.addEventListener('click', handleUpdates);
