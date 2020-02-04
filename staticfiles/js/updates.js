@@ -125,22 +125,25 @@ const handleUpdates = (e) => {
   }
 
 	  grecaptcha.ready(() => {
-      grecaptcha.execute('6Lf5ddUUAAAAAKIJ5kmvXFeoqZ-VFtKgSBzaUXTk', {
+      grecaptcha.execute(`${config.siteKey}`, {
         action: '/'
 			}).then((token) => {
 
   const settings = {
     method: 'post',
-    crossDomain: true,
+					mode: 'cors',
 					headers: {
                   'Content-Type': 'application/json',
-									'g-recaptcha-response': token
+									'g-recaptcha-response': token,
 					},
     body: JSON.stringify(data),
   };
 
   fetch(`${config.baseURL}/participants/register`, settings)
-    .then((response) => response.json())
+											.then((response) => {
+															console.log(response)
+															return response.json()
+											} )
     .then((data) => {
       
       let mes = "";
