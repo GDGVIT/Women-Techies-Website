@@ -45,6 +45,7 @@
 
 
 <script>
+    const packageName = 'updates';
     const updatesInputName = document.getElementById('updatesInputName');
 const updatesInputEmail = document.getElementById('updatesInputEmail');
 const updatesInputPhoneNumber = document.getElementById('updatesInputPhoneNumber');
@@ -285,7 +286,7 @@ const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
         })
     }
     window.onload = () => {
-        console.log(`[Package] ${packageName}`);
+        /* console.log(`[Package] ${packageName}`); */
         updatesSubmitBtn.addEventListener('click', handleUpdates);
     };
 
