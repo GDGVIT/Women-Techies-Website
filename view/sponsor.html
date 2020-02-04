@@ -46,14 +46,13 @@
 
 
 <script>
-    const packageName = 'updates';
     const updatesInputName = document.getElementById('updatesInputName');
-const updatesInputEmail = document.getElementById('updatesInputEmail');
-const updatesInputPhoneNumber = document.getElementById('updatesInputPhoneNumber');
-const updatesInputRegistrationNumber = document.getElementById('updatesInputRegistrationNumber');
-const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
+    const updatesInputEmail = document.getElementById('updatesInputEmail');
+    const updatesInputPhoneNumber = document.getElementById('updatesInputPhoneNumber');
+    const updatesInputRegistrationNumber = document.getElementById('updatesInputRegistrationNumber');
+    const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
 
-    const constraints = {
+    /* const constraints = {
         emailAddress: {
             presence: true,
             email: true,
@@ -68,9 +67,9 @@ const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
             presence: true,
             format: /^1[2-9][a-zA-Z]{3}[0-9]{4}$/,
         },
-    };
+    }; */
 
-    const isValid = (data) => {
+    /* const isValid = (data) => {
         const errs = validate(data, constraints);
         if (errs != undefined) {
             console.log('[Validation errors] ', errs);
@@ -81,7 +80,7 @@ const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
             return false;
         }
         return true;
-    };
+    }; */
 
     const handleUpdates = (e) => {
         console.log('[Event] updatesSubmitBtn clicked');
@@ -92,9 +91,9 @@ const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
             emailAddress: updatesInputEmail.value,
             phoneNumber: updatesInputPhoneNumber.value,
             registrationNumber: updatesInputRegistrationNumber.value,
-            eventName: 'WomenTechies20',
+            eventName: 'WomenTechies20'
         };
-        if (!isValid(data)) {
+        /* if (!isValid(data)) { */
             /* let mes = "Invalid Fields";
             const message = document.querySelector(".message");
             var t1 = gsap.timeline();
@@ -162,11 +161,12 @@ const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
                     document.querySelector(".container").style.opacity = "1";
                 })
             }*/
-            return;
+            /* return;
         }
         else {
-            /* pdatesSubmitBtn.innerHTML = '<img src="./assets/loading.gif" alt="" height = "30" width = "25">' */
-        }
+            /* pdatesSubmitBtn.innerHTML = '<img src="./assets/loading.gif" alt="" height = "30" width = "25">'
+            return;
+        } */
 
         grecaptcha.ready(() => {
             grecaptcha.execute('6Lf2bdUUAAAAANfKfte6Y9voNat5c6MPYIsVNQ4k', {
@@ -187,13 +187,13 @@ const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
                     .then((response) => response.json())
                     .then((data) => {
 
-                        let mes = "";
-                        const message = document.querySelector(".message");
+                        /* let mes = "";
+                        const message = document.querySelector(".message"); */
 
-                        if (data.message == "Error: Document already exists") {
-                            /* mes = "Already Registered!"; */
-                        }
-                        else {
+                        /* if (data.message == "Error: Document already exists") {
+                            /* mes = "Already Registered!"; 
+                        } */
+                        /* else {
                             console.log('Successfully submitted form');
                             /* mes = "Successfully Submitted form!";
                             if (window.innerWidth > 992) {
@@ -201,8 +201,8 @@ const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
                             }
                             else {
                                 message.style.fontSize = "2.2vw"
-                            } */
-                        }
+                            } 
+                        } */
                         /* var t1 = gsap.timeline();
                         t1.fromTo(".container", {
                             opacity: 1
