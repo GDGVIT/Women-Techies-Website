@@ -41,6 +41,7 @@
         </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6Lf2bdUUAAAAANfKfte6Y9voNat5c6MPYIsVNQ4k"></script>
 
 
@@ -182,7 +183,7 @@ const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
                     },
                     body: JSON.stringify(data),
                 };
-                fetch(`${config.baseURL}/participants/register`, settings)
+                fetch("https://womentechies.herokuapp.com/api/sponsorus", settings)
                     .then((response) => response.json())
                     .then((data) => {
 
