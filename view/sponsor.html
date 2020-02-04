@@ -30,11 +30,11 @@
             style="height: 8vw; max-height: 100px; margin: 20px 0 0 20px;">
         <div class="main">
             <h1 style="text-align: center; margin-bottom: 30px;">Sponsor Us!</h1>
-            <form action="https://womentechies.herokuapp.com/api/sponsorus" method="post">
+            <form action="https://womentechies.herokuapp.com/api/sponsorus" method="post" id = "sponsor_form">
                 <p style="text-align: left;">Fill in your details</p>
-                <input type="text" placeholder="Name" id="updatesInputName" required>
-                <input type="text" placeholder="Company Name" id="updatesInputRegistrationNumber" required>
-                <input type="email" placeholder="Email" id="updatesInputEmail" required>
+                <input type="text" placeholder="Name" id="a" required>
+                <input type="text" placeholder="Company Name" id="b" required>
+                <input type="email" placeholder="Email" id="c" required>
                 <input type="tel" placeholder="Phone No." id="updatesInputPhoneNumber" required>
                 <div class="g-recaptcha" data-sitekey="6Lf2bdUUAAAAANfKfte6Y9voNat5c6MPYIsVNQ4k" style="position: relative; left: 50%; transform: translateX(-50%); width: fit-content;"></div><br>
                 <button type="submit" class="submit" id="updatesSubmitBtn">Submit</button>
@@ -46,10 +46,10 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('#comment_form').submit(function () {
+        $('#sponsor_form').submit(function () {
             $(this).ajaxSubmit({
                 error: function (xhr) {
-                    status('Error: ' + xhr.status);
+                    console.log("okay")
                 },
                 success: function (response) {
                     console.log(response);
