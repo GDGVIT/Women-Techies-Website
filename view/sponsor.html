@@ -43,6 +43,7 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6Lf2bdUUAAAAANfKfte6Y9voNat5c6MPYIsVNQ4k"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
 
 
 <script>
@@ -51,25 +52,26 @@
     const updatesInputPhoneNumber = document.getElementById('updatesInputPhoneNumber');
     const updatesInputRegistrationNumber = document.getElementById('updatesInputRegistrationNumber');
     const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
-
-    /* const constraints = {
-        emailAddress: {
+    const heighta = window.innerHeight;
+    const widtha = window.innerWidth;
+    const constraints = {
+        email: {
             presence: true,
             email: true,
         },
         name: {
             presence: true,
         },
-        phoneNumber: {
+        phone: {
+            presence: true,
+            format: /^[789]\d{9}$/,
+        },
+        company: {
             presence: true,
         },
-        registrationNumber: {
-            presence: true,
-            format: /^1[2-9][a-zA-Z]{3}[0-9]{4}$/,
-        },
-    }; */
+    };
 
-    /* const isValid = (data) => {
+    const isValid = (data) => {
         const errs = validate(data, constraints);
         if (errs != undefined) {
             console.log('[Validation errors] ', errs);
@@ -80,7 +82,7 @@
             return false;
         }
         return true;
-    }; */
+    };
 
     const handleUpdates = (e) => {
         console.log('[Event] updatesSubmitBtn clicked');
@@ -92,8 +94,8 @@
             phone: updatesInputPhoneNumber.value,
             company: updatesInputRegistrationNumber.value,
         };
-        /* if (!isValid(data)) { */
-            /* let mes = "Invalid Fields";
+        if (!isValid(data)) {
+            let mes = "Invalid Fields";
             const message = document.querySelector(".message");
             var t1 = gsap.timeline();
             t1.fromTo(".container", {
@@ -159,13 +161,13 @@
                     document.querySelector(".popup").style.display = "none";
                     document.querySelector(".container").style.opacity = "1";
                 })
-            }*/
-            /* return;
+            }
+            return;
         }
         else {
-            /* pdatesSubmitBtn.innerHTML = '<img src="./assets/loading.gif" alt="" height = "30" width = "25">'
+            updatesSubmitBtn.innerHTML = '<img src="../assets/loading.gif" alt="" height = "30" width = "25">'
             return;
-        } */
+        }
 
         grecaptcha.ready(() => {
             grecaptcha.execute('6Lf2bdUUAAAAANfKfte6Y9voNat5c6MPYIsVNQ4k', {
@@ -185,23 +187,23 @@
                     .then((response) => response.json())
                     .then((data) => {
 
-                        /* let mes = "";
-                        const message = document.querySelector(".message"); */
+                        let mes = "";
+                        const message = document.querySelector(".message");
 
-                        /* if (data.message == "Error: Document already exists") {
-                            /* mes = "Already Registered!"; 
-                        } */
-                        /* else {
+                        if (data.message == "Error: Document already exists") {
+                            mes = "Already Registered!"; 
+                        }
+                        else {
                             console.log('Successfully submitted form');
-                            /* mes = "Successfully Submitted form!";
+                            mes = "Successfully Submitted form!";
                             if (window.innerWidth > 992) {
                                 message.style.fontSize = "0.9vw"
                             }
                             else {
                                 message.style.fontSize = "2.2vw"
                             } 
-                        } */
-                        /* var t1 = gsap.timeline();
+                        }
+                        var t1 = gsap.timeline();
                         t1.fromTo(".container", {
                             opacity: 1
                         }, {
@@ -267,15 +269,15 @@
                                 document.querySelector(".popup").style.display = "none";
                                 document.querySelector(".container").style.opacity = "1";
                             })
-                        }*/
+                        }
                         console.log(data);
                         document.querySelector("form").reset();
                     }).catch((err) => {
                         alert('Error on submission');
-                        /* updatesSubmitBtn.innerHTML = "Submit";
+                        updatesSubmitBtn.innerHTML = "Submit";
                         const message = document.querySelector(".message");
                         message.innerHTML = "Error on submission";
-                        message.style.color = "white"; */
+                        message.style.color = "white";
                         console.error(err);
                     });
 
@@ -283,7 +285,6 @@
         })
     }
     window.onload = () => {
-        /* console.log(`[Package] ${packageName}`); */
         updatesSubmitBtn.addEventListener('click', handleUpdates);
     };
 
