@@ -399,7 +399,7 @@ nav{
 }
 .content-eight{
     position: relative;
-    top: 50%;
+    top: 35%;
     transform: translateY(-50%);
     margin: 0 10vw 0 10vw;
 }
@@ -428,8 +428,8 @@ nav{
     margin-bottom: 10vh;
 }
 .footer{
-    position: relative;
-    margin-top: 25vh;
+    position: absolute;
+    bottom: 10vh;
     left: 50%;
     transform: translateX(-50%);
     display: grid;
@@ -874,9 +874,12 @@ nav{
         width: fit-content;
     }
     .footer{
+        position: relative;
+        bottom: inherit;
         margin-top: 10vh;
         grid-template-columns: none;
         grid-template-rows: repeat(4, auto);
+        margin-bottom: 10vh;
     }
     /* Eight-Mobile: End */ 
 
