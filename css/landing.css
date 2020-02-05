@@ -286,18 +286,53 @@ nav{
 }
 .content-five{
     position: relative;
-    top: 25%;
+    top: 50%;
     transform: translateY(-50%);
     height: fit-content;
+    overflow: hidden;
 }
-.content-five > h1{
+.five > h1{
     text-align: center;
 }
 .inner{
     position: relative;
-    
+    width: fit-content;
+    margin: 0 5vw 0 0vw ;
+    transition: all 1s ease-out;
 }
-
+.inner > img{
+    height: 80vh;
+}
+.left{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    outline: none;
+    height: 4vh;
+    background-color: #F7295E;
+    width: 4vh;
+    border-radius: 4vh;
+    font-weight: bolder;
+    color: white;
+}
+.right{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    outline: none;
+    height: 4vh;
+    background-color: #F7295E;
+    width: 4vh;
+    border-radius: 4vh;
+    font-weight: bolder;
+    color: white;
+}
 /* Five: End */
 
 /* Six: Start */
