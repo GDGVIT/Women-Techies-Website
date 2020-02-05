@@ -144,30 +144,7 @@ for (q = 0; q < acc.length; q++) {
         }
     });
 }
-const left = document.querySelector(".left");
-const right = document.querySelector(".right");
-const inner = document.querySelector(".inner");
-i = 0;
-let hea = document.querySelector(".timeline").clientWidth;
-let width_svg = 0;
-if(width > 850){
-    width_svg = hea - vh;
-}
-    
-else{
-    width_svg = hea - 0.2*vh;
-}
-    
-right.addEventListener("click", ()=>{
-    i += 200; 
-    if(i > width_svg) i -= 200 ;
-    inner.style.transform = "translateX(-"+i+"px)";
-})
-left.addEventListener("click", ()=>{
-    i -= 200;
-    if(i < 0) i = 0;
-    inner.style.transform = "translateX(-"+i+"px)";
-})
+
 
 
 
