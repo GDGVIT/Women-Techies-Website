@@ -186,7 +186,7 @@
                     .then((response) => response.json())
                     .then((data) => {
 
-                        /* let mes = "";
+                        let mes = "";
                         const message = document.querySelector(".message");
 
                         if (data.message == "Error: Document already exists") {
@@ -268,15 +268,15 @@
                                 document.querySelector(".popup").style.display = "none";
                                 document.querySelector(".container").style.opacity = "1";
                             })
-                        } */
+                        }
                         console.log(data);
                         document.querySelector("form").reset();
                     }).catch((err) => {
                         alert('Error on submission');
-                        /* updatesSubmitBtn.innerHTML = "Submit";
+                        updatesSubmitBtn.innerHTML = "Submit";
                         const message = document.querySelector(".message");
                         message.innerHTML = "Error on submission";
-                        message.style.color = "white"; */
+                        message.style.color = "white";
                         console.error(err);
                     });
 
