@@ -755,7 +755,9 @@ nav{
     }
 
     /* One-Mobile: End */
-
+    .inner > img{
+        height: 60vh;
+    }
     /* Two-Mobile: Start */
     #two{
         position: relative;
