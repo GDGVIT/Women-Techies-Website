@@ -893,6 +893,7 @@ nav{
 
     #seven{
         height: fit-content;
+        min-height: 80vh;
     }
     .content-seven{
         position: relative;
