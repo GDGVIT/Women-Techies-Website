@@ -335,13 +335,13 @@ i = 0;
 let hea = document.querySelector(".timeline").clientWidth;
 let width_svg = 0;
 if(width > 850){
-    width_svg = hea - 0.9*window.innerWidth + 200;
+    width_svg = hea - 0.8*window.innerWidth;
 }
     
 else{
-    width_svg = hea - 0.9*window.innerWidth + 200;
+    width_svg = hea - 0.8*window.innerWidth;
 }
-    
+    console.log(hea)
 right.addEventListener("click", ()=>{
     i += 200; 
     if(i > width_svg) i -= 200 ;
