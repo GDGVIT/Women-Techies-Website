@@ -171,19 +171,13 @@ nav{
     color: var(--main-text-color);
     font-size: var(--desk-text-size);
 }
-.img-overflow-nice{
+.img-overflow{
     position: relative;
-    /* overflow: hidden; */
-    height: 0;
-    padding-top: 64.1%;
+    overflow: hidden;
 }
-.img-overflow-nice > img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
+.img-overflow > img{
+    position: relative;
     width: 100%;
-    height: auto;
 }
 /* Two: Start */
 
@@ -235,9 +229,10 @@ nav{
     background-color: var(--hackathon-color);
     color: white;
     font-weight: bolder;
-    width: 15vw;
-    height: 5vh;
-    font-size: calc(var(--desk-text-size) - 0.3rem);
+    /* width: 15vw;
+    height: 5vh; */
+    padding: 10px 40px;
+    font-size: calc(var(--desk-text-size));
 }
 
 
@@ -254,13 +249,6 @@ nav{
     transform: translateY(-50%);
     margin-left: 4vw;
 }
-.img-overflow{
-    position: relative;
-    height: 0;
-  /* Formula is: (height / width * 100%) */
-    padding-top: 94.1%;
-}
-
 .content-four > h1{
     margin-bottom: 20px;
     font-weight: bolder;
@@ -803,7 +791,7 @@ nav{
         position: relative;
         width: 50vw;
         height: 6vh;
-        font-size: calc(var(--text-font-size) - 2vw);
+        font-size: calc(var(--text-font-size));
     }
     /*Three-Mobile: End */
 
@@ -834,12 +822,6 @@ nav{
         width: 90%;
         left: 50%;
         transform: translateX(-50%);
-        
-            position: absolute;
-            top: 0;
-            max-width: 100%;
-            height: auto;
-        
     }
     /* Four-Mobile: End */
 
@@ -978,6 +960,6 @@ nav{
         margin-bottom: 10vh;
     }
     /* Eight-Mobile: End */ 
-    
+
 }
 
