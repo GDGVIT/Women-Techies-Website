@@ -121,7 +121,7 @@ const handleUpdates = (e) => {
     return;
   }
   else {
-    updatesSubmitBtn.innerHTML = '<img src="./assets/loading.gif" alt="" height = "30" width = "25">'
+    updatesSubmitBtn.innerHTML = '<img src="../assets/loading.gif" alt="" height = "30" width = "25">'
   }
 
   grecaptcha.ready(() => {
