@@ -237,9 +237,9 @@ const handleUpdates = (e) => {
           console.error(err);
         });
 
-    })/* .catch(err => {
+    }).catch(err => {
 
-    }) */
+    })
   })
 }
 window.onload = () => {
