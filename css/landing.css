@@ -235,10 +235,9 @@ nav{
     background-color: var(--hackathon-color);
     color: white;
     font-weight: bolder;
-    /* width: 15vw;
-    height: 5vh; */
-    padding: 10px 40px;
-    font-size: calc(var(--desk-text-size));
+    width: 15vw;
+    height: 5vh;
+    font-size: calc(var(--desk-text-size) - 0.3rem);
 }
 
 
@@ -804,7 +803,7 @@ nav{
         position: relative;
         width: 50vw;
         height: 6vh;
-        font-size: calc(var(--text-font-size));
+        font-size: calc(var(--text-font-size) - 2vw);
     }
     /*Three-Mobile: End */
 
