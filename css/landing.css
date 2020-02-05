@@ -423,6 +423,7 @@ nav{
     color: var(--main-text-color);
     margin-bottom: 10px;
 }
+
 .contactus > div > div > img{
     float: left;
 }
@@ -438,7 +439,7 @@ nav{
     font-weight: bolder;
 }
 .contactus > div > p:nth-child(2){
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     color: var(--main-text-color);
 }
 .management > p:nth-child(1){
@@ -455,6 +456,7 @@ nav{
     width: fit-content;
     row-gap: 2vh;
     column-gap: 2vw;
+    color: #707070;
 }
 .footer > div > img{
     float: left;
@@ -464,6 +466,7 @@ nav{
     top: 12px;
     transform: translateY(-50%);
     margin-left: 30px;
+    font-weight: bold;
 }
 
 /* Eight: End */
