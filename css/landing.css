@@ -419,13 +419,29 @@ nav{
     top: 12px;
     transform: translateY(-50%);
     margin-left: 30px;
+    color: var(--main-text-color);
+    margin-bottom: 10px;
 }
 .contactus > div > div > img{
     float: left;
 }
+.contactus > div > div{
+    margin-bottom: 14px;
+}
 .content-eight > h1{
     text-align: center;
     margin-bottom: 10vh;
+}
+.contactus > div > p{
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.contactus > div > p:nth-child(2){
+    margin-bottom: 15px;
+    color: var(--main-text-color);
+}
+.management > p:nth-child(1){
+    color: var(--about-color);
 }
 .footer{
     position: absolute;
@@ -867,6 +883,7 @@ nav{
         left: 50%;
         transform: translateX(-50%);
     }
+    
     .club{
         margin-bottom: 10vh;
     }
