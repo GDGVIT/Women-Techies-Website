@@ -1,8 +1,8 @@
-/* if (location.hash) {
+if (location.hash) {
     setTimeout(function () {
         window.scrollTo(0, 0);
     }, 1);
-} */
+}
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
 const navInner = document.querySelectorAll(".nav-inner a")
