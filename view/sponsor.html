@@ -73,6 +73,9 @@
 
     const isValid = (data) => {
         const errs = validate(data, constraints);
+        if(!data.company || !data.name){
+            return false;
+        }
         if (errs != undefined) {
             console.log('[Validation errors] ', errs);
             return false;
