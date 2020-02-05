@@ -293,7 +293,10 @@ nav{
 .content-five > h1{
     text-align: center;
 }
-
+.inner{
+    position: relative;
+    
+}
 
 /* Five: End */
 
