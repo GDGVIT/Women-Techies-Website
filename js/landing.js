@@ -1,6 +1,5 @@
 if (location.hash) {
     setTimeout(function () {
-
         window.scrollTo(0, 0);
     }, 1);
 }
