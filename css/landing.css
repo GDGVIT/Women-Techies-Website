@@ -697,7 +697,7 @@ nav{
         top: 50%;
         transform: translateY(-50%);
         left: 10px;
-        width: 40vw;
+        width: 30vw;
         z-index: 10;
     }
     .ham{
