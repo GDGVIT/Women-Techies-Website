@@ -779,16 +779,19 @@ nav{
         height: 50px;
         width: 50px;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
+        -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .middle{
         height: 100px;
         width: 100px;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
+        -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .bottom{
         height: 150px;
         width: 150px;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
+        -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .img-overflow-1{
         position: absolute;
