@@ -306,7 +306,7 @@ nav{
 .left{
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 10px;
     transform: translateY(-50%);
     z-index: 10;
     border: none;
@@ -317,11 +317,12 @@ nav{
     border-radius: 4vh;
     font-weight: bolder;
     color: white;
+    transition: transform 0.5s ease-out;
 }
 .right{
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 10px;
     transform: translateY(-50%);
     z-index: 10;
     border: none;
@@ -332,6 +333,13 @@ nav{
     border-radius: 4vh;
     font-weight: bolder;
     color: white;
+    transition: transform 0.5s ease-out;
+}
+.right:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+.left:hover{
+    transform: translateY(-50%) scale(1.1);
 }
 /* Five: End */
 
