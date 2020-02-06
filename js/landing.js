@@ -12,6 +12,14 @@ if(window.innerWidth > 850){
     preloader.classList.remove("display");
     preloader.classList.add("display-none")
 }
+else{
+    main.classList.remove("display-none");
+    main.classList.add("display");
+    mobile.classList.remove("display-none");
+    mobile.classList.add("display");
+    preloader.classList.remove("display");
+    preloader.classList.add("display-none")
+}
 
 if (location.hash) {
     setTimeout(function () {
