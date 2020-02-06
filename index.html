@@ -363,26 +363,30 @@
     </div>
     </div>
     <script>
-        let vh = window.innerHeight;
+        let height = window.innerHeight;
         let vw = window.innerWidth;
         if(vw < 850){
             const vitOrange = document.querySelector(".vit-orange");
-            console.log(0.64 * (0.4 *vw));
+            vitOrange.height =  0.64 * (0.9 *vw);
+            const violet = document.querySelector(".violet-man-woman");
+            violet.height = 0.9407 * (0.81*vw);
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
     <script src="./js/landing.js"></script>
     <script>
+        let vh = window.innerHeight;
         if (window.innerWidth < 850) {
-            let vh = window.innerHeight * 0.01;
+            vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
         window.addEventListener("resize", () => {
             if (window.innerWidth > 850) {
-                let vh = window.innerHeight * 0.01;
+                vh = window.innerHeight * 0.01;
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
             }
         })
+        vh = window.innerHeight;
         let width = window.innerWidth;
         const left = document.querySelector(".left");
         const right = document.querySelector(".right");
