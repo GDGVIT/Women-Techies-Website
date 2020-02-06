@@ -70,22 +70,13 @@ button.addEventListener("click", () => {
 
 let vh = window.innerHeight;
 let width = window.innerWidth;
-navlinks[0].addEventListener("click", () => { a = 0; });
-navlinks[1].addEventListener("click", () => { a = 1; });
-navlinks[4].addEventListener("click", () => { a = 4; });
-navlinks[3].addEventListener("click", () => { a = 3; });
-navlinks[2].addEventListener("click", () => { a = 2; });
-navlinks[5].addEventListener("click", () => { a = 5; });
-navlinks[6].addEventListener("click", () => { a = 6; });
-navlinks[7].addEventListener("click", () => { a = 7; });
-navlinks[8].addEventListener("click", () => { a = 8; });
-
+function assign(b){
+    a = b;
+}
 k = 0;
-if (width > 850) {
-    window.addEventListener("resize", () => {
-        vh = window.innerHeight;
-    })
-    window.addEventListener("scroll", (e) => {
+window.addEventListener("scroll",()=>
+{
+    if(width > 850){
         let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
         scrollpos += 0.5 * vh;
         if (scrollpos > height_color_desk[k+1]) {
@@ -101,12 +92,8 @@ if (width > 850) {
 
         }
 
-    })
-}
-else {
-    k = 0;
-    vh = window.innerHeight;
-    window.addEventListener("scroll", (e) => {
+    }
+    else{
         let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
         scrollpos += 0.4 * vh;
         if (scrollpos > height_color[k + 1]) {
@@ -126,8 +113,8 @@ else {
                 a = -1;
             }
         }
-    })
-}
+    }
+});
 var acc = document.getElementsByClassName("accordion");
 var q;
 
