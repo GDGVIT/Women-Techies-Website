@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/updates.css">
+    <title>Sponsor Us</title>
+    <style>
+        .main>form>p {
+            margin-bottom: 2vh;
+        }
+
+        form>input {
+            margin-bottom: 4vh;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../assets/Ellipse 1.svg" alt="" class="popup">
+    <p class="message"></p>
+    <div class="container">
+        <img src="../assets/Rectangle 1.png" alt="" class="rect">
+        <img src="../assets/Ellipse 1.svg" alt="" class="circle">
+        <img src="../assets/Polygon 1.svg" alt="" class="triangleR">
+        <img src="../assets/Polygon 2.svg" alt="" class="triangleB">
+        <img src="../assets/logo-orange.png" alt="" class="mainlogo"
+            style="height: 8vw; max-height: 100px; margin: 20px 0 0 20px;">
+        <div class="main">
+            <h1 style="text-align: center; margin-bottom: 50px;">Sponsor Us!</h1>
+            <form action="" method="post" id="sponsor_form">
+                <p style="text-align: left;">Fill in your details</p>
+                <input type="text" placeholder="Name" id="updatesInputName" required>
+                <input type="text" placeholder="Company Name" id="updatesInputRegistrationNumber" required>
+                <input type="email" placeholder="Email" id="updatesInputEmail" required>
+                <input type="tel" placeholder="Phone No." id="updatesInputPhoneNumber" required>
+                <button type="submit" class="submit" id="updatesSubmitBtn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lf2bdUUAAAAANfKfte6Y9voNat5c6MPYIsVNQ4k"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+
+
+<script>
+    const updatesInputName = document.getElementById('updatesInputName');
+    const updatesInputEmail = document.getElementById('updatesInputEmail');
+    const updatesInputPhoneNumber = document.getElementById('updatesInputPhoneNumber');
+    const updatesInputRegistrationNumber = document.getElementById('updatesInputRegistrationNumber');
+    const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
+    const heighta = window.innerHeight;
+    const widtha = window.innerWidth;
+    const constraints = {
+        email: {
+            presence: true,
+            email: true,
+        },
+        name: {
+            presence: true,
+        },
+        phone: {
+            presence: true,
+            format: /^[789]\d{9}$/,
+        },
+        company: {
+            presence: true,
+        },
+    };
+
+    const isValid = (data) => {
+        const errs = validate(data, constraints);
+        if(!data.company || !data.name){
+            return false;
+        }
+        if (errs != undefined) {
+            console.log('[Validation errors] ', errs);
+            return false;
+        }
+        if (!validate.isNumber(parseInt(updatesInputPhoneNumber.value))) {
+            console.log('[Validation errors] PhoneNumber invalid');
+            return false;
+        }
+        return true;
+    };
+
+    const handleUpdates = (e) => {
+        console.log('[Event] updatesSubmitBtn clicked');
+
+        e.preventDefault();
+        const data = {
+            name: updatesInputName.value,
+            email: updatesInputEmail.value,
+            phone: updatesInputPhoneNumber.value,
+            company: updatesInputRegistrationNumber.value,
+        };
+        if (!isValid(data)) {
+            let mes = "Invalid Fields";
+            const message = document.querySelector(".message");
+            var t1 = gsap.timeline();
+            t1.fromTo(".container", {
+                opacity: 1
+            }, {
+                opacity: 0.1,
+                duration: 0.5
+            });
+            t1.fromTo(".popup", {
+                display: "none",
+                opacity: 0
+            }, {
+                display: "block",
+                opacity: 1,
+                duration: 0.1
+            });
+            if (window.innerWidth > 992) {
+                t1.fromTo(".popup", {
+                    width: 0
+                }, {
+                    width: "20vw",
+                    duration: 1,
+                    ease: "power4.out"
+                });
+            }
+            else {
+                t1.fromTo(".popup", {
+                    width: 0
+                }, {
+                    width: "50vw",
+                    duration: 1,
+                    ease: "power4.out"
+                });
+            }
+            updatesSubmitBtn.innerHTML = "Submit"
+            if (window.innerWidth < 992) {
+                console.log(document.querySelector(".popup").style.height)
+                message.style.top = (50 * (heighta / 100)) + ((50 * (widtha / 100)) / 2) - (54 * (50 * (widtha / 100) / 100)) + "px";
+            }
+            else {
+                message.style.top = (50 * (window.innerHeight / 100)) - (73 * (20 * (window.innerWidth) / 100) / 100) + (10 * (window.innerWidth / 100)) + "px";
+            }
+            message.innerHTML = mes;
+            message.style.color = "white";
+            t1.fromTo(".message", {
+                display: "none",
+                opacity: 0,
+            }, {
+                display: "block",
+                opacity: 1,
+                duration: 0.1
+            }, "-=0.5")
+            if (window.innerWidth > 992) {
+                setTimeout(() => {
+                    message.style.display = "none";
+                    document.querySelector(".popup").style.display = "none";
+                    document.querySelector(".container").style.opacity = "1";
+                }, 2700);
+            }
+            else {
+                window.addEventListener("click", () => {
+                    message.style.display = "none";
+                    document.querySelector(".popup").style.display = "none";
+                    document.querySelector(".container").style.opacity = "1";
+                })
+            }
+            return;
+        }
+        else {
+            updatesSubmitBtn.innerHTML = '<img src="../assets/loading.gif" alt="" height = "30" width = "25">'
+        }
+
+        grecaptcha.ready(() => {
+            grecaptcha.execute('6Lf2bdUUAAAAANfKfte6Y9voNat5c6MPYIsVNQ4k', {
+                action: '/'
+            }).then((token) => {
+
+                const settings = {
+                    method: 'post',
+                    mode: "cors",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'g-recaptcha-response': token
+                    },
+                    body: JSON.stringify(data),
+                };
+                fetch("https://womentechies.herokuapp.com/api/sponsorus", settings)
+                    .then((response) => response.json())
+                    .then((data) => {
+
+                        let mes = "";
+                        const message = document.querySelector(".message");
+
+                        if (data.message == "Error: Document already exists") {
+                            mes = "Already Registered!"; 
+                        }
+                        else {
+                            console.log('Successfully submitted form');
+                            mes = "Successfully Submitted form!";
+                            if (window.innerWidth > 992) {
+                                message.style.fontSize = "0.9vw"
+                            }
+                            else {
+                                message.style.fontSize = "2.2vw"
+                            } 
+                        }
+                        var t1 = gsap.timeline();
+                        t1.fromTo(".container", {
+                            opacity: 1
+                        }, {
+                            opacity: 0.1,
+                            duration: 0.5
+                        });
+                        t1.fromTo(".popup", {
+                            display: "none",
+                            opacity: 0
+                        }, {
+                            display: "block",
+                            opacity: 1,
+                            duration: 0.1
+                        });
+                        if (window.innerWidth > 992) {
+                            t1.fromTo(".popup", {
+                                width: 0
+                            }, {
+                                width: "20vw",
+                                duration: 1,
+                                ease: "power4.out"
+                            });
+                        }
+                        else {
+                            t1.fromTo(".popup", {
+                                width: 0
+                            }, {
+                                width: "50vw",
+                                duration: 1,
+                                ease: "power4.out"
+                            });
+                        }
+
+                        updatesSubmitBtn.innerHTML = "Submit"
+                        if (window.innerWidth < 992) {
+                            console.log(document.querySelector(".popup").style.height)
+                            message.style.top = (50 * (window.innerHeight / 100)) + ((50 * (window.innerWidth / 100)) / 2) - (54 * (50 * (window.innerWidth / 100) / 100)) + "px";
+                        }
+                        else {
+                            message.style.top = (50 * (window.innerHeight / 100)) - (73 * (20 * (window.innerWidth) / 100) / 100) + (10 * (window.innerWidth / 100)) + "px";
+                        }
+                        message.innerHTML = mes;
+                        message.style.color = "white";
+                        t1.fromTo(".message", {
+                            display: "none",
+                            opacity: 0,
+                        }, {
+                            display: "block",
+                            opacity: 1,
+                            duration: 0.1
+                        }, "-=0.5")
+                        if (window.innerWidth > 992) {
+                            setTimeout(() => {
+                                message.style.display = "none";
+                                document.querySelector(".popup").style.display = "none";
+                                document.querySelector(".container").style.opacity = "1";
+                                document.querySelector("form").reset();
+                            }, 3000);
+                        }
+                        else {
+                            window.addEventListener("click", () => {
+                                message.style.display = "none";
+                                document.querySelector(".popup").style.display = "none";
+                                document.querySelector(".container").style.opacity = "1";
+                            })
+                        }
+                        console.log(data);
+                        document.querySelector("form").reset();
+                    }).catch((err) => {
+                        alert('Error on submission');
+                        updatesSubmitBtn.innerHTML = "Submit";
+                        const message = document.querySelector(".message");
+                        message.innerHTML = "Error on submission";
+                        message.style.color = "white";
+                        console.error(err);
+                    });
+
+            });
+        })
+    }
+    window.onload = () => {
+        updatesSubmitBtn.addEventListener('click', handleUpdates);
+    };
+
+
+</script>
+<!-- <script>
+    const updatesInputName = document.getElementById('updatesInputName');
+    const updatesInputEmail = document.getElementById('updatesInputEmail');
+    const updatesInputPhoneNumber = document.getElementById('updatesInputPhoneNumber');
+    const updatesInputRegistrationNumber = document.getElementById('updatesInputRegistrationNumber');
+    const updatesSubmitBtn = document.getElementById('updatesSubmitBtn');
+    const heighta = window.innerHeight;
+    const widtha = window.innerWidth;
+    const constraints = {
+        email: {
+            presence: true,
+            email: true,
+        },
+        name: {
+            presence: true,
+        },
+        phoneNumber: {
+            presence: true,
+        },
+        registrationNumber: {
+            presence: true,
+            format: /^1[2-9][a-zA-Z]{3}[0-9]{4}$/,
+        },
+    };
+
+    /* const isValid = (data) => {
+        const errs = validate(data, constraints);
+        if (errs != undefined) {
+            console.log('[Validation errors] ', errs);
+            return false;
+        }
+        if (!validate.isNumber(parseInt(updatesInputPhoneNumber.value))) {
+            console.log('[Validation errors] PhoneNumber invalid');
+            return false;
+        }
+        return true;
+    }; */
+
+    const handleUpdates = (e) => {
+        console.log('[Event] updatesSubmitBtn clicked');
+
+        e.preventDefault();
+        const data = {
+            name: updatesInputName.value,
+            email: updatesInputEmail.value,
+            phone: updatesInputPhoneNumber.value,
+            company: updatesInputRegistrationNumber.value,
+        };
+        /* if (!isValid(data)) { */
+        /* let mes = "Invalid Fields";
+        const message = document.querySelector(".message");
+        var t1 = gsap.timeline();
+        t1.fromTo(".container", {
+            opacity: 1
+        }, {
+            opacity: 0.1,
+            duration: 0.5
+        });
+        t1.fromTo(".popup", {
+            display: "none",
+            opacity: 0
+        }, {
+            display: "block",
+            opacity: 1,
+            duration: 0.1
+        });
+        if (window.innerWidth > 992) {
+            t1.fromTo(".popup", {
+                width: 0
+            }, {
+                width: "20vw",
+                duration: 1,
+                ease: "power4.out"
+            });
+        }
+        else {
+            t1.fromTo(".popup", {
+                width: 0
+            }, {
+                width: "50vw",
+                duration: 1,
+                ease: "power4.out"
+            });
+        }
+        updatesSubmitBtn.innerHTML = "Submit"
+        if (window.innerWidth < 992) {
+            console.log(document.querySelector(".popup").style.height)
+            message.style.top = (50 * (heighta / 100)) + ((50 * (widtha / 100)) / 2) - (54 * (50 * (widtha / 100) / 100)) + "px";
+        }
+        else {
+            message.style.top = (50 * (window.innerHeight / 100)) - (73 * (20 * (window.innerWidth) / 100) / 100) + (10 * (window.innerWidth / 100)) + "px";
+        }
+        message.innerHTML = mes;
+        message.style.color = "white";
+        t1.fromTo(".message", {
+            display: "none",
+            opacity: 0,
+        }, {
+            display: "block",
+            opacity: 1,
+            duration: 0.1
+        }, "-=0.5")
+        if (window.innerWidth > 992) {
+            setTimeout(() => {
+                message.style.display = "none";
+                document.querySelector(".popup").style.display = "none";
+                document.querySelector(".container").style.opacity = "1";
+            }, 2700);
+        }
+        else {
+            window.addEventListener("click", () => {
+                message.style.display = "none";
+                document.querySelector(".popup").style.display = "none";
+                document.querySelector(".container").style.opacity = "1";
+            })
+        }*/
+        /* return;
+    }
+    else {
+        /* pdatesSubmitBtn.innerHTML = '<img src="./assets/loading.gif" alt="" height = "30" width = "25">'
+        return;
+    } */
+
+        grecaptcha.ready(() => {
+            grecaptcha.execute('6Lf2bdUUAAAAANfKfte6Y9voNat5c6MPYIsVNQ4k', {
+                action: '/'
+            }).then((token) => {
+
+                const settings = {
+                    method: 'post',
+                    mode: "cors",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'g-recaptcha-response': token
+                    },
+                    body: JSON.stringify(data),
+                };
+                fetch("https://womentechies.herokuapp.com/api/sponsorus", settings)
+                    .then((response) => response.json())
+                    .then((data) => {
+
+                        /* let mes = "";
+                        const message = document.querySelector(".message"); */
+
+                        /* if (data.message == "Error: Document already exists") {
+                            /* mes = "Already Registered!"; 
+                        } */
+                        /* else {
+                            console.log('Successfully submitted form');
+                            /* mes = "Successfully Submitted form!";
+                            if (window.innerWidth > 992) {
+                                message.style.fontSize = "0.9vw"
+                            }
+                            else {
+                                message.style.fontSize = "2.2vw"
+                            } 
+                        } */
+                        /* var t1 = gsap.timeline();
+                        t1.fromTo(".container", {
+                            opacity: 1
+                        }, {
+                            opacity: 0.1,
+                            duration: 0.5
+                        });
+                        t1.fromTo(".popup", {
+                            display: "none",
+                            opacity: 0
+                        }, {
+                            display: "block",
+                            opacity: 1,
+                            duration: 0.1
+                        });
+                        if (window.innerWidth > 992) {
+                            t1.fromTo(".popup", {
+                                width: 0
+                            }, {
+                                width: "20vw",
+                                duration: 1,
+                                ease: "power4.out"
+                            });
+                        }
+                        else {
+                            t1.fromTo(".popup", {
+                                width: 0
+                            }, {
+                                width: "50vw",
+                                duration: 1,
+                                ease: "power4.out"
+                            });
+                        }
+
+                        updatesSubmitBtn.innerHTML = "Submit"
+                        if (window.innerWidth < 992) {
+                            console.log(document.querySelector(".popup").style.height)
+                            message.style.top = (50 * (window.innerHeight / 100)) + ((50 * (window.innerWidth / 100)) / 2) - (54 * (50 * (window.innerWidth / 100) / 100)) + "px";
+                        }
+                        else {
+                            message.style.top = (50 * (window.innerHeight / 100)) - (73 * (20 * (window.innerWidth) / 100) / 100) + (10 * (window.innerWidth / 100)) + "px";
+                        }
+                        message.innerHTML = mes;
+                        message.style.color = "white";
+                        t1.fromTo(".message", {
+                            display: "none",
+                            opacity: 0,
+                        }, {
+                            display: "block",
+                            opacity: 1,
+                            duration: 0.1
+                        }, "-=0.5")
+                        if (window.innerWidth > 992) {
+                            setTimeout(() => {
+                                message.style.display = "none";
+                                document.querySelector(".popup").style.display = "none";
+                                document.querySelector(".container").style.opacity = "1";
+                                document.querySelector("form").reset();
+                            }, 3000);
+                        }
+                        else {
+                            window.addEventListener("click", () => {
+                                message.style.display = "none";
+                                document.querySelector(".popup").style.display = "none";
+                                document.querySelector(".container").style.opacity = "1";
+                            })
+                        }*/
+                        console.log(data);
+                        document.querySelector("form").reset();
+                    }).catch((err) => {
+                        alert('Error on submission');
+                        /* updatesSubmitBtn.innerHTML = "Submit";
+                        const message = document.querySelector(".message");
+                        message.innerHTML = "Error on submission";
+                        message.style.color = "white"; */
+                        console.error(err);
+                    });
+
+            });
+        })
+    }
+    window.onload = () => {
+        /* console.log(`[Package] ${packageName}`); */
+        updatesSubmitBtn.addEventListener('click', handleUpdates);
+    };
+
+</script> -->
+<script>
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+</script>
+
+</html>

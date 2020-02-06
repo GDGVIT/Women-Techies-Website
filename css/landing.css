@@ -8,10 +8,10 @@ html {
     --main-text-color: black;
     --about-color: rgb(164,27,228);
     --hackathon-color: rgb(252,37,126);
-    --text-font-size: 5vw;
-    --heading-font-size: 7vw;
-    --desk-text-size: 2.25vh;
-    --desk-heading-size: 3.5vh;
+    --text-font-size: 1.15rem;
+    --heading-font-size: 2rem;
+    --desk-text-size: 1.15rem;
+    --desk-heading-size: 2rem;
 }
 
 *{
@@ -45,10 +45,11 @@ nav{
 }
 .nav-inner{
     position: relative;
-    margin: 18vh 0 auto 2.8vw;
+    margin: 16vh 0 auto 2.8vw;
     display: grid;
     grid-template-rows: repeat(9, auto);
     height: 60vh;
+    align-items: center;
 }
 .nav-inner > a{
     color: var(--main-text-color);
@@ -65,7 +66,7 @@ nav{
 
 .main{
     position: relative;
-    height: 600vh;
+    height: 100%;
     margin-left: 15vw;
 }
 .main > div{
@@ -228,9 +229,10 @@ nav{
     background-color: var(--hackathon-color);
     color: white;
     font-weight: bolder;
-    width: 15vw;
-    height: 5vh;
-    font-size: calc(var(--desk-text-size) - 0.3rem);
+    /* width: 15vw;
+    height: 5vh; */
+    padding: 10px 40px;
+    font-size: calc(var(--desk-text-size));
 }
 
 
@@ -284,15 +286,61 @@ nav{
 }
 .content-five{
     position: relative;
-    top: 25%;
+    top: 50%;
     transform: translateY(-50%);
     height: fit-content;
+    overflow: hidden;
 }
-.content-five > h1{
+.five > h1{
     text-align: center;
 }
-
-
+.inner{
+    position: relative;
+    width: fit-content;
+    margin: 0 5vw 0 0vw ;
+    transition: all 1s ease-out;
+}
+.inner > img{
+    height: 80vh;
+}
+.left{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    outline: none;
+    height: 4vh;
+    background-color: #F7295E;
+    width: 4vh;
+    border-radius: 4vh;
+    font-weight: bolder;
+    color: white;
+    transition: transform 0.5s ease-out;
+}
+.right{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    outline: none;
+    height: 4vh;
+    background-color: #F7295E;
+    width: 4vh;
+    border-radius: 4vh;
+    font-weight: bolder;
+    color: white;
+    transition: transform 0.5s ease-out;
+}
+.right:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+.left:hover{
+    transform: translateY(-50%) scale(1.1);
+}
 /* Five: End */
 
 /* Six: Start */
@@ -313,7 +361,9 @@ nav{
 .grid-six{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(2, 50%);
+    left: 50%;
+    transform: translateX(-50%);
     justify-items: center;
 }
 .content-six > h1{
@@ -350,6 +400,8 @@ nav{
     position: relative;
     display: grid;
     grid-template-columns: 80% 20%;
+    display: block;
+        grid-template-columns: none;
 }
 .grid-seven{
     position: relative;
@@ -359,6 +411,15 @@ nav{
     align-items: center;
     justify-items: center;
     height: fit-content;
+    display: block;
+        grid-template-rows: none;
+        grid-template-columns: none;
+        /* width: min-content; */
+        left: 50%;
+        transform: translateX(-50%);
+}
+.ele-seven > p{
+    text-align: center;
 }
 .ele-seven > img{
     border-radius: 300px;
@@ -367,10 +428,11 @@ nav{
 }
 .buttons-seven{
     position: relative;
+    height: 20vh;
 }
 .buttons-seven > button{
-    width: 80%;
-    height: 15%;
+    width: 20vw;
+    height: 4vh;
     max-height: 50px;
     left: 50%;
     outline: none;
@@ -399,7 +461,7 @@ nav{
 }
 .content-eight{
     position: relative;
-    top: 50%;
+    top: 35%;
     transform: translateY(-50%);
     margin: 0 10vw 0 10vw;
 }
@@ -419,17 +481,34 @@ nav{
     top: 12px;
     transform: translateY(-50%);
     margin-left: 30px;
+    color: var(--main-text-color);
+    margin-bottom: 10px;
 }
+
 .contactus > div > div > img{
     float: left;
+}
+.contactus > div > div{
+    margin-bottom: 14px;
 }
 .content-eight > h1{
     text-align: center;
     margin-bottom: 10vh;
 }
+.contactus > div > p{
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.contactus > div > p:nth-child(2){
+    margin-bottom: 25px;
+    color: var(--main-text-color);
+}
+.management > p:nth-child(1){
+    color: var(--about-color);
+}
 .footer{
-    position: relative;
-    margin-top: 25vh;
+    position: absolute;
+    bottom: 10vh;
     left: 50%;
     transform: translateX(-50%);
     display: grid;
@@ -438,6 +517,7 @@ nav{
     width: fit-content;
     row-gap: 2vh;
     column-gap: 2vw;
+    color: #707070;
 }
 .footer > div > img{
     float: left;
@@ -447,12 +527,96 @@ nav{
     top: 12px;
     transform: translateY(-50%);
     margin-left: 30px;
+    font-weight: bold;
 }
 
 /* Eight: End */
 
+/* Nine: End */
 
+#nine, #ten{
+    color: var(--about-color);
+    height: fit-content;
+    min-height: 100vh;
+}
+.content-nine{
+    position: relative;
+    margin: 0 10vw 0 10vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.content-nine > h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.accordion {
+    background-color:white;
+    color: black;
+    font-size: var(--desk-text-size);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-weight: bolder;
+}
 
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    color: black;
+}
+.panel > p{
+    padding: 20px 0;
+}
+.accordion:after {
+    content: '▾'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "▴"; /* Unicode character for "minus" sign (-) */
+  }
+  
+  .one-acc{
+    border-bottom: solid 1px rgb(164,27,228);
+  }
+  .two-acc{
+    border-bottom: solid 1px rgb(255, 167, 87);
+  }
+  .three-acc{
+    border-bottom: solid 1px rgb(252,37,126);
+  }
+  .active{
+    border-bottom: none;
+}
+.black-border{
+    border-bottom: solid 1px black;
+}
+
+/* Nine: End */
+.termsandconditions{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.termsandconditions > a{
+    text-decoration: none;
+    margin: 0 3vw;
+    font-size: 1rem;
+}
 
 
 ::-webkit-scrollbar {
@@ -474,6 +638,15 @@ nav{
 
 
 @media(max-width: 850px){
+    .termsandconditions > a{
+        font-size: 3vw;
+    }
+    .right, .left{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 5vh;
+        top: 60%;
+    }
     html{
         scroll-behavior: smooth;
     }
@@ -615,6 +788,7 @@ nav{
     .img-overflow-1{
         position: absolute;
         width: 100vw;
+        height: auto;
         bottom: 0;
         overflow: hidden;
         right: inherit;
@@ -622,13 +796,19 @@ nav{
     }
     .women-img{
         width: 110%;
+        height: auto;
         bottom: -5vh;
         left: 50%;
         transform: translateX(-50%);
     }
 
     /* One-Mobile: End */
-
+    .inner{
+        margin: 0;
+    }
+    .inner > img{
+        height: 60vh;
+    }
     /* Two-Mobile: Start */
     #two{
         position: relative;
@@ -714,7 +894,7 @@ nav{
         position: relative;
         width: 50vw;
         height: 6vh;
-        font-size: calc(var(--text-font-size) - 2vw);
+        font-size: calc(var(--text-font-size));
     }
     /*Three-Mobile: End */
 
@@ -754,7 +934,7 @@ nav{
         position: relative;
         top: inherit;
         transform: none;
-        margin: 0px 5vw 0 5vw;
+        margin: 0;
         padding-top: 60px;
     }
 
@@ -780,17 +960,16 @@ nav{
         position: relative;
         display: grid;
         grid-template-columns: none;
-        grid-template-rows: repeat(3, 25vh);
-        justify-items: center;
+        grid-template-rows: repeat(2, 25vh);
     }
     .content-six > h1{
         text-align: center;
         margin-bottom: 8%;
     }
     .ele > img{
-        border-radius: 300px;
+        border-radius: 70px;
         height: 10vh;
-        border: 10px solid var(--hackathon-color);
+        border: 5px solid var(--hackathon-color);
         margin-bottom: 10px;
     }
     .ele > h2, .ele > p{
@@ -804,6 +983,7 @@ nav{
 
     #seven{
         height: fit-content;
+        min-height: 50vh;
     }
     .content-seven{
         position: relative;
@@ -820,7 +1000,7 @@ nav{
         display: block;
         grid-template-rows: none;
         grid-template-columns: none;
-        width: min-content;
+        /* width: min-content; */
         left: 50%;
         transform: translateX(-50%);
     }
@@ -830,7 +1010,9 @@ nav{
         transform: translateX(-50%);
     }
     .ele-seven{
-        width: min-content;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5vh;
     }
     .buttons-seven > button{
         width: 80%;
@@ -867,6 +1049,7 @@ nav{
         left: 50%;
         transform: translateX(-50%);
     }
+    
     .club{
         margin-bottom: 10vh;
     }
@@ -874,9 +1057,12 @@ nav{
         width: fit-content;
     }
     .footer{
+        position: relative;
+        bottom: inherit;
         margin-top: 10vh;
         grid-template-columns: none;
         grid-template-rows: repeat(4, auto);
+        margin-bottom: 10vh;
     }
     /* Eight-Mobile: End */ 
 

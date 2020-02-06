@@ -5,51 +5,390 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/updates.css">
-    <title>WomenTechies2020</title>
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>WomenTechies20</title>
 </head>
 
 <body>
-    <img src="./assets/Ellipse 1.svg" alt="" class="popup">
-    <p class="message"></p>
-    <div class="container">
-        <img src="./assets/Rectangle 1.png" alt="" class="rect">
-        <img src="./assets/Ellipse 1.svg" alt="" class="circle">
-        <img src="./assets/Polygon 1.svg" alt="" class="triangleR">
-        <img src="./assets/Polygon 2.svg" alt="" class="triangleB">
-        <img src="./assets/logo-orange.png" alt="" class="mainlogo"
-            style="height: 8vw; max-height: 100px; margin: 20px 0 0 20px;">
-        <div class="main">
-            <h1 style="text-align: center;">Sign Up for Updates</h1>
-            <p style="text-align: center;">VIT's only women-centric hackathon is <strong>coming soon</strong></p>
-            <form action="" method="post">
-                <p style="text-align: center;">Fill in your details</p>
-                <input type="text" placeholder="Name" id="updatesInputName" required>
-                <input type="email" placeholder="E-mail" id="updatesInputEmail" required>
-                <input type="tel" placeholder="Phone No." id="updatesInputPhoneNumber" required>
-                <input type="text" placeholder="Registration No." id="updatesInputRegistrationNumber" required>
-                <button type="submit" class="submit" id="updatesSubmitBtn">Submit</button>
-              <div class="twitter">
-                    <img src="./assets/Group 48@2x.png" alt="" style="position: absolute; z-index: -1; height: 100%">
-                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" style="position: absolute;" style="background-color: rgb(164, 27, 227);" data-text="I will be celebrating International Women's Day at WomenTechies by @dscvit, VIT's only women-centric #hackathon! 
-
-I am all set to #HackLikeAGirl! 👩‍💻.
-
-Sign up for updates at" data-url="https://womentechies.dscvit.com" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-						</form>
+    <nav>
+        <img src="./assets/dsc-logo.svg" alt="" class="dsclogo">
+        <div class="nav-inner">
+            <a href="#one">Home</a>
+            <a href="#two">About DSC</a>
+            <a href="#three">Hackathon</a>
+            <a href="#four">Our Vision</a>
+            <a href="#five">Timeline</a>
+            <a href="#six">Speakers</a>
+            <a href="#seven">Sponsors</a>
+            <a href="#eight">Contact Us</a>
+            <a href="#nine">FAQs</a>
+        </div>
+    </nav>
+    <div class="mobile">
+        <img src="./assets/dsc-logo.svg" alt="" class="dsclogo-mobile">
+        <div class="ham">
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        <div class="nav-items">
+            <a href = "#one"onclick="assign(0);">Home</a>
+            <a href = "#two"onclick="assign(1)">About DSC</a>
+            <a href="#three" onclick="assign(2)">Hackathon</a>
+            <a href="#four" onclick="assign(3)">Our Vision</a>
+            <a href="#five" onclick="assign(4)">Timeline</a>
+            <a href="#six" onclick="assign(5)">Speakers</a>
+            <a href = "#seven"onclick="assign(6)">Sponsors</a>
+            <a href="#eight" onclick="assign(7)">Contact Us</a>
+            <a href="#nine" onclick="assign(8)">FAQs</a>
         </div>
     </div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-		        <script src="https://www.google.com/recaptcha/api.js?render=6Lf5ddUUAAAAAKIJ5kmvXFeoqZ-VFtKgSBzaUXTk"></script>
-		<script src="./staticfiles/js/config.js"> </script>
-        <script src="./staticfiles/js/updates.js"> </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <div class="main">
+        <div class="one" id="one">
+            <div class="content-one">
+                <div class="topright">
+                    <div class="top"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
+                </div>
+                <img src="./assets/logo-orange-b.png" alt="" class="women-techies-logo">
+                <div class="img-overflow-1">
+                    <img src="./assets/women.png" alt="" class="women-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="two" id="two">
+            <div class="content-two">
+                <span class="header">About DSC</span>
+                <p>
+                    DSC VIT powered by Google Developers is a student community at VIT Vellore. We strive to
+                    bring about technological innovations among students and we do so by providing a
+                    platform for them to exhibit their talents. We are a group of passionate designers, developers
+                    and managers who work together to bring about collaborative results which better the lives
+                    of everyone around us.
+                </p>
+                <div class="text-img">
+                    <p>
+                        <span class="header">About VIT</span>
+                        Vellore Institute of Technology, Vellore VIT, Vellore
+                        is one of the top-rated engineering colleges in
+                        India. Diversity is the strongest aspect of the
+                        institute and the students from various states
+                        and nations, the key to its reputation. The
+                        university works on ideas and executes tasks of
+                        different domains under Clubs and Chapters.
+                    </p>
+
+                    <div class="img-overflow">
+                        <img src="./assets/vit-orange.png" alt="" class="vit-orange">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="three" id="three">
+            <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
+            <div class="content-three">
+                <img src="./assets/women-look.png" alt="" class="women-look" width="100px">
+                <div class="text-3">
+                    <p class="heading-three">Hackathon</p>
+                    <p>
+                        The 24-hour hackathon aims to bring out the best developers to put their skills and
+                        creativity against the clock to come up with a solution for a real-world problem. There is a
+                        minimum requirement of 50% female participation in each team, to ensure and promote women’s
+                        participation in tech and tech-related events.
+                        <br>
+                        Don’t know how to code? Or Don’t know how to implement a certain idea? No worries, our
+                        experts will be there every step of the way to mentor and guide you as you build your
+                        product, your participation is what that matters
+                    </p>
+                    <button onclick="window.location.href = 'https://womentechies20.hackerearth.com'">Register</button>
+                </div>
+            </div>
+        </div>
+        <div class="four" id="four">
+            <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
+            <div class="content-four">
+                <div class="grid-four">
+                    <p> <span>Our Vision</span>
+                        We have been organising Women Techies for the past 2 years with a goal to encourage and
+                        facilitate the participation of women in the tech space. Succeeding in tech is no easy task,
+                        but, by providing women with opportunities and platforms to exhibit their skills, we hope to put
+                        them right at the top of the leaderboard. Knowing that our efforts benefit so many talented
+                        women and being able to see the satisfaction on our participant’s faces makes all of us
+                        extremely proud in the work that we do.
+                    </p>
+                    <div class="img-overflow">
+                        <img src="./assets/violet-man-woman.png" alt="" class="violet-man-woman">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="five" id="five">
+            <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
+
+            <div class="content-five">
+                <h1 style="text-align: center;">Timeline</h1>
+                <button class="left" onclick="move(1)"> <img src="./assets/angle-left.png" alt="" height="15px"
+                        width="15px" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+                </button>
+                <button class="right" onclick="move(0)"> <img src="./assets/angle-left.png" alt="" height="15px"
+                        width="15px"
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(180deg);">
+                </button>
+                <div class="inner">
+                    <img src="./assets/svg make.svg" alt="" class="timeline" style="z-index: -10;">
+                </div>
+            </div>
+        </div>
+        <div class="six" id="six">
+            <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
+            <div class="content-six">
+                <h1>Speakers</h1>
+                <div class="grid-six">
+                    <div class="ele">
+                        <img src="./assets/speaker1.jpeg" alt=""
+                            style="position: relative; left: 50%; transform: translateX(-50%);">
+                        <p>Aayushma Agrawal is active public speaker and writer. She has got adventurous genes and a
+                            curious heart to explore new things.</p>
+                    </div>
+                    <div class="ele">
+                        <p style="position: relative;
+                         top: 50%; transform: translateY(-50%); font-weight: bold;">More Coming Soon...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seven" id="seven">
+            <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
+            <div class="content-seven">
+                <div class="grid-whole">
+                    <h1>Sponsors</h1>
+                    <div></div>
+                    <div class="grid-seven">
+                        <div class="ele-seven">
+                            <p style="font-weight: bold;">Coming Soon...</p>
+                        </div>
+                    </div>
+                    <div class="buttons-seven">
+                        <button onclick="window.location.href = './view/sponsor.html'">Sponsor Us</button>
+                        <button onclick="window.location.href = './downloads/womentechiesbrochure.pdf'">Download
+                            Brochure</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="eight" id="eight">
+            <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
+            <div class="content-eight">
+                <h1 style="color: rgb(255, 167, 87)">Contact Us</h1>
+                <div class="contactus">
+                    <div class="club">
+                        <p>Angad Sharma</p>
+                        <p>Point of Contact</p>
+                        <div style="position: relative;">
+                            <img src="./assets/mail.svg" alt="">
+                            <p>angadsharma1016@gmail.com</p>
+                        </div>
+                        <div style="position: relative;">
+                            <img src="./assets/viber.png" alt="">
+                            <p>9971673330</p>
+                        </div>
+                    </div>
+                    <div class="management">
+                        <p>Meherdeep Thakur</p>
+                        <p>Point of Contact</p>
+                        <div style="position: relative;">
+                            <img src="./assets/mail.svg" alt="">
+                            <p>meherdeept@gmail.com</p>
+                        </div>
+                        <div style="position: relative;">
+                            <img src="./assets/viber.png" alt="">
+                            <p>8700865402</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div style="position: relative; cursor: pointer;"
+                    onclick="window.location.href = 'https://www.facebook.com/dscvitvellore'">
+                    <img src="./assets/facebook.png" alt="">
+                    <p>fb.com/dscvitvellore</p>
+                </div>
+                <div style="position: relative; cursor: pointer;"
+                    onclick="window.location.href = 'https://www.instagram.com/dscvitvellore/'">
+                    <img src="./assets/insta.png" alt="">
+                    <p>instagram.com/dscvitvellore</p>
+                </div>
+                <div style="position: relative; cursor: pointer;" onclick="window.location.href = ''">
+                    <img src="./assets/mail.svg" alt="">
+                    <p>dscvitvellore@gmail.com</p>
+                </div>
+                <div style="position: relative; cursor: pointer;"
+                    onclick="window.location.href = 'https://twitter.com/dscvit'">
+                    <img src="./assets/twitter.png" alt="">
+                    <p>twitter.com/dscvit</p>
+                </div>
+            </div>
+        </div>
+        <div class="nine" id="nine">
+            <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
+            <div class="content-nine">
+                <h1>FAQs</h1>
+                <button class="accordion one-acc" >1. Do I need to pay any
+                    money to register for the Hackathon?</button>
+                <div class="panel">
+                    <p>No. You don’t have to pay anything to anyone to register yourself for any Hackathon on
+                        HackerEarth.</p>
+                </div>
+                <button class="accordion two-acc" >2. Do I need to have any
+                    specific qualifications to be a participant for the Hackathon?</button>
+                <div class="panel">
+                    <p>If you love to code, you are more than welcome to participate in the Hackathon</p>
+                </div>
+                <button class="accordion three-acc" >3. How do I submit what I
+                    have made for the Hackathon?</button>
+                <div class="panel">
+                    <p>You have to develop the application on your local system and submit it on HackerEarth in tar/zip
+                        file format along with instructions to run the application and source code.</p>
+                </div>
+                <button class="accordion one-acc" >4. Do we need to have the
+                    entire idea fully working?</button>
+                <div class="panel">
+                    <p>The entire idea need not to be fully implemented however, the submission should be functional so
+                        that it can be reviewed by the judges.</p>
+                </div>
+                <button class="accordion two-acc" >5. How is the environment?
+                    Will your environment support any language? Will you provide any IDE and DB for us to work on our
+                    ideas?</button>
+                <div class="panel">
+                    <p>You have to develop the entire software application on your local system and submit it on
+                        HackerEarth in tar/zip file format along with instructions to run the application and source
+                        code.</p>
+                </div>
+                <button class="accordion three-acc" >6. Does one have to be
+                    online and available for the entire duration of the Hackathon?</button>
+                <div class="panel">
+                    <p>No, one does not need to be logged in on HackerEarth or be online for the entire duration. You
+                        can develop the application on your local system based on the given themes and then submit it on
+                        HackerEarth, on the specific challenge page.</p>
+                </div>
+                <button class="accordion one-acc" >7. What is the maximum and
+                    minimum capacity for a team?</button>
+                <div class="panel">
+                    <p>The maximum capacity of a team is 4, out of which 2 members should be girls. You can also enroll
+                        as a solo participant, after which you will be paired with another team member to make a team of
+                        2.</p>
+                </div>
+            </div>
+        </div>
+        <div class="ten" id="ten">
+            <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
+            <div class="content-nine">
+                <h1>FAQs Cont.</h1>
+                <button class="accordion two-acc">8. Since there is no
+                    specific technology mentioned, are there any restrictions on using a number of pre-built
+                    libraries?</button>
+                <div class="panel">
+                    <p>There is no restriction to use any language, technology stack, or libraries. You can use any of
+                        them to create a web/mobile application.</p>
+                </div>
+                <button class="accordion three-acc">9. Do I need to give a
+                    demo for the product that I have built?</button>
+                <div class="panel">
+                    <p>Although it is not compulsory, but if you are highly passionate about your idea and you think it
+                        needs a demo/experience, you are welcome to present it. Also, if you are a winner, you are
+                        required to present a demo at a physical event, which will be informed before-hand.</p>
+                </div>
+                <button class="accordion one-acc">10. A fully developed
+                    application need to have a solid backend for data storage like SQL, SharePoint, etc. since it's
+                    online, is it acceptable to show only the prototype of it?</button>
+                <div class="panel">
+                    <p>Yes, it's absolutely fine to submit just the prototype. If you use any database like MySQL or
+                        PostgreSQL you can also submit a database dump along with your submission. However, you are
+                        allowed to submit just the prototype.</p>
+                </div>
+                <button class="accordion two-acc" >11. If it is a team
+                    submission, does that mean all team members will have access to work at the same time?</button>
+                <div class="panel">
+                    <p>Yes, all team members can log in from their accounts and submit the application on
+                        HackerEarth.</p>
+                </div>
+                <button class="accordion three-acc" >12. Who will own the
+                    IP(Intellectual Property) Rights to the product that I have built?</button>
+                <div class="panel">
+                    <p>The developer/developers of the web/mobile application will have all rights and own the IP of the
+                        product. However, all the code needs to be in the public domain (open source) so that it can be
+                        evaluated by the judges.</p>
+                </div>
+                <button class="accordion one-acc" >13. Will I get Additional
+                    Learning for participating in this hackathon?</button>
+                <div class="panel">
+                    <p>Additional Learning is subjected to the faculty. Please confirm that with your respective
+                        faculty, and you can get additional learning using the event participation certificate.</p>
+                </div>
+                <button class="accordion two-acc" >14. When is the hackathon
+                    being held?</button>
+                <div class="panel">
+                    <p>The hackathon will start at 5:30 PM in the evening on the International Women’s Day(8th March)
+                        and will end the next day(9th March) at 7:00 PM in the evening.</p>
+                </div>
+            </div>
+            <div class="termsandconditions">
+                <a href="./downloads/code-of-conduct.pdf">Code of conduct</a>
+                <a href="./downloads/privacy-policy.pdf">Privacy Policy</a>
+                <a href="./downloads/terms-conditions.pdf">Terms and Conditions</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./js/landing.js"></script>
+    <script>
+        let vh = window.innerHeight;
+        if (window.innerWidth < 850) {
+            vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 850) {
+                vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            }
+        })
+        let height = window.innerHeight;
+        let width = window.innerWidth;
+        const left = document.querySelector(".left");
+        const right = document.querySelector(".right");
+        const inner = document.querySelector(".inner");
+        z = 0;
+        let hea = 0;
+        let width_svg = 0;
+        function move(t) {
+            if (width > 850){
+                hea = 5.55 * 0.8 * height;
+                width_svg = hea - 0.85 * width;
+            }
+            else{
+                hea = 5.55 * 0.6 * height;
+                width_svg = hea - 0.7*width;
+            }
+            
+            if (t == 0) {
+                z += 200;
+                if (z > width_svg) {
+                    z = width_svg;
+                }
+                inner.style.transform = "translateX(-" + z + "px)";
+            }
+            if (t == 1) {
+                z -= 200;
+                if (z < 0) {
+                    z = 0;
+                }
+                inner.style.transform = "translateX(-" + z + "px)";
+            }
+        }
+    </script>
 </body>
-<script>
-    let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-      
-</script>
 
 </html>
