@@ -91,14 +91,12 @@ if (width > 850) {
         if (scrollpos > height_color_desk[k+1]) {
             navInner[k].style.color = "black";
             k++;
-            console.log(k)
             navInner[k].style.color = colors[k];
 
         }
         if (scrollpos < height_color_desk[k]) {
             navInner[k].style.color = "black";
             k--;
-            console.log(k)
             navInner[k].style.color = colors[k];
 
         }

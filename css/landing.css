@@ -892,7 +892,7 @@ nav{
         position: relative;
         top: inherit;
         transform: none;
-        margin: 0px 5vw 0 5vw;
+        margin: 0;
         padding-top: 60px;
     }
 
