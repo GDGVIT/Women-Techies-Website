@@ -1,3 +1,18 @@
+
+window.onload = function(){
+    const preloader = document.querySelector(".preloader");
+    const main = document.querySelector(".main");
+    const desktopNav =  document.querySelector(".desktop-nav");
+    const mobile = document.querySelector(".mobile");
+if(window.innerWidth > 850){
+    main.classList.remove("display-none");
+    main.classList.add("display");
+    desktopNav.classList.remove("display-none");
+    desktopNav.classList.add("display");
+    preloader.classList.remove("display");
+    preloader.classList.add("display-none")
+}
+
 if (location.hash) {
     setTimeout(function () {
         window.scrollTo(0, 0);
@@ -118,7 +133,7 @@ for (q = 0; q < acc.length; q++) {
         }
     });
 }
-
+}
 
 
 

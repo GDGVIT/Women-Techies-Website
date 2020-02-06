@@ -11,7 +11,10 @@
 </head>
 
 <body>
-    <nav>
+    <div class="preloader display">
+        <img src="./assets/logo-orange-b.png" alt="" class="women-techies-logo-preloader">
+    </div>
+    <nav class="desktop-nav display-none">
         <img src="./assets/dsc-logo.svg" alt="" class="dsclogo" onclick="window.location.href = '#one'">
         <div class="nav-inner">
             <a href="#one">Home</a>
@@ -25,7 +28,7 @@
             <a href="#nine">FAQs</a>
         </div>
     </nav>
-    <div class="mobile">
+    <div class="mobile display-none" >
         <img src="./assets/dsc-logo.svg" alt="" class="dsclogo-mobile" onclick="window.location.href = '#one';">
         <div class="ham">
             <div class="line1"></div>
@@ -43,7 +46,7 @@
             <a href="#nine" onclick="assign(8)">FAQs</a>
         </div>
     </div>
-    <div class="main">
+    <div class="main display-none">
         <div class="one" id="one">
             <div class="content-one">
                 <div class="topright">
