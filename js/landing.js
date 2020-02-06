@@ -44,11 +44,13 @@ for (j = 0; j <= 9; j++) {
 }
 let i = 0;
 let a = -1;
+let k = 0;
 function openclose() {
     navItems.classList.toggle("open");
     lines[0].classList.toggle("merge");
     lines[1].classList.toggle("merge");
     body.classList.toggle("overflow");
+    k++;
 }
 button.addEventListener("click", () => {
     openclose();

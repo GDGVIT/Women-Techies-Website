@@ -104,6 +104,7 @@ nav{
 .top{
     position: absolute;
     clip-path: polygon(0% 0, 100% 0, 100% 100%);
+    -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     background-color: rgb(255, 167, 87);
     z-index: 10;
     right: 0;
@@ -113,6 +114,7 @@ nav{
 .middle{
     position: absolute;
     clip-path: polygon(0% 0, 100% 0, 100% 100%);
+    -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     background-color: rgb(255, 197, 145);
     z-index: 9;
     right: 0;
@@ -122,6 +124,7 @@ nav{
 .bottom{
     position: absolute;
     clip-path: polygon(0% 0, 100% 0, 100% 100%);
+    -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     background-color: rgb(255, 221, 190);
     z-index: 8;
     right: 0;
