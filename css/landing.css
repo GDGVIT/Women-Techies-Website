@@ -584,9 +584,34 @@ nav{
   .active:after {
     content: "▴"; /* Unicode character for "minus" sign (-) */
   }
+  
+  .one-acc{
+    border-bottom: solid 1px rgb(164,27,228);
+  }
+  .two-acc{
+    border-bottom: solid 1px rgb(255, 167, 87);
+  }
+  .three-acc{
+    border-bottom: solid 1px rgb(252,37,126);
+  }
+  .active{
+    border-bottom: none;
+}
+.black-border{
+    border-bottom: solid 1px black;
+}
 
 /* Nine: End */
-
+.termsandconditions{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+.termsandconditions > a{
+    text-decoration: none;
+    margin-right: 5px;
+}
 
 
 ::-webkit-scrollbar {

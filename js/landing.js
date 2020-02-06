@@ -1,8 +1,8 @@
-if (location.hash) {
+/* if (location.hash) {
     setTimeout(function () {
         window.scrollTo(0, 0);
     }, 1);
-}
+} */
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
 const navInner = document.querySelectorAll(".nav-inner a")
@@ -120,10 +120,13 @@ for (q = 0; q < acc.length; q++) {
     acc[q].addEventListener("click", function () {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
+        console.log(q)
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
+            panel.classList.remove("black-border")
         } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.classList.add("black-border")
         }
     });
 }
