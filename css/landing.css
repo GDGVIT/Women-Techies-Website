@@ -606,11 +606,14 @@ nav{
     position: absolute;
     bottom: 20px;
     text-align: center;
-    width: 100%;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .termsandconditions > a{
     text-decoration: none;
-    margin-right: 5vw;
+    margin: 0 3vw;
+    font-size: 1rem;
 }
 
 
@@ -633,6 +636,9 @@ nav{
 
 
 @media(max-width: 850px){
+    .termsandconditions > a{
+        font-size: 3vw;
+    }
     html{
         scroll-behavior: smooth;
     }
