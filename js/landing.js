@@ -7,6 +7,7 @@ const left = document.querySelector(".left");
 const right = document.querySelector(".right");
 const inner = document.querySelector(".inner");
 z = 0;
+let hea = 5.55 * 0.8 * window.innerHeight;
 let width_svg = hea - 0.8 * window.innerWidth;
 function moveright() {
     console.log("right")
@@ -25,17 +26,13 @@ function moveleft(){
         }
         inner.style.transform = "translateX(-" + z + "px)";
 }
-if(window.innerWidth > 850){
-    let hea = 5.55 * 0.8 * window.innerHeight;
+
+    
     right.addEventListener("click", moveright);
     left.addEventListener("click", moveleft);
     
-}
-else{
-    let hea = 5.55 * 0.6 * window.innerHeight;
-    right.addEventListener("touchstart", moveright);
-    left.addEventListener("touchstart", moveleft);
-}
+
+
 
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
