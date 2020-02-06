@@ -377,6 +377,7 @@ nav{
 }
 .ele > h2, .ele > p{
     color: var(--main-text-color);
+    font-size: var(--desk-text-size);
     text-align: center;
 }
 /* Six: End */
