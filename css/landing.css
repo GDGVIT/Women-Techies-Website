@@ -228,10 +228,9 @@ nav{
     border-radius: 4px;
     background-color: var(--hackathon-color);
     color: white;
-    font-weight: bolder;
     /* width: 15vw;
     height: 5vh; */
-    padding: 10px 40px;
+    padding: 10px 50px;
     font-size: calc(var(--desk-text-size));
 }
 
@@ -378,6 +377,7 @@ nav{
 }
 .ele > h2, .ele > p{
     color: var(--main-text-color);
+    font-size: var(--desk-text-size);
     text-align: center;
 }
 /* Six: End */
@@ -394,14 +394,15 @@ nav{
 }
 .grid-whole > h1{
     text-align: center;
-    margin-bottom: 4vh;
+    margin-bottom: 5vh;
+    font-size: 3rem;
 }
 .grid-whole{
     position: relative;
     display: grid;
     grid-template-columns: 80% 20%;
     display: block;
-        grid-template-columns: none;
+    grid-template-columns: none;
 }
 .grid-seven{
     position: relative;
@@ -420,6 +421,7 @@ nav{
 }
 .ele-seven > p{
     text-align: center;
+    margin-bottom: 25vh;
 }
 .ele-seven > img{
     border-radius: 300px;
@@ -432,7 +434,7 @@ nav{
 }
 .buttons-seven > button{
     width: 20vw;
-    height: 4vh;
+    height: 8vh;
     max-height: 50px;
     left: 50%;
     outline: none;
@@ -440,7 +442,7 @@ nav{
     border-radius: 4px;
     background-color: rgb(255, 167, 87);
     color: white;
-    font-weight: bolder;
+    font-size: 1.1rem;
 }
 .buttons-seven > button:nth-child(1){
     position: absolute;
