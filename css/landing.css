@@ -803,6 +803,9 @@ nav{
     }
 
     /* One-Mobile: End */
+    .inner{
+        margin: 0;
+    }
     .inner > img{
         height: 60vh;
     }
