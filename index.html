@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/landing.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
     <title>Document</title>
 </head>
 
@@ -353,6 +354,9 @@
                         and will end the next day(9th March) at 7:00 PM in the evening.</p>
                 </div>
             </div>
+            <div class="termsandconditions">
+                <a href="">Code of conduct</a>
+            </div>
         </div>
     </div>
     </div>
@@ -378,9 +382,15 @@
         let hea = 0;
         let width_svg = 0;
         function move(t) {
-            if (width > 850) hea = 5.55 * 0.8 * vh;
-            else hea = 5.55 * 0.8 * vh;
-            width_svg = hea - 0.7 * width;
+            if (width > 850){
+                hea = 5.55 * 0.8 * vh;
+                width_svg = hea - 0.8 * width;
+            }
+            else{
+                hea = 5.55 * 0.6 * vh;
+                width_svg = hea - (0.80* width);
+            }
+            
             if (t == 0) {
                 z += 200;
                 if (z > width_svg) {
