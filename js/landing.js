@@ -43,6 +43,8 @@ for (j = 0; j <= 9; j++) {
         }
     }
 }
+console.log(height_color)
+console.log(height_openclose)
 let i = 0;
 let a = -1;
 function openclose() {
