@@ -25,17 +25,11 @@ function move(t) {
         inner.style.transform = "translateX(-" + z + "px)";
     }
 }
-/* right.addEventListener("click", () => {
-    
-}) */
-/* left.addEventListener("click", () => {
-    z -= 200;
-    if (z < 0) {
-        z = 0;
-    }
-    inner.style.transform = "translateX(-" + z + "px)";
-})
- */
+right.addEventListener("click", move(0));
+right.addEventListener("touchstart", move(0));
+left.addEventListener("click", move(1));
+left.addEventListener("touchstart", move(1));
+
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
 const navInner = document.querySelectorAll(".nav-inner a")
