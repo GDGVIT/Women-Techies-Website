@@ -15,7 +15,7 @@ if(window.innerWidth > 850){
 }
 else{
     hea = 5.55 * 0.6 * window.innerHeight;
-    width_svg = hea - 0.8 * window.innerWidth;
+    width_svg = hea - 0.7 * window.innerWidth;
 }
 function moveright() {
 
