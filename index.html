@@ -355,7 +355,7 @@
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
             }
         })
-        vh = window.innerHeight;
+        let height = window.innerHeight;
         let width = window.innerWidth;
         const left = document.querySelector(".left");
         const right = document.querySelector(".right");
@@ -365,11 +365,11 @@
         let width_svg = 0;
         function move(t) {
             if (width > 850){
-                hea = 5.55 * 0.8 * vh;
+                hea = 5.55 * 0.8 * height;
                 width_svg = hea - 0.85 * width;
             }
             else{
-                hea = 5.55 * 0.6 * vh;
+                hea = 5.55 * 0.6 * height;
                 width_svg = hea - 0.8*width;
             }
             
