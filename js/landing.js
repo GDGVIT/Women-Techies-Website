@@ -7,11 +7,18 @@ const left = document.querySelector(".left");
 const right = document.querySelector(".right");
 const inner = document.querySelector(".inner");
 z = 0;
-let hea = 5.55 * 0.8 * window.innerHeight;
-let width_svg = hea - 0.8 * window.innerWidth;
+let hea = 0;
+let width_svg = 0;
+if(window.innerWidth > 850){
+    hea = 5.55 * 0.8 * window.innerHeight;
+    width_svg = hea - 0.8 * window.innerWidth;
+}
+else{
+    hea = 5.55 * 0.6 * window.innerHeight;
+    width_svg = hea - 0.8 * window.innerWidth;
+}
 function moveright() {
-    console.log("right")
-    console.log(width_svg)
+
         z += 200;
         if (z > width_svg) {
             z -= 200;
@@ -19,7 +26,7 @@ function moveright() {
         inner.style.transform = "translateX(-" + z + "px)";
 }
 function moveleft(){
-    console.log("left")
+
         z -= 200;
         if (z < 0) {
             z = 0;
