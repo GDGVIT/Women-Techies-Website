@@ -125,13 +125,16 @@
         </div>
         <div class="five" id="five">
             <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
-            
+
             <div class="content-five">
                 <h1 style="text-align: center;">Timeline</h1>
-                <button class="left"> <img src="./assets/angle-left.png" alt="" height = "15px" width="15px" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"> </button>
-                <button class="right"> <img src="./assets/angle-left.png" alt="" height = "15px" width="15px" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(180deg);"> </button>
+                <button class="left" onclick="move(1)" style="z-index: 90;"> <img src="./assets/angle-left.png" alt="" height="15px" width="15px"
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"> </button>
+                <button class="right" onclick="move(0)"> <img src="./assets/angle-left.png" alt="" height="15px" width="15px"
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(180deg);">
+                </button>
                 <div class="inner">
-                    <img src="./assets/svg make.svg" alt="" class= "timeline"style="z-index: -10;">
+                    <img src="./assets/svg make.svg" alt="" class="timeline" style="z-index: -10;">
                 </div>
             </div>
         </div>
@@ -141,8 +144,10 @@
                 <h1>Speakers</h1>
                 <div class="grid-six">
                     <div class="ele">
-                        <img src="./assets/speaker1.jpeg" alt="" style="position: relative; left: 50%; transform: translateX(-50%);">
-                        <p>Aayushma Agrawal is active public speaker and writer. She has got adventurous genes and a curious heart to explore new things.</p>
+                        <img src="./assets/speaker1.jpeg" alt=""
+                            style="position: relative; left: 50%; transform: translateX(-50%);">
+                        <p>Aayushma Agrawal is active public speaker and writer. She has got adventurous genes and a
+                            curious heart to explore new things.</p>
                     </div>
                     <div class="ele">
                         <p style="position: relative;
@@ -222,11 +227,13 @@
                 </div>
             </div>
             <div class="footer">
-                <div style="position: relative; cursor: pointer;" onclick="window.location.href = 'https://www.facebook.com/dscvitvellore'">
+                <div style="position: relative; cursor: pointer;"
+                    onclick="window.location.href = 'https://www.facebook.com/dscvitvellore'">
                     <img src="./assets/facebook.png" alt="">
                     <p>fb.com/dscvitvellore</p>
                 </div>
-                <div style="position: relative; cursor: pointer;" onclick="window.location.href = 'https://www.instagram.com/dscvitvellore/'">
+                <div style="position: relative; cursor: pointer;"
+                    onclick="window.location.href = 'https://www.instagram.com/dscvitvellore/'">
                     <img src="./assets/insta.png" alt="">
                     <p>instagram.com/dscvitvellore</p>
                 </div>
@@ -234,7 +241,8 @@
                     <img src="./assets/mail.svg" alt="">
                     <p>dscvitvellore@gmail.com</p>
                 </div>
-                <div style="position: relative; cursor: pointer;" onclick="window.location.href = 'https://twitter.com/dscvit'">
+                <div style="position: relative; cursor: pointer;"
+                    onclick="window.location.href = 'https://twitter.com/dscvit'">
                     <img src="./assets/twitter.png" alt="">
                     <p>twitter.com/dscvit</p>
                 </div>
@@ -261,21 +269,33 @@
                     <p>You have to develop the application on your local system and submit it on HackerEarth in tar/zip
                         file format along with instructions to run the application and source code.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(164,27,228);">4. Do we need to have the entire idea fully working?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(164,27,228);">4. Do we need to have the
+                    entire idea fully working?</button>
                 <div class="panel">
-                    <p>The entire idea needs not to be fully implemented however, the submission should be functional so that it can be reviewed by the judges.</p>
+                    <p>The entire idea needs not to be fully implemented however, the submission should be functional so
+                        that it can be reviewed by the judges.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(255, 167, 87);">5. How is the environment? Will your environment support any language? Will you provide any IDE and DB for us to work on ideas?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(255, 167, 87);">5. How is the environment?
+                    Will your environment support any language? Will you provide any IDE and DB for us to work on
+                    ideas?</button>
                 <div class="panel">
-                    <p>You have to develop the entire software application on your local system and submit it on HackerEarth in tar/zip file format along with instructions to run the application and source code.</p>
+                    <p>You have to develop the entire software application on your local system and submit it on
+                        HackerEarth in tar/zip file format along with instructions to run the application and source
+                        code.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">6. Does one have to be online and available for the entire duration of the Hackathon?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">6. Does one have to be
+                    online and available for the entire duration of the Hackathon?</button>
                 <div class="panel">
-                    <p>No, one does not need to be logged in on HackerEarth or be online for the entire duration. You can develop the application on your local system based on the given themes and then submit it on HackerEarth, on the specific challenge page.</p>
+                    <p>No, one does not need to be logged in on HackerEarth or be online for the entire duration. You
+                        can develop the application on your local system based on the given themes and then submit it on
+                        HackerEarth, on the specific challenge page.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">7. What is the maximum and minimum capacity for a team?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">7. What is the maximum and
+                    minimum capacity for a team?</button>
                 <div class="panel">
-                    <p>The maximum capacity of a team is 4, out of which 2 members should be girls. You can also enroll as a solo participant, after which you will be paired with another team member to make a team of 2.</p>
+                    <p>The maximum capacity of a team is 4, out of which 2 members should be girls. You can also enroll
+                        as a solo participant, after which you will be paired with another team member to make a team of
+                        2.</p>
                 </div>
             </div>
         </div>
@@ -283,40 +303,60 @@
             <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
             <div class="content-nine">
                 <h1>FAQs Cont.</h1>
-                <button class="accordion" style="border-bottom: solid 1px rgb(164,27,228);">8. Since there is no specific technology mentioned, are there any restrictions on using a number of pre-built libraries?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(164,27,228);">8. Since there is no
+                    specific technology mentioned, are there any restrictions on using a number of pre-built
+                    libraries?</button>
                 <div class="panel">
-                    <p>There is no restriction to use any language, technology stack, or libraries. You can use any of them to create a web/mobile application.</p>
+                    <p>There is no restriction to use any language, technology stack, or libraries. You can use any of
+                        them to create a web/mobile application.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(255, 167, 87);">9. Do I need to give a demo for the product that I have built?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(255, 167, 87);">9. Do I need to give a
+                    demo for the product that I have built?</button>
                 <div class="panel">
-                    <p>Although it is not compulsory, but if you are highly passionate about your idea and you think it needs a demo/experience, you are welcome to present it. Also, if you are a winner, you are required to present a demo at a physical event, which will be informed before-hand.</p>
+                    <p>Although it is not compulsory, but if you are highly passionate about your idea and you think it
+                        needs a demo/experience, you are welcome to present it. Also, if you are a winner, you are
+                        required to present a demo at a physical event, which will be informed before-hand.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">10. A fully developed application need to have a solid backend for data storage like SQL, SharePoint, etc. since its online, is it accepted to show only the prototype of it?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">10. A fully developed
+                    application need to have a solid backend for data storage like SQL, SharePoint, etc. since its
+                    online, is it accepted to show only the prototype of it?</button>
                 <div class="panel">
-                    <p>Yes, it's absolutely fine to submit just the prototype. If you use any database like MySQL or PostgresSQL you can also submit a database dump along with your submission. However, you are allowed to submit just the prototype.</p>
+                    <p>Yes, it's absolutely fine to submit just the prototype. If you use any database like MySQL or
+                        PostgresSQL you can also submit a database dump along with your submission. However, you are
+                        allowed to submit just the prototype.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(164,27,228);">11. If it is a team submission, does that mean all team members will have access to work at the same time?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(164,27,228);">11. If it is a team
+                    submission, does that mean all team members will have access to work at the same time?</button>
                 <div class="panel">
-                    <p>Yes, all team members can log in from their accounts and do application submission on HackerEarth.</p>
+                    <p>Yes, all team members can log in from their accounts and do application submission on
+                        HackerEarth.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(255, 167, 87);">12. Who will own the IP(Intellectual Property) Rights to the product that I have built?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(255, 167, 87);">12. Who will own the
+                    IP(Intellectual Property) Rights to the product that I have built?</button>
                 <div class="panel">
-                    <p>The developer/developers of the web/mobile application will have all rights and own the IP of the product. However, all code needs to be in the public domain (open source) so that it can be evaluated by the judges.</p>
+                    <p>The developer/developers of the web/mobile application will have all rights and own the IP of the
+                        product. However, all code needs to be in the public domain (open source) so that it can be
+                        evaluated by the judges.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">13. Will I get Additional Learning for participating in this hackathon?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">13. Will I get Additional
+                    Learning for participating in this hackathon?</button>
                 <div class="panel">
-                    <p>Additional Learning is subjected to the faculty. Please confirm that with your respective faculty, and you can get additional learning using the event participation certificate.</p>
+                    <p>Additional Learning is subjected to the faculty. Please confirm that with your respective
+                        faculty, and you can get additional learning using the event participation certificate.</p>
                 </div>
-                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">14. When is the hackathon being held?</button>
+                <button class="accordion" style="border-bottom: solid 1px rgb(252,37,126);">14. When is the hackathon
+                    being held?</button>
                 <div class="panel">
-                    <p>The hackathon will start at 5:30 PM in the evening on the International Women’s Day(8th March) and will end the next day(9th March) at 7:00 PM in the evening.</p>
+                    <p>The hackathon will start at 5:30 PM in the evening on the International Women’s Day(8th March)
+                        and will end the next day(9th March) at 7:00 PM in the evening.</p>
                 </div>
             </div>
         </div>
     </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
-<script>
+    <script src="./js/landing.js"></script>
+    <script>
         if (window.innerWidth < 850) {
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -327,32 +367,8 @@
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
             }
         })
-        const left = document.querySelector(".left");
-const right = document.querySelector(".right");
-const inner = document.querySelector(".inner");
-i = 0;
-let hea = document.querySelector(".timeline").clientWidth;
-let width_svg = 0;
-if(width > 850){
-    width_svg = hea - 0.8*window.innerWidth;
-}
-else{
-    width_svg = hea - 0.8*window.innerWidth;
-}
-right.addEventListener("click", ()=>{
-    i += 200; 
-    if(i > width_svg) i -= 200 ;
-    inner.style.transform = "translateX(-"+i+"px)";
-})
-left.addEventListener("click", ()=>{
-    i -= 200;
-    if(i < 0) i = 0;
-    inner.style.transform = "translateX(-"+i+"px)";
-})
-
     </script>
-    <script src="./js/landing.js"></script>
-    
+
 </body>
 
 </html>

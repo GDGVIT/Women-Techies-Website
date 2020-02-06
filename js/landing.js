@@ -3,6 +3,39 @@ if (location.hash) {
         window.scrollTo(0, 0);
     }, 1);
 }
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+const inner = document.querySelector(".inner");
+z = 0;
+let hea = document.querySelector(".timeline").clientWidth;
+let width_svg = hea - 0.8 * window.innerWidth;
+function move(t) {
+    if (t == 0) {
+        z += 200;
+        if (z > width_svg) {
+            z -= 200;
+        }
+        inner.style.transform = "translateX(-" + z + "px)";
+    }
+    if (t == 1) {
+        z -= 200;
+        if (z < 0) {
+            z = 0;
+        }
+        inner.style.transform = "translateX(-" + z + "px)";
+    }
+}
+/* right.addEventListener("click", () => {
+    
+}) */
+/* left.addEventListener("click", () => {
+    z -= 200;
+    if (z < 0) {
+        z = 0;
+    }
+    inner.style.transform = "translateX(-" + z + "px)";
+})
+ */
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
 const navInner = document.querySelectorAll(".nav-inner a")
@@ -27,11 +60,11 @@ let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 for (j = 0; j <= 9; j++) {
     for (o = 0; o <= j; o++) {
-        if(o == 9){
-            height_color_desk[o] += 3*heights[j];
-            height_color[o] += 4*heights[j];
+        if (o == 9) {
+            height_color_desk[o] += 3 * heights[j];
+            height_color[o] += 4 * heights[j];
         }
-        else{ 
+        else {
             height_color_desk[j] += heights[o];
             height_color[j] += heights[o];
         }
@@ -70,16 +103,15 @@ button.addEventListener("click", () => {
 
 let vh = window.innerHeight;
 let width = window.innerWidth;
-function assign(b){
+function assign(b) {
     a = b;
 }
 k = 0;
-window.addEventListener("scroll",()=>
-{
-    if(width > 850){
+window.addEventListener("scroll", () => {
+    if (width > 850) {
         let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
         scrollpos += 0.5 * vh;
-        if (scrollpos > height_color_desk[k+1]) {
+        if (scrollpos > height_color_desk[k + 1]) {
             navInner[k].style.color = "black";
             k++;
             navInner[k].style.color = colors[k];
@@ -93,7 +125,7 @@ window.addEventListener("scroll",()=>
         }
 
     }
-    else{
+    else {
         let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
         scrollpos += 0.4 * vh;
         if (scrollpos > height_color[k + 1]) {
