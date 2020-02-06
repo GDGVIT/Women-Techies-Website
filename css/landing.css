@@ -66,7 +66,7 @@ nav{
 
 .main{
     position: relative;
-    height: 600vh;
+    height: 100%;
     margin-left: 15vw;
 }
 .main > div{
@@ -361,7 +361,9 @@ nav{
 .grid-six{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(2, 50%);
+    left: 50%;
+    transform: translateX(-50%);
     justify-items: center;
 }
 .content-six > h1{
@@ -638,6 +640,12 @@ nav{
 @media(max-width: 850px){
     .termsandconditions > a{
         font-size: 3vw;
+    }
+    .right, .left{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 5vh;
+        top: 60%;
     }
     html{
         scroll-behavior: smooth;

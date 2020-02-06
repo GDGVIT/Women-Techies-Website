@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/landing.css">
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Women Techies 2020</title>
+    <title>WomenTechies20</title>
 </head>
 
 <body>
@@ -32,13 +32,13 @@
             <div class="line2"></div>
         </div>
         <div class="nav-items">
-            <a onclick="window.location.href = '#one'; assign(0);">Home</a>
-            <a onclick="window.location.href = '#two';assign(1)">About DSC</a>
+            <a href = "#one"onclick="assign(0);">Home</a>
+            <a href = "#two"onclick="assign(1)">About DSC</a>
             <a href="#three" onclick="assign(2)">Hackathon</a>
             <a href="#four" onclick="assign(3)">Our Vision</a>
             <a href="#five" onclick="assign(4)">Timeline</a>
             <a href="#six" onclick="assign(5)">Speakers</a>
-            <a onclick="window.location.href = '#seven'; assign(6)">Sponsors</a>
+            <a href = "#seven"onclick="assign(6)">Sponsors</a>
             <a href="#eight" onclick="assign(7)">Contact Us</a>
             <a href="#nine" onclick="assign(8)">FAQs</a>
         </div>
@@ -154,7 +154,7 @@
                     </div>
                     <div class="ele">
                         <p style="position: relative;
-                         top: 50%; transform: translateY(-50%); font-weight: bold;">Coming Soon...</p>
+                         top: 50%; transform: translateY(-50%); font-weight: bold;">More Coming Soon...</p>
                     </div>
                 </div>
             </div>
@@ -275,11 +275,11 @@
                 <button class="accordion one-acc" >4. Do we need to have the
                     entire idea fully working?</button>
                 <div class="panel">
-                    <p>The entire idea needs not to be fully implemented however, the submission should be functional so
+                    <p>The entire idea need not to be fully implemented however, the submission should be functional so
                         that it can be reviewed by the judges.</p>
                 </div>
                 <button class="accordion two-acc" >5. How is the environment?
-                    Will your environment support any language? Will you provide any IDE and DB for us to work on
+                    Will your environment support any language? Will you provide any IDE and DB for us to work on our
                     ideas?</button>
                 <div class="panel">
                     <p>You have to develop the entire software application on your local system and submit it on
@@ -321,24 +321,24 @@
                         required to present a demo at a physical event, which will be informed before-hand.</p>
                 </div>
                 <button class="accordion one-acc">10. A fully developed
-                    application need to have a solid backend for data storage like SQL, SharePoint, etc. since its
-                    online, is it accepted to show only the prototype of it?</button>
+                    application need to have a solid backend for data storage like SQL, SharePoint, etc. since it's
+                    online, is it acceptable to show only the prototype of it?</button>
                 <div class="panel">
                     <p>Yes, it's absolutely fine to submit just the prototype. If you use any database like MySQL or
-                        PostgresSQL you can also submit a database dump along with your submission. However, you are
+                        PostgreSQL you can also submit a database dump along with your submission. However, you are
                         allowed to submit just the prototype.</p>
                 </div>
                 <button class="accordion two-acc" >11. If it is a team
                     submission, does that mean all team members will have access to work at the same time?</button>
                 <div class="panel">
-                    <p>Yes, all team members can log in from their accounts and do application submission on
+                    <p>Yes, all team members can log in from their accounts and submit the application on
                         HackerEarth.</p>
                 </div>
                 <button class="accordion three-acc" >12. Who will own the
                     IP(Intellectual Property) Rights to the product that I have built?</button>
                 <div class="panel">
                     <p>The developer/developers of the web/mobile application will have all rights and own the IP of the
-                        product. However, all code needs to be in the public domain (open source) so that it can be
+                        product. However, all the code needs to be in the public domain (open source) so that it can be
                         evaluated by the judges.</p>
                 </div>
                 <button class="accordion one-acc" >13. Will I get Additional
@@ -362,17 +362,6 @@
         </div>
     </div>
     </div>
-    <script>
-        let height = window.innerHeight;
-        let vw = window.innerWidth;
-        if(vw < 850){
-            const vitOrange = document.querySelector(".vit-orange");
-            vitOrange.height =  0.64 * (0.9 *vw);
-            const violet = document.querySelector(".violet-man-woman");
-            violet.height = 0.9407 * (0.81*vw);
-        }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
     <script src="./js/landing.js"></script>
     <script>
         let vh = window.innerHeight;
@@ -397,17 +386,17 @@
         function move(t) {
             if (width > 850){
                 hea = 5.55 * 0.8 * vh;
-                width_svg = hea - 0.8 * width;
+                width_svg = hea - 0.85 * width;
             }
             else{
                 hea = 5.55 * 0.6 * vh;
-                width_svg = hea - (0.80* width);
+                width_svg = hea - width;
             }
             
             if (t == 0) {
                 z += 200;
                 if (z > width_svg) {
-                    z -= 200;
+                    z = width_svg;
                 }
                 inner.style.transform = "translateX(-" + z + "px)";
             }

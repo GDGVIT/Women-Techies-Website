@@ -1,16 +1,15 @@
-/* if (location.hash) {
+if (location.hash) {
     setTimeout(function () {
         window.scrollTo(0, 0);
     }, 1);
-} */
+}
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
 const navInner = document.querySelectorAll(".nav-inner a")
 const lines = document.querySelectorAll(".ham div");
 const navlinks = document.querySelectorAll(".nav-items a");
 const body = document.querySelector("body");
-const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87)", "rgb(252,37,126)", "rgb(164,27,228)"]
-const t1 = gsap.timeline();
+const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87)", "rgb(252,37,126)", "rgb(164,27,228)"];
 let heights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 heights[0] = 0;
 heights[1] = document.querySelector("#one").clientHeight;
@@ -52,19 +51,6 @@ function openclose() {
     lines[0].classList.toggle("merge");
     lines[1].classList.toggle("merge");
     body.classList.toggle("overflow");
-    if (i == 9) {
-        i = 0;
-    }
-    else {
-        for (i = 0; i < 9; i++) {
-            t1.fromTo(navlinks[i], {
-                opacity: 0
-            }, {
-                opacity: 1,
-                duration: 0.10
-            })
-        }
-    }
 }
 button.addEventListener("click", () => {
     openclose();
