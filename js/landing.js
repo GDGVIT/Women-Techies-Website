@@ -3,33 +3,6 @@ if (location.hash) {
         window.scrollTo(0, 0);
     }, 1);
 }
-let vh = window.innerHeight;
-let width = window.innerWidth;
-const left = document.querySelector(".left");
-const right = document.querySelector(".right");
-const inner = document.querySelector(".inner");
-z = 0;
-let hea = 0;
-let width_svg = 0;
-function move(t) {
-    if(width > 850) hea = 5.55 * 0.8 * vh;
-    else    hea = 5.55* 0.8 * vh;
-    width_svg = hea - 0.7 * width; 
-    if (t == 0) {
-        z += 200;
-        if (z > width_svg) {
-            z -= 200;
-        }
-        inner.style.transform = "translateX(-" + z + "px)";
-    }
-    if (t == 1) {
-        z -= 200;
-        if (z < 0) {
-            z = 0;
-        }
-        inner.style.transform = "translateX(-" + z + "px)";
-    }
-}
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
 const navInner = document.querySelectorAll(".nav-inner a")
