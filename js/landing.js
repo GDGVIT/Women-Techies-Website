@@ -9,26 +9,31 @@ const inner = document.querySelector(".inner");
 z = 0;
 let hea = document.querySelector(".timeline").clientWidth;
 let width_svg = hea - 0.8 * window.innerWidth;
-function move(t) {
-    if (t == 0) {
+function moveright() {
+    console.log("right")
         z += 200;
         if (z > width_svg) {
             z -= 200;
         }
         inner.style.transform = "translateX(-" + z + "px)";
-    }
-    if (t == 1) {
+}
+function moveleft(){
+    console.log("left")
         z -= 200;
         if (z < 0) {
             z = 0;
         }
         inner.style.transform = "translateX(-" + z + "px)";
-    }
 }
-right.addEventListener("click", move(0));
-right.addEventListener("touchstart", move(0));
-left.addEventListener("click", move(1));
-left.addEventListener("touchstart", move(1));
+if(window.innerWidth > 850){
+    right.addEventListener("click", moveright);
+    left.addEventListener("click", moveleft);
+    
+}
+else{
+    right.addEventListener("touchstart", moveright);
+    left.addEventListener("touchstart", moveleft);
+}
 
 const button = document.querySelector(".ham");
 const navItems = document.querySelector(".nav-items");
