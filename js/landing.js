@@ -69,7 +69,7 @@ window.onload = function () {
     console.log(height_color_desk)
     console.log(height_openclose)
     let i = 0;
-    
+
     let k = 0;
     function openclose() {
         navItems.classList.toggle("open");
@@ -83,7 +83,7 @@ window.onload = function () {
     });
 
 
-    
+
     k = 0;
     window.addEventListener("scroll", () => {
         if (width > 850) {
@@ -142,10 +142,32 @@ window.onload = function () {
             }
         });
     }
+    const rest = document.querySelector(".rest");
+    const showmore = document.querySelector(".showmore")
+    let r = 0;
+    showmore.addEventListener("click", () => {
+        r++;
+        rest.classList.toggle("display");
+        if (r % 2 == 1) {
+            showmore.innerHTML = "Show Less";
+            /* rest.style.height = rest.scrollHeight + "px";
+            setTimeout(()=>{
+                rest.style.height = "100%";
+            },1100) */
+            
+        }
+        else {
+            /* rest.style.overflow = "hidden";
+            rest.style.height = null; */
+            showmore.innerHTML = "Show More";
+        }
+    });
+
 }
+
 let a = -1;
 function assign(b) {
-        a = b;
-    }
+    a = b;
+}
 
 

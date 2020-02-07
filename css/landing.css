@@ -616,12 +616,14 @@ nav{
     margin: 0 10vw 0 10vw;
     padding-top: 10vh;
     padding-bottom: 10vh;
+    /* transition: all 3s; */
 }
 .content-nine > h1{
     text-align: center;
     margin-bottom: 30px;
 }
 .accordion {
+    position: relative;
     background-color:white;
     color: black;
     font-size: var(--desk-text-size);
@@ -705,7 +707,20 @@ nav{
     background: orange; 
 }
 
-
+.showmore{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+    border-radius: 4px;
+    background-color: var(--hackathon-color);
+    color: white;
+    width: 15vw;
+    height: 6vh;
+    font-size: calc(var(--desk-text-size));
+    outline: none;
+    border: none;
+}
 
 
 
@@ -1198,7 +1213,10 @@ nav{
     -webkit-transform: translateX(-50%);
     }
     /* Seven-Mobile: End */
-
+    .showmore{
+        width: 50vw;
+        height: 6vh;
+    }
     /* Eight-Mobile: End */
 
     #eight{
@@ -1237,9 +1255,16 @@ nav{
     /* Eight-Mobile: End */ 
 
 }
+.rest{
+    position: relative;
+    display: none;
+    transition: all 1s;
+}
+
 .display-none{
     display: none;
 }
 .display{
     display: block;
 }
+
