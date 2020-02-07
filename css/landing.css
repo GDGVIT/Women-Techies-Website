@@ -1228,6 +1228,7 @@ nav{
     .showmore{
         width: 50vw;
         height: 6vh;
+        font-size: var(--text-font-size);
     }
     /* Eight-Mobile: End */
 
