@@ -544,15 +544,13 @@ nav{
 .contactus > div > div{
     height: 24px;
 }
-.contactus > div > div > p{
+.contactus > div > div > a{
     position: relative;
-    top: 12px;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    margin-left: 30px;
+    margin-left: 10px;
     color: var(--main-text-color);
     margin-bottom: 10px;
+    text-decoration: none;
+    outline: none;
 }
 
 .contactus > div > div > img{
