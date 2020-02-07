@@ -12,6 +12,8 @@ html {
     --heading-font-size: 2rem;
     --desk-text-size: 1.15rem;
     --desk-heading-size: 2rem;
+    --heading-margin: 24px;
+    --para-margin: 48px;
 }
 
 *{
@@ -209,6 +211,7 @@ nav{
 .img-overflow{
     position: relative;
     overflow: hidden;
+    margin: 0;
 }
 .img-overflow > img{
     position: relative;
@@ -952,6 +955,7 @@ nav{
         display: block;
         font-size: var(--heading-font-size);
         font-weight: bolder;
+        margin-bottom: 24px;
     }
     .content-two > p{
         font-size: var(--text-font-size);
@@ -960,6 +964,7 @@ nav{
     }
     .content-two > p:nth-child(2){
         font-size: var(--text-font-size);
+        margin-bottom: 48px;
     }
     .text-img{
         display: block;
@@ -977,7 +982,9 @@ nav{
         color: var(--main-text-color);
         font-size: var(--text-font-size);
     }
-
+    .img-overflow{
+        margin: 48px 0 0 0;
+    }
     /*Two-Mobile: End */
 
     /*Three-Mobile: Start */
@@ -1009,12 +1016,12 @@ nav{
     .text-3 > p:nth-child(1){
         font-size: var(--heading-font-size);
         color: var(--hackathon-color);
-
+        margin-bottom: var(--heading-margin);
     }
     .text-3 > p:nth-child(2){
         font-size: var(--text-font-size);
         color: var(--main-text-color);
-        margin-bottom: 30px;
+        margin-bottom: var(--para-margin);
     }
     .text-3 > button{
         position: relative;
@@ -1041,11 +1048,11 @@ nav{
     }
     .grid-four > p > span{
         font-size: var(--heading-font-size);
-
-    }
+        margin-bottom: var(--heading-margin);
+    }   
     .grid-four > p{
         font-size: var(--text-font-size);
-        margin-bottom: 2vh;
+        margin-bottom: var(--para-margin);
     }
     .grid-four > div > img{
         width: 90%;
