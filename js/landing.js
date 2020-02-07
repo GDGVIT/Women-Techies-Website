@@ -1,5 +1,6 @@
 
 window.onload = function () {
+    
     const preloader = document.querySelector(".preloader");
     const main = document.querySelector(".main");
     const desktopNav = document.querySelector(".desktop-nav");
