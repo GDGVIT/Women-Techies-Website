@@ -131,7 +131,7 @@
             <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
 
             <div class="content-five">
-                <h1 style="text-align: center;">Timeline</h1>
+                <h1>Timeline</h1>
                 <button class="left" onclick="move(1)"> <img src="./assets/angle-left.png" alt="" height="15px"
                         width="15px" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
                 </button>
@@ -139,8 +139,10 @@
                         width="15px"
                         style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(180deg);">
                 </button>
-                <div class="inner">
-                    <img src="./assets/svg make.svg" alt="" class="timeline" style="z-index: -10;">
+                <div class="outer">
+                    <div class="inner">
+                        <img src="./assets/svg make.svg" alt="" class="timeline" style="z-index: -10;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -362,7 +364,7 @@
         let width = window.innerWidth;
         const left = document.querySelector(".left");
         const right = document.querySelector(".right");
-        const inner = document.querySelector(".inner");
+        const inner = document.querySelector(".timeline");
         z = 0;
         let hea = 0;
         let width_svg = 0;
@@ -372,8 +374,8 @@
                 width_svg = hea - 0.85 * width;
             }
             else{
-                hea = 5.55 * 0.6 * height;
-                width_svg = hea - 0.7*width;
+                hea = 5.55 * 0.5 * height;
+                width_svg = hea - width;
             }
             
             if (t == 0) {
