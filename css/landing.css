@@ -984,6 +984,8 @@ nav{
         height: fit-content;
         margin: 0 5vw 0 5vw;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
     }
     .header{
         display: block;
@@ -1033,6 +1035,8 @@ nav{
         padding-top: 60px;
         margin: 0px 5vw 0 5vw;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         height: fit-content;
         top: inherit;
 
@@ -1045,6 +1049,8 @@ nav{
         top: inherit;
         left: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         height: fit-content;
     }
     .text-3 > p:nth-child(1){
@@ -1078,6 +1084,8 @@ nav{
         padding-top: 60px;
         top: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         margin: 0 5vw 0 5vw;
     }
     .grid-four{
@@ -1109,6 +1117,8 @@ nav{
         position: relative;
         top: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         margin: 0;
         padding-top: 60px;
         margin-bottom: 20px;
@@ -1133,6 +1143,8 @@ nav{
         position: relative;
         top: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         padding-top: 60px;
         height: fit-content;
         margin: 0 5vw 0 5vw;
@@ -1157,6 +1169,8 @@ nav{
         margin-bottom: 12px;
         left: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
     }
     .ele > h2, .ele > p{
         color: var(--main-text-color);
@@ -1175,6 +1189,8 @@ nav{
         position: relative;
         top: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         padding-top: 60px;
         margin: 0 5vw 0 5vw;
     }
@@ -1237,6 +1253,14 @@ nav{
     }
     .content-eight{
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         top: inherit;
         margin: 0 4vw 10vh 4vw;
         padding-top: 60px;
