@@ -427,6 +427,9 @@ nav{
     height: 20vh;
     border: 10px solid var(--hackathon-color);
     margin-bottom: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .ele > h2, .ele > p{
     color: var(--main-text-color);
@@ -1127,6 +1130,8 @@ nav{
         height: 13vh;
         border: 5px solid var(--hackathon-color);
         margin-bottom: 12px;
+        left: inherit;
+        transform: none;
     }
     .ele > h2, .ele > p{
         color: var(--main-text-color);
