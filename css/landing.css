@@ -115,8 +115,22 @@ nav{
     position: relative;
     height: 100%;
 }
+.main-register{
+    display: block;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--hackathon-color);
+    color: white;
+    width: 15vw;
+    height: 6vh;
+    font-size: calc(var(--desk-text-size));
+    margin: 10vh 0 0 calc(100px + 12.5vw);
+    transform: translateX(-50%);
+    cursor: pointer;
+}
 .women-techies-logo{
-    position: absolute;
+    position: relative;
     margin: 23vh 0 0 100px;
     width: 25vw;
     min-width: 250px;
@@ -272,6 +286,7 @@ nav{
     width: 15vw;
     height: 6vh;
     font-size: calc(var(--desk-text-size));
+    cursor: pointer;
 }
 
 
@@ -503,6 +518,7 @@ nav{
     background-color: rgb(255, 167, 87);
     color: white;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 .buttons-seven > button:nth-child(1){
     position: absolute;
@@ -977,7 +993,15 @@ nav{
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     }
-
+    .main-register{
+        position: absolute;
+    top: calc(35% + 20vh);
+    margin: 0;
+    height: 5vh;
+    width: 50vw;
+    left: 50vw;
+    transform: translateX(-50%);
+    }
     /* One-Mobile: End */
     .inner{
         position: relative;
@@ -1093,6 +1117,7 @@ nav{
         transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
+        cursor: pointer;
     }
     /*Three-Mobile: End */
 
