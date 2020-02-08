@@ -22,10 +22,16 @@ window.onload = function () {
         preloader.classList.add("display-none")
     }
 
-    if (location.hash) {
+    /* if (location.hash) {
         setTimeout(function () {
             window.scrollTo(0, 0);
         }, 1);
+    } */
+    if (location.hash) {
+        console.log("using hash")
+        var elId = location.hash.replace('#', '');
+        var scrollToEl = document.getElementById(elId);
+        scrollToEl.scrollIntoView(true);
     }
     const button = document.querySelector(".ham");
     const navItems = document.querySelector(".nav-items");
@@ -77,10 +83,6 @@ window.onload = function () {
     button.addEventListener("click", () => {
         openclose();
     });
-
-
-    console.log(height_color)
-    console.log(navlinks)
     let k = 0;
     window.addEventListener("scroll", () => {
         if (width > 850) {
@@ -103,13 +105,10 @@ window.onload = function () {
         else {
             let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
             scrollpos += 0.4 * vh;
-            console.log(scrollpos)
             if (scrollpos > height_color[k + 1]) {
-               
                 navlinks[k].style.color = "black";
                 k++;
                 navlinks[k].style.color = colors[k];
-                console.log(k)
             }
             if (scrollpos < height_color[k]) {
                 navlinks[k].style.color = "black";
@@ -149,15 +148,8 @@ window.onload = function () {
         rest.classList.toggle("display");
         if (r % 2 == 1) {
             showmore.innerHTML = "Show Less";
-            /* rest.style.height = rest.scrollHeight + "px";
-            setTimeout(()=>{
-                rest.style.height = "100%";
-            },1100) */
-            
         }
         else {
-            /* rest.style.overflow = "hidden";
-            rest.style.height = null; */
             showmore.innerHTML = "Show More";
         }
     });

@@ -132,18 +132,9 @@
 
             <div class="content-five">
                 <h1>Timeline</h1>
-                <!-- <button class="left" onclick="move(1)"> <img src="./assets/angle-left.png" alt="" height="15px"
-                        width="15px" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
-                </button> -->
-                <!-- <button class="right" onclick="move(0)"> <img src="./assets/angle-left.png" alt="" height="15px"
-                        width="15px"
-                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(180deg);">
-                </button> -->
-                <!-- <div class="outer"> -->
                 <div class="inner" id="inner">
                     <img src="./assets/svg make.svg" alt="" class="timeline" style="z-index: -10;">
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         <div class="six" id="six">
@@ -352,16 +343,11 @@
         </div>
     </div>
     </div>
-    <script>
+    <!-- <script>
         window.onload = function () {
-            if (location.hash) {
-                console.log("using hash")
-                var elId = location.hash.replace('#', '');
-                var scrollToEl = document.getElementById(elId);
-                scrollToEl.scrollIntoView(true);
-            }
+            
         }
-    </script>
+    </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
     <script src="./js/landing.js"></script>
     <script>
@@ -378,37 +364,6 @@
         })
         let height = window.innerHeight;
         let width = window.innerWidth;
-        /*const left = document.querySelector(".left");
-        const right = document.querySelector(".right");
-        const inner = document.querySelector(".timeline");
-        z = 0;
-        let hea = 0;
-        let width_svg = 0;
-        function move(t) {
-            if (width > 850){
-                hea = 5.55 * 0.8 * height;
-                width_svg = hea - 0.85 * width;
-            }
-            else{
-                hea = 5.55 * 0.5 * height;
-                width_svg = hea - width;
-            }
-
-            if (t == 0) {
-                z += 200;
-                if (z > width_svg) {
-                    z = width_svg;
-                }
-                inner.style.transform = "translateX(-" + z + "px)";
-            }
-            if (t == 1) {
-                z -= 200;
-                if (z < 0) {
-                    z = 0;
-                }
-                inner.style.transform = "translateX(-" + z + "px)";
-            }
-        } */
     </script>
 </body>
 
