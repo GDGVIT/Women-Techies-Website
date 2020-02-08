@@ -12,6 +12,8 @@ html {
     --heading-font-size: 2rem;
     --desk-text-size: 1.15rem;
     --desk-heading-size: 2rem;
+    --heading-margin: 20px;
+    --para-margin: 14px;
 }
 
 *{
@@ -20,7 +22,37 @@ html {
     padding: none;
     
 }
-
+.women-techies-logo-preloader{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    min-width: 0;
+    width: 20vw;
+    animation-name: preloader;
+    -moz-animation-name: preloader;
+    -webkit-animation-name: preloader;
+    animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+@keyframes preloader {
+    0%{
+        transform: translate(-50%,-50%) scale(0.9);
+    }
+    50%{
+        transform: translate(-50%,-50%) scale(1.0);
+    }
+    100%{
+        transform: translate(-50%,-50%) scale(0.9);
+    }
+}
 body{
     margin: 0;
     padding: 0;
@@ -83,8 +115,22 @@ nav{
     position: relative;
     height: 100%;
 }
+.main-register{
+    display: block;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--hackathon-color);
+    color: white;
+    width: 15vw;
+    height: 6vh;
+    font-size: calc(var(--desk-text-size));
+    margin: 10vh 0 0 calc(100px + 12.5vw);
+    transform: translateX(-50%);
+    cursor: pointer;
+}
 .women-techies-logo{
-    position: absolute;
+    position: relative;
     margin: 23vh 0 0 100px;
     width: 25vw;
     min-width: 250px;
@@ -104,6 +150,7 @@ nav{
 .top{
     position: absolute;
     clip-path: polygon(0% 0, 100% 0, 100% 100%);
+    -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     background-color: rgb(255, 167, 87);
     z-index: 10;
     right: 0;
@@ -113,6 +160,7 @@ nav{
 .middle{
     position: absolute;
     clip-path: polygon(0% 0, 100% 0, 100% 100%);
+    -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     background-color: rgb(255, 197, 145);
     z-index: 9;
     right: 0;
@@ -122,6 +170,7 @@ nav{
 .bottom{
     position: absolute;
     clip-path: polygon(0% 0, 100% 0, 100% 100%);
+    -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     background-color: rgb(255, 221, 190);
     z-index: 8;
     right: 0;
@@ -145,6 +194,8 @@ nav{
     margin: 0 0 0 5vw;
     top: 50%;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 .content-two > p{
     color: var(--main-text-color);
@@ -174,6 +225,7 @@ nav{
 .img-overflow{
     position: relative;
     overflow: hidden;
+    margin: 0;
 }
 .img-overflow > img{
     position: relative;
@@ -193,6 +245,8 @@ nav{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 .women-look{
     position: relative;
@@ -204,6 +258,8 @@ nav{
     left: 47%;
     top: 50%;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 .text-3 > p:nth-child(1){
     color: var(--hackathon-color);
@@ -221,17 +277,16 @@ nav{
 .text-3 > button{
     position: absolute;
     margin-top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     outline: none;
     border: none;
     border-radius: 4px;
     background-color: var(--hackathon-color);
     color: white;
-    /* width: 15vw;
-    height: 5vh; */
-    padding: 10px 50px;
+    width: 15vw;
+    height: 6vh;
     font-size: calc(var(--desk-text-size));
+    cursor: pointer;
 }
 
 
@@ -246,6 +301,8 @@ nav{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     margin-left: 4vw;
 }
 .content-four > h1{
@@ -287,17 +344,21 @@ nav{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     height: fit-content;
     overflow: hidden;
 }
-.five > h1{
+.content-five > h1{
     text-align: center;
+    font-size: var(--desk-heading-size);
 }
 .inner{
     position: relative;
-    width: fit-content;
-    margin: 0 5vw 0 0vw ;
-    transition: all 1s ease-out;
+    width: 80vw;
+    margin: 0 5vw 0 0vw;
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 .inner > img{
     height: 80vh;
@@ -307,6 +368,8 @@ nav{
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     z-index: 10;
     border: none;
     outline: none;
@@ -323,6 +386,8 @@ nav{
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     z-index: 10;
     border: none;
     outline: none;
@@ -351,11 +416,14 @@ nav{
     position: relative;
     top: 40%;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     height: fit-content;
     margin: 0 4vw 0 4vw;
 }
 .content-six > h1{
     text-align: center;
+    font-size: var(--desk-heading-size);
 }
 .grid-six{
     position: relative;
@@ -363,6 +431,8 @@ nav{
     grid-template-columns: repeat(2, 50%);
     left: 50%;
     transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     justify-items: center;
 }
 .content-six > h1{
@@ -374,6 +444,9 @@ nav{
     height: 20vh;
     border: 10px solid var(--hackathon-color);
     margin-bottom: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .ele > h2, .ele > p{
     color: var(--main-text-color);
@@ -389,13 +462,15 @@ nav{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     margin: 0 4vw 0 4vw;
     color: rgb(255, 167, 87);
 }
 .grid-whole > h1{
     text-align: center;
     margin-bottom: 5vh;
-    font-size: 3rem;
+    font-size: var(--desk-heading-size);
 }
 .grid-whole{
     position: relative;
@@ -418,6 +493,8 @@ nav{
         /* width: min-content; */
         left: 50%;
         transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
 }
 .ele-seven > p{
     text-align: center;
@@ -433,8 +510,8 @@ nav{
     height: 20vh;
 }
 .buttons-seven > button{
-    width: 20vw;
-    height: 8vh;
+    width: 15vw;
+    height: 6vh;
     max-height: 50px;
     left: 50%;
     outline: none;
@@ -443,16 +520,21 @@ nav{
     background-color: rgb(255, 167, 87);
     color: white;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 .buttons-seven > button:nth-child(1){
     position: absolute;
     top: 30%;
     transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
 }
 .buttons-seven > button:nth-child(2){
     position: absolute;
     top: 70%;
     transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
 }
 /* Seven: End */
 
@@ -465,6 +547,8 @@ nav{
     position: relative;
     top: 35%;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     margin: 0 10vw 0 10vw;
 }
 .contactus{
@@ -478,13 +562,14 @@ nav{
 .contactus > div > div{
     height: 24px;
 }
-.contactus > div > div > p{
+.contactus > div > div > a{
     position: relative;
-    top: 12px;
-    transform: translateY(-50%);
-    margin-left: 30px;
+    margin-left: 10px;
     color: var(--main-text-color);
     margin-bottom: 10px;
+    text-decoration: none;
+    outline: none;
+    font-size: var(--text-font-size);
 }
 
 .contactus > div > div > img{
@@ -496,26 +581,35 @@ nav{
 .content-eight > h1{
     text-align: center;
     margin-bottom: 10vh;
-}
-.contactus > div > p{
-    font-size: 1.2rem;
-    font-weight: bolder;
+    font-size: var(--heading-font-size);
 }
 .contactus > div > p:nth-child(2){
     margin-bottom: 25px;
     color: var(--main-text-color);
+    font-size: var(--text-font-size);
+}
+.contactus > div > p:nth-child(1){
+    
+    font-size: calc(var(--heading-font-size) - 0.3rem);
+    font-weight: bold;
+}
+.club > p:nth-child(1){
+    color: var(--hackathon-color);
 }
 .management > p:nth-child(1){
     color: var(--about-color);
 }
 .footer{
     position: absolute;
-    bottom: 10vh;
+    bottom: 15vh;
     left: 50%;
     transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+    width: -moz-max-content;
     width: fit-content;
     row-gap: 2vh;
     column-gap: 2vw;
@@ -528,8 +622,11 @@ nav{
     position: relative;
     top: 12px;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     margin-left: 30px;
     font-weight: bold;
+    font-size: var(--text-font-size);
 }
 
 /* Eight: End */
@@ -546,12 +643,15 @@ nav{
     margin: 0 10vw 0 10vw;
     padding-top: 10vh;
     padding-bottom: 10vh;
+    /* transition: all 3s; */
 }
 .content-nine > h1{
     text-align: center;
     margin-bottom: 30px;
+    font-size: var(--desk-heading-size);
 }
 .accordion {
+    position: relative;
     background-color:white;
     color: black;
     font-size: var(--desk-text-size);
@@ -607,12 +707,14 @@ nav{
 
 /* Nine: End */
 .termsandconditions{
-    position: absolute;
-    bottom: 20px;
+    position: relative;
+    bottom: 10px;
     text-align: center;
     width: fit-content;
     left: 50%;
     transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
 }
 .termsandconditions > a{
     text-decoration: none;
@@ -633,13 +735,81 @@ nav{
     background: orange; 
 }
 
+#inner::-webkit-scrollbar {
+    width: 7px;
+}
+   
+#inner::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 100px;
+    margin: 0 10vw;
+}
+   
+#inner::-webkit-scrollbar-thumb {
+    background: var(--hackathon-color); 
+    border-radius: 100px;
+}
 
+.showmore{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+    border-radius: 4px;
+    background-color: var(--hackathon-color);
+    color: white;
+    width: 15vw;
+    height: 6vh;
+    font-size: calc(var(--desk-text-size));
+    outline: none;
+    border: none;
+}
 
 
 
 
 
 @media(max-width: 850px){
+    .preloader{
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        transition: all 1s;
+        -moz-transition: all 1s;
+        -webkit-transition: all 1s;
+    }
+    .women-techies-logo-preloader{
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        min-width: 0;
+        width: 60vw;
+        animation-name: preloader;
+        -moz-animation-name: preloader;
+        -webkit-animation-name: preloader;
+        animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+    }
+    @keyframes preloader {
+        0%{
+            transform: translate(-50%,-50%) scale(0.9);
+        }
+        50%{
+            transform: translate(-50%,-50%) scale(1.0);
+        }
+        100%{
+            transform: translate(-50%,-50%) scale(0.9);
+        }
+    }
     .termsandconditions > a{
         font-size: 3vw;
     }
@@ -662,7 +832,7 @@ nav{
     .overflow{
         overflow: hidden;
     }
-    nav:nth-child(1){
+    .desktop-nav{
         display: none;
     }
     .mobile{
@@ -687,20 +857,38 @@ nav{
     .nav-items > a:nth-child(1){
        color: orange;
     }
+    .grid-whole > h1{
+        font-size: var(--heading-font-size);
+        text-align: left;
+    }
+    .content-eight > h1{
+        text-align: left;
+    }
+    .content-nine > h1{
+        text-align: left;
+        font-size: var(--heading-font-size);
+    }
+    .contactus > div > div > a{
+        font-size: var(--text-font-size);
+    }
     /* Nav-Mobile: Start */
 
     .dsclogo-mobile{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
         left: 10px;
-        width: 40vw;
+        width: 30vw;
         z-index: 10;
     }
     .ham{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
         right: 10px;
         height: 50px;
         width: 50px;
@@ -714,6 +902,8 @@ nav{
         height: 2px;
         background-color: black;
         transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
         transition: ease 0.2s;
     }
     .line1{
@@ -769,6 +959,8 @@ nav{
         top: 35%;
         left: 50%;
         transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
         min-width: 0;
         width: 60vw;
     }
@@ -776,16 +968,19 @@ nav{
         height: 50px;
         width: 50px;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
+        -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .middle{
         height: 100px;
         width: 100px;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
+        -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .bottom{
         height: 150px;
         width: 150px;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
+        -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .img-overflow-1{
         position: absolute;
@@ -802,18 +997,35 @@ nav{
         bottom: -5vh;
         left: 50%;
         transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     }
-
+    .main-register{
+        position: absolute;
+    top: calc(35% + 20vh);
+    margin: 0;
+    height: 5vh;
+    width: 50vw;
+    left: 50vw;
+    transform: translateX(-50%);
+    }
     /* One-Mobile: End */
     .inner{
+        position: relative;
         margin: 0;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        width: 100vw;
     }
     .inner > img{
-        height: 60vh;
+        position: relative;
+        height: 50vh;
     }
+    
     /* Two-Mobile: Start */
     #two{
         position: relative;
+        height: -moz-max-content;
         height: fit-content;
     }
     .content-two{
@@ -823,11 +1035,14 @@ nav{
         height: fit-content;
         margin: 0 5vw 0 5vw;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
     }
     .header{
         display: block;
         font-size: var(--heading-font-size);
         font-weight: bolder;
+        margin-bottom: 24px;
     }
     .content-two > p{
         font-size: var(--text-font-size);
@@ -836,6 +1051,7 @@ nav{
     }
     .content-two > p:nth-child(2){
         font-size: var(--text-font-size);
+        margin-bottom: 48px;
     }
     .text-img{
         display: block;
@@ -853,11 +1069,14 @@ nav{
         color: var(--main-text-color);
         font-size: var(--text-font-size);
     }
-
+    .img-overflow{
+        margin: 48px 0 0 0;
+    }
     /*Two-Mobile: End */
 
     /*Three-Mobile: Start */
     #three{
+        height: -moz-max-content;
         height: fit-content;
     }
     .women-look{
@@ -868,6 +1087,8 @@ nav{
         padding-top: 60px;
         margin: 0px 5vw 0 5vw;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         height: fit-content;
         top: inherit;
 
@@ -880,28 +1101,36 @@ nav{
         top: inherit;
         left: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         height: fit-content;
     }
     .text-3 > p:nth-child(1){
         font-size: var(--heading-font-size);
         color: var(--hackathon-color);
-
+        margin-bottom: var(--heading-margin);
     }
     .text-3 > p:nth-child(2){
         font-size: var(--text-font-size);
         color: var(--main-text-color);
-        margin-bottom: 30px;
+        margin-bottom: var(--para-margin);
     }
     .text-3 > button{
         position: relative;
         width: 50vw;
         height: 6vh;
         font-size: calc(var(--text-font-size));
+        left: 50%;
+        transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        cursor: pointer;
     }
     /*Three-Mobile: End */
 
     /* Four-Mobile: Start */
     #four{
+        height: -moz-max-content;
         height: fit-content;
     }
     .content-four{
@@ -909,6 +1138,8 @@ nav{
         padding-top: 60px;
         top: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         margin: 0 5vw 0 5vw;
     }
     .grid-four{
@@ -917,66 +1148,89 @@ nav{
     }
     .grid-four > p > span{
         font-size: var(--heading-font-size);
-
-    }
+        margin-bottom: var(--heading-margin);
+    }   
     .grid-four > p{
         font-size: var(--text-font-size);
-        margin-bottom: 2vh;
+        margin-bottom: var(--para-margin);
     }
     .grid-four > div > img{
         width: 90%;
         left: 50%;
         transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     }
     /* Four-Mobile: End */
 
     /* Five-Mobile: End */
-
+    #five{
+        height: -moz-max-content;
+        height: fit-content;
+    }
     .content-five{
         position: relative;
         top: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         margin: 0;
         padding-top: 60px;
+        margin-bottom: 20px;
+        width: 100vw;
     }
-
-
+    .content-five > h1{
+        position: relative;
+        text-align: initial;
+        left: 5vw;
+        width: fit-content;
+        font-weight: bolder;
+        font-size: var(--heading-font-size);
+    }
+    
     /* Five-Mobile: End */
 
     /* Six-Mobile: Start */
     #six{
+        height: -moz-max-content;
         height: fit-content;
     }
     .content-six{
         position: relative;
         top: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         padding-top: 60px;
         height: fit-content;
         margin: 0 5vw 0 5vw;
     }
     .content-six > h1{
-        text-align: center;
+        text-align: initial;
+        margin-bottom: var(--heading-margin);
+        font-weight: bolder;
+        font-size: var(--heading-font-size);
     }
     .grid-six{
         position: relative;
         display: grid;
         grid-template-columns: none;
         grid-template-rows: repeat(2, 25vh);
-    }
-    .content-six > h1{
-        text-align: center;
-        margin-bottom: 8%;
+        justify-items: left;
     }
     .ele > img{
-        border-radius: 70px;
-        height: 10vh;
+        border-radius: 140px;
+        height: 13vh;
         border: 5px solid var(--hackathon-color);
-        margin-bottom: 10px;
+        margin-bottom: 12px;
+        left: inherit;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
     }
     .ele > h2, .ele > p{
         color: var(--main-text-color);
-        text-align: center;
+        text-align: left;
     }
 
     /* Six-Mobile: End */
@@ -984,6 +1238,7 @@ nav{
     /* Seven-Mobile: End */
 
     #seven{
+        height: -moz-max-content;
         height: fit-content;
         min-height: 50vh;
     }
@@ -991,6 +1246,8 @@ nav{
         position: relative;
         top: inherit;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         padding-top: 60px;
         margin: 0 5vw 0 5vw;
     }
@@ -1005,11 +1262,15 @@ nav{
         /* width: min-content; */
         left: 50%;
         transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     }
     .buttons-seven{
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     }
     .ele-seven{
         width: 100%;
@@ -1017,29 +1278,47 @@ nav{
         margin-bottom: 5vh;
     }
     .buttons-seven > button{
-        width: 80%;
-        height: 5vh;
-        margin-bottom: 5vh;
+        width: 50vw;
+        height: 6vh;
+        margin-bottom: var(--heading-margin);
     }
     .buttons-seven > button:nth-child(1){
         position: relative;
         top: inherit;
         transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     }
     .buttons-seven > button:nth-child(2){
         position: relative;
         top: inherit;
+        font-size: 0.9rem;
         transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     }
     /* Seven-Mobile: End */
-
+    .showmore{
+        width: 50vw;
+        height: 6vh;
+        font-size: var(--text-font-size);
+    }
     /* Eight-Mobile: End */
 
     #eight{
+        height: -moz-max-content;
         height: fit-content;
     }
     .content-eight{
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         top: inherit;
         margin: 0 4vw 10vh 4vw;
         padding-top: 60px;
@@ -1047,15 +1326,25 @@ nav{
     .contactus{
         display: block;
         grid-template-columns: none;
+width:-moz-max-content;
         width: fit-content;
         left: 50%;
         transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     }
-    
+    .contactus > div > p:nth-child(1){
+        font-size: 1.4rem;
+        font-weight: bolder;
+    }
+    .contactus > div > p:nth-child(2){
+        font-weight: bolder;
+    }
     .club{
         margin-bottom: 10vh;
     }
     .contactus > div > div{
+width:-moz-max-content;
         width: fit-content;
     }
     .footer{
@@ -1068,5 +1357,17 @@ nav{
     }
     /* Eight-Mobile: End */ 
 
+}
+.rest{
+    position: relative;
+    display: none;
+    transition: all 1s;
+}
+
+.display-none{
+    display: none;
+}
+.display{
+    display: block;
 }
 
