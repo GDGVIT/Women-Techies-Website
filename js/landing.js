@@ -21,15 +21,11 @@ window.onload = function () {
         preloader.classList.remove("display");
         preloader.classList.add("display-none")
     }
-    function lochasChanged(){
-        /* console.log("using hash")
-        var elId = location.hash.replace('#', '');
-        var scrollToEl = document.getElementById(elId);
-        scrollToEl.scrollIntoView(true); */
+    /* function lochasChanged(){
         console.log("okay")
         window.scrollTo(0,height_color[a]);
     }
-    window.onhashchange = lochasChanged;
+    window.onhashchange = lochasChanged; */
     const button = document.querySelector(".ham");
     const navItems = document.querySelector(".nav-items");
     const navInner = document.querySelectorAll(".nav-inner a")
@@ -49,7 +45,7 @@ window.onload = function () {
     heights[8] = document.querySelector("#eight").clientHeight;
     heights[9] = document.querySelector("#nine").clientHeight;
     let height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    /* let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; */
     let height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     for (j = 0; j <= 9; j++) {
         for (o = 0; o <= j; o++) {
@@ -61,12 +57,12 @@ window.onload = function () {
                 height_color_desk[j] += heights[o];
                 height_color[j] += heights[o];
             }
-            if (o == j) {
+            /* if (o == j) {
                 height_openclose[j] += 0.8 * heights[o];
             }
             else {
                 height_openclose[j] += heights[o];
-            }
+            } */
         }
     }
     let i = 0;
@@ -102,7 +98,7 @@ window.onload = function () {
         heights[8] = document.querySelector("#eight").clientHeight;
         heights[9] = document.querySelector("#nine").clientHeight;
         height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        /* height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; */
         height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         for (j = 0; j <= 9; j++) {
             for (o = 0; o <= j; o++) {
@@ -114,27 +110,28 @@ window.onload = function () {
                     height_color_desk[j] += heights[o];
                     height_color[j] += heights[o];
                 }
-                if (o == j) {
+                /* if (o == j) {
                     height_openclose[j] += 0.8 * heights[o];
                 }
                 else {
                     height_openclose[j] += heights[o];
-                }
+                } */
             }
         }
-        console.log(height_color)
-        console.log(height_openclose)
-        console.log(height_color_desk)
     })
+    
+    button.addEventListener("click", () => {
+        openclose();
+    });
+    for(ok = 0; ok < 9; ok++){
+        navlinks[ok].addEventListener("click", openclose);
+    }
     function openclose() {
         navItems.classList.toggle("open");
         lines[0].classList.toggle("merge");
         lines[1].classList.toggle("merge");
         body.classList.toggle("overflow");
     }
-    button.addEventListener("click", () => {
-        openclose();
-    });
     let k = 0;
     window.addEventListener("scroll", () => {
         if (window.innerWidth > 850) {
@@ -168,12 +165,12 @@ window.onload = function () {
                 navlinks[k].style.color = colors[k];
 
             }
-            if (a != -1) {
+            /* if (a != -1) {
                 if (scrollpos < height_openclose[a + 1] && scrollpos > height_color[a]) {
                     openclose();
                     a = -1;
                 }
-            }
+            } */
         }
     });
     var acc = document.getElementsByClassName("accordion");
@@ -206,11 +203,6 @@ window.onload = function () {
         }
     });
 
-}
-
-let a = -1;
-function assign(b) {
-    a = b;
 }
 
 
