@@ -1207,9 +1207,10 @@ nav{
     }
     .content-six > h1{
         text-align: initial;
-        margin-bottom: var(--heading-margin);
+        margin-bottom: calc(var(--heading-margin) + 12px);
         font-weight: bolder;
         font-size: var(--heading-font-size);
+        
     }
     .grid-six{
         position: relative;
