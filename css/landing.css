@@ -1319,6 +1319,7 @@ nav{
     .contactus{
         display: block;
         grid-template-columns: none;
+width:-moz-max-content;
         width: fit-content;
         left: 50%;
         transform: translateX(-50%);
@@ -1336,6 +1337,7 @@ nav{
         margin-bottom: 10vh;
     }
     .contactus > div > div{
+width:-moz-max-content;
         width: fit-content;
     }
     .footer{
