@@ -351,6 +351,7 @@ nav{
 }
 .content-five > h1{
     text-align: center;
+    font-size: var(--desk-heading-size);
 }
 .inner{
     position: relative;
@@ -422,6 +423,7 @@ nav{
 }
 .content-six > h1{
     text-align: center;
+    font-size: var(--desk-heading-size);
 }
 .grid-six{
     position: relative;
@@ -468,7 +470,7 @@ nav{
 .grid-whole > h1{
     text-align: center;
     margin-bottom: 5vh;
-    font-size: 3rem;
+    font-size: var(--desk-heading-size);
 }
 .grid-whole{
     position: relative;
@@ -646,6 +648,7 @@ nav{
 .content-nine > h1{
     text-align: center;
     margin-bottom: 30px;
+    font-size: var(--desk-heading-size);
 }
 .accordion {
     position: relative;
@@ -863,6 +866,7 @@ nav{
     }
     .content-nine > h1{
         text-align: left;
+        font-size: var(--heading-font-size);
     }
     /* Nav-Mobile: Start */
 
