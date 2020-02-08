@@ -22,10 +22,12 @@ window.onload = function () {
         preloader.classList.add("display-none")
     }
     function lochasChanged(){
-        console.log("using hash")
+        /* console.log("using hash")
         var elId = location.hash.replace('#', '');
         var scrollToEl = document.getElementById(elId);
-        scrollToEl.scrollIntoView(true);
+        scrollToEl.scrollIntoView(true); */
+        console.log("okay")
+        window.scrollTo(0,height_color[a]);
     }
     window.onhashchange = lochasChanged;
     const button = document.querySelector(".ham");
