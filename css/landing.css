@@ -120,7 +120,7 @@ nav{
     outline: none;
     border: none;
     border-radius: 4px;
-    background-color: var(--hackathon-color);
+    background-color: orange;
     color: white;
     width: 15vw;
     height: 6vh;
@@ -151,7 +151,7 @@ nav{
     position: absolute;
     clip-path: polygon(0% 0, 100% 0, 100% 100%);
     -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
-    background-color: rgb(255, 167, 87);
+    background-color: orange;
     z-index: 10;
     right: 0;
     height: 7vw;
@@ -465,7 +465,7 @@ nav{
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     margin: 0 4vw 0 4vw;
-    color: rgb(255, 167, 87);
+    color: orange;
 }
 .grid-whole > h1{
     text-align: center;
@@ -517,7 +517,7 @@ nav{
     outline: none;
     border: none;
     border-radius: 4px;
-    background-color: rgb(255, 167, 87);
+    background-color: orange;
     color: white;
     font-size: 1.1rem;
     cursor: pointer;
@@ -693,7 +693,7 @@ nav{
     border-bottom: solid 1px rgb(164,27,228);
   }
   .two-acc{
-    border-bottom: solid 1px rgb(255, 167, 87);
+    border-bottom: solid 1px orange;
   }
   .three-acc{
     border-bottom: solid 1px rgb(252,37,126);
@@ -1370,4 +1370,8 @@ width:-moz-max-content;
 .display{
     display: block;
 }
-
+@media screen and (min-width: 490px) and (max-width: 850px){
+    .women-img{
+        width: 65vw;
+    }
+}
