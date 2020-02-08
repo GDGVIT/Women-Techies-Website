@@ -401,18 +401,18 @@ nav{
     transition: transform 0.5s ease-out;
 }
 .right:hover{
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
 }
 .left:hover{
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
 }
 .inner > img{
     height: 80vh;
 }
 .left{
     position: absolute;
-    top: 50%;
-    left: 10px;
+    top: 100%;
+    left: calc(50vw - 20px);
     transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -430,10 +430,10 @@ nav{
 .right{
     position: absolute;
     top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    right: calc(50vw - 20px);
+    transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -webkit-transform: translateX(50%);
     z-index: 10;
     border: none;
     outline: none;
@@ -446,10 +446,10 @@ nav{
     transition: transform 0.5s ease-out;
 }
 .right:hover{
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
 }
 .left:hover{
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
 }
 /* Five: End */
 
@@ -862,12 +862,7 @@ nav{
     .termsandconditions > a{
         font-size: 3vw;
     }
-    .right, .left{
-        height: 5vh;
-        width: 5vh;
-        border-radius: 5vh;
-        top: 60%;
-    }
+    
     html{
         scroll-behavior: smooth;
     }
@@ -1045,6 +1040,19 @@ nav{
         overflow: hidden;
         right: inherit;
         left: inherit;
+    }
+    .right, .left{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 5vh;
+        top: 100%;
+        transform: none;
+    }
+    .right{
+        right: 5vh;
+    }
+    .left{
+        left: 5vh;
     }
     .women-img{
         width: 110%;
