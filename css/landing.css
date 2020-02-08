@@ -837,6 +837,16 @@ nav{
     .nav-items > a:nth-child(1){
        color: orange;
     }
+    .grid-whole > h1{
+        font-size: var(--heading-font-size);
+        text-align: left;
+    }
+    .content-eight > h1{
+        text-align: left;
+    }
+    .content-nine > h1{
+        text-align: left;
+    }
     /* Nav-Mobile: Start */
 
     .dsclogo-mobile{
