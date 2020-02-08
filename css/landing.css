@@ -357,9 +357,8 @@ nav{
     position: relative;
     width: 80vw;
     margin: 0 5vw 0 0vw;
--webkit-overflow-scrolling: touch;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 .inner > img{
     height: 80vh;
