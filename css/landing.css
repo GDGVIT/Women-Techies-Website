@@ -868,6 +868,9 @@ nav{
         text-align: left;
         font-size: var(--heading-font-size);
     }
+    .contactus > div > div > a{
+        font-size: var(--text-font-size);
+    }
     /* Nav-Mobile: Start */
 
     .dsclogo-mobile{
@@ -1331,7 +1334,7 @@ width:-moz-max-content;
     -webkit-transform: translateX(-50%);
     }
     .contactus > div > p:nth-child(1){
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: bolder;
     }
     .contactus > div > p:nth-child(2){
