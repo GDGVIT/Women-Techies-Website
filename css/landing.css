@@ -688,7 +688,7 @@ nav{
 /* Nine: End */
 .termsandconditions{
     position: relative;
-    bottom: 0px;
+    bottom: 10px;
     text-align: center;
     width: fit-content;
     left: 50%;
