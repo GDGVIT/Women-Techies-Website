@@ -1159,6 +1159,7 @@ nav{
 
     /* Six-Mobile: Start */
     #six{
+        height: -moz-max-content;
         height: fit-content;
     }
     .content-six{
@@ -1204,6 +1205,7 @@ nav{
     /* Seven-Mobile: End */
 
     #seven{
+        height: -moz-max-content;
         height: fit-content;
         min-height: 50vh;
     }
@@ -1271,6 +1273,7 @@ nav{
     /* Eight-Mobile: End */
 
     #eight{
+        height: -moz-max-content;
         height: fit-content;
     }
     .content-eight{
