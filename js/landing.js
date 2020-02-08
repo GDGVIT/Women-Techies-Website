@@ -21,12 +21,6 @@ window.onload = function () {
         preloader.classList.remove("display");
         preloader.classList.add("display-none")
     }
-
-    /* if (location.hash) {
-        setTimeout(function () {
-            window.scrollTo(0, 0);
-        }, 1);
-    } */
     function lochasChanged(){
         console.log("using hash")
         var elId = location.hash.replace('#', '');
@@ -74,7 +68,62 @@ window.onload = function () {
         }
     }
     let i = 0;
-
+    window.addEventListener("resize", ()=>{
+        if (window.innerWidth > 850) {
+            main.classList.remove("display-none");
+            main.classList.add("display");
+            desktopNav.classList.remove("display-none");
+            desktopNav.classList.add("display");
+            preloader.classList.remove("display");
+            preloader.classList.add("display-none");
+            mobile.classList.remove("display");
+            mobile.classList.add("display-none");
+        }
+        else {
+            main.classList.remove("display-none");
+            main.classList.add("display");
+            mobile.classList.remove("display-none");
+            mobile.classList.add("display");
+            desktopNav.classList.remove("display")
+            desktopNav.classList.add("display-none")
+            preloader.classList.remove("display");
+            preloader.classList.add("display-none")
+        }
+        heights[0] = 0;
+        heights[1] = document.querySelector("#one").clientHeight;
+        heights[2] = document.querySelector("#two").clientHeight;
+        heights[3] = document.querySelector("#three").clientHeight;
+        heights[4] = document.querySelector("#four").clientHeight;
+        heights[5] = document.querySelector("#five").clientHeight;
+        heights[6] = document.querySelector("#six").clientHeight;
+        heights[7] = document.querySelector("#seven").clientHeight;
+        heights[8] = document.querySelector("#eight").clientHeight;
+        heights[9] = document.querySelector("#nine").clientHeight;
+        height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        for (j = 0; j <= 9; j++) {
+            for (o = 0; o <= j; o++) {
+                if (o == 9) {
+                    height_color_desk[o] += 3 * heights[j];
+                    height_color[o] += 5 * heights[j];
+                }
+                else {
+                    height_color_desk[j] += heights[o];
+                    height_color[j] += heights[o];
+                }
+                if (o == j) {
+                    height_openclose[j] += 0.8 * heights[o];
+                }
+                else {
+                    height_openclose[j] += heights[o];
+                }
+            }
+        }
+        console.log(height_color)
+        console.log(height_openclose)
+        console.log(height_color_desk)
+    })
     function openclose() {
         navItems.classList.toggle("open");
         lines[0].classList.toggle("merge");
@@ -86,7 +135,7 @@ window.onload = function () {
     });
     let k = 0;
     window.addEventListener("scroll", () => {
-        if (width > 850) {
+        if (window.innerWidth > 850) {
             let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
             scrollpos += 0.5 * vh;
             if (scrollpos > height_color_desk[k + 1]) {
