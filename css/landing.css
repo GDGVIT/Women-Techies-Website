@@ -362,9 +362,49 @@ nav{
     -webkit-overflow-scrolling: touch; */
 }
 #inner{
-    overflow: scroll;
-    /* overflow-x: scroll; */
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+.left{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    outline: none;
+    height: 4vh;
+    background-color: #F7295E;
+    width: 4vh;
+    border-radius: 4vh;
+    font-weight: bolder;
+    color: white;
+    transition: transform 0.5s ease-out;
+}
+.right{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    outline: none;
+    height: 4vh;
+    background-color: #F7295E;
+    width: 4vh;
+    border-radius: 4vh;
+    font-weight: bolder;
+    color: white;
+    transition: transform 0.5s ease-out;
+}
+.right:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+.left:hover{
+    transform: translateY(-50%) scale(1.1);
 }
 .inner > img{
     height: 80vh;
@@ -598,6 +638,9 @@ nav{
     
     font-size: calc(var(--heading-font-size) - 0.3rem);
     font-weight: bold;
+}
+.timeline{
+    transition: all 1s;
 }
 .club > p:nth-child(1){
     color: var(--hackathon-color);
@@ -834,6 +877,12 @@ nav{
         box-sizing: border-box;
         height: 100%;
         /* height: calc(var(--vh, 1vh) * 600); */
+    }
+    .right, .left{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 5vh;
+        top: 60%;
     }
     .overflow{
         overflow: hidden;
