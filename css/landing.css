@@ -572,7 +572,7 @@ nav{
 }
 .contactus > div > p:nth-child(1){
     
-    font-size: var(--heading-font-size);
+    font-size: calc(var(--heading-font-size) - 0.3rem);
     font-weight: bold;
 }
 .club > p:nth-child(1){
