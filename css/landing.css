@@ -591,6 +591,7 @@ nav{
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+    width: -moz-max-content;
     width: fit-content;
     row-gap: 2vh;
     column-gap: 2vw;
