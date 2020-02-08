@@ -716,7 +716,7 @@ nav{
 }
 
 #inner::-webkit-scrollbar {
-    width: 20px;
+    width: 50px;
 }
    
 #inner::-webkit-scrollbar-track {
