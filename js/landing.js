@@ -27,12 +27,13 @@ window.onload = function () {
             window.scrollTo(0, 0);
         }, 1);
     } */
-    if (location.hash) {
+    function lochasChanged(){
         console.log("using hash")
         var elId = location.hash.replace('#', '');
         var scrollToEl = document.getElementById(elId);
         scrollToEl.scrollIntoView(true);
     }
+    window.onhashchange = lochasChanged;
     const button = document.querySelector(".ham");
     const navItems = document.querySelector(".nav-items");
     const navInner = document.querySelectorAll(".nav-inner a")
