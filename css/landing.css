@@ -1370,4 +1370,8 @@ width:-moz-max-content;
 .display{
     display: block;
 }
-
+@media screen and (min-width: 490px) and (max-width: 850px){
+    .women-img{
+        width: 65vw;
+    }
+}
