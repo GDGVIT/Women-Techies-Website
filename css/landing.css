@@ -1205,6 +1205,12 @@ nav{
         height: fit-content;
         margin: 0 5vw 0 5vw;
     }
+    .ele-seven > p{
+        text-align: left;
+        font-size: var(--text-font-size);
+        font-weight: bold;
+        padding-top: 5vh;
+    }
     .content-six > h1{
         text-align: initial;
         margin-bottom: calc(var(--heading-margin) + 12px);
@@ -1232,6 +1238,7 @@ nav{
     .ele > h2, .ele > p{
         color: var(--main-text-color);
         text-align: left;
+        font-size: var(--text-font-size);
     }
 
     /* Six-Mobile: End */
