@@ -1,6 +1,6 @@
 
 window.onload = function () {
-    
+
     const preloader = document.querySelector(".preloader");
     const main = document.querySelector(".main");
     const desktopNav = document.querySelector(".desktop-nav");
@@ -52,7 +52,7 @@ window.onload = function () {
         for (o = 0; o <= j; o++) {
             if (o == 9) {
                 height_color_desk[o] += 3 * heights[j];
-                height_color[o] += 4 * heights[j];
+                height_color[o] += 5 * heights[j];
             }
             else {
                 height_color_desk[j] += heights[o];
@@ -66,26 +66,22 @@ window.onload = function () {
             }
         }
     }
-    console.log(height_color)
-    console.log(height_color_desk)
-    console.log(height_openclose)
     let i = 0;
 
-    let k = 0;
     function openclose() {
         navItems.classList.toggle("open");
         lines[0].classList.toggle("merge");
         lines[1].classList.toggle("merge");
         body.classList.toggle("overflow");
-        k++;
     }
     button.addEventListener("click", () => {
         openclose();
     });
 
 
-
-    k = 0;
+    console.log(height_color)
+    console.log(navlinks)
+    let k = 0;
     window.addEventListener("scroll", () => {
         if (width > 850) {
             let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
@@ -107,10 +103,13 @@ window.onload = function () {
         else {
             let scrollpos = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
             scrollpos += 0.4 * vh;
+            console.log(scrollpos)
             if (scrollpos > height_color[k + 1]) {
+               
                 navlinks[k].style.color = "black";
                 k++;
                 navlinks[k].style.color = colors[k];
+                console.log(k)
             }
             if (scrollpos < height_color[k]) {
                 navlinks[k].style.color = "black";
@@ -133,7 +132,6 @@ window.onload = function () {
         acc[q].addEventListener("click", function () {
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
-            console.log(q)
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
                 panel.classList.remove("black-border")
