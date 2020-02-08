@@ -355,6 +355,7 @@
     <script>
         window.onload = function () {
             if (location.hash) {
+                console.log("using hash")
                 var elId = location.hash.replace('#', '');
                 var scrollToEl = document.getElementById(elId);
                 scrollToEl.scrollIntoView(true);
