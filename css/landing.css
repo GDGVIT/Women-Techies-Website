@@ -356,12 +356,13 @@ nav{
 .inner{
     position: relative;
     width: 80vw;
-    margin: 0 5vw 0 0vw;
-    overflow-y: hidden;
+    margin: 0 5vw 0 5vw;
+    /* overflow-y: hidden;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; */
 }
-.inner > img{
-    height: 80vh;
+#inner{
+    overflow: hidden;
 }
 .left{
     position: absolute;
@@ -399,11 +400,21 @@ nav{
     color: white;
     transition: transform 0.5s ease-out;
 }
+
+.inner > img{
+    height: 80vh;
+}
+
 .right:hover{
     transform: translateY(-50%) scale(1.1);
+    -moz-transform: translateY(-50%) scale(1.1);
+    -webkit-transform: translateY(-50%) scale(1.1);
 }
 .left:hover{
     transform: translateY(-50%) scale(1.1);
+    -moz-transform: translateY(-50%) scale(1.1);
+    -webkit-transform: translateY(-50%) scale(1.1);
+
 }
 /* Five: End */
 
@@ -592,6 +603,9 @@ nav{
     
     font-size: calc(var(--heading-font-size) - 0.3rem);
     font-weight: bold;
+}
+.timeline{
+    transition: all 1s;
 }
 .club > p:nth-child(1){
     color: var(--hackathon-color);
@@ -813,12 +827,7 @@ nav{
     .termsandconditions > a{
         font-size: 3vw;
     }
-    .right, .left{
-        height: 5vh;
-        width: 5vh;
-        border-radius: 5vh;
-        top: 60%;
-    }
+    
     html{
         scroll-behavior: smooth;
     }
@@ -828,6 +837,12 @@ nav{
         box-sizing: border-box;
         height: 100%;
         /* height: calc(var(--vh, 1vh) * 600); */
+    }
+    .right, .left{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 5vh;
+        top: 60%;
     }
     .overflow{
         overflow: hidden;
@@ -990,6 +1005,19 @@ nav{
         overflow: hidden;
         right: inherit;
         left: inherit;
+    }
+    .right, .left{
+        height: 5vh;
+        width: 5vh;
+        border-radius: 5vh;
+        top: 100%;
+        transform: none;
+    }
+    .right{
+        right: 5vh;
+    }
+    .left{
+        left: 5vh;
     }
     .women-img{
         width: 110%;
@@ -1205,6 +1233,12 @@ nav{
         height: fit-content;
         margin: 0 5vw 0 5vw;
     }
+    .ele-seven > p{
+        text-align: left;
+        font-size: var(--text-font-size);
+        font-weight: bold;
+        padding-top: 5vh;
+    }
     .content-six > h1{
         text-align: initial;
         margin-bottom: calc(var(--heading-margin) + 12px);
@@ -1232,6 +1266,7 @@ nav{
     .ele > h2, .ele > p{
         color: var(--main-text-color);
         text-align: left;
+        font-size: var(--text-font-size);
     }
 
     /* Six-Mobile: End */
@@ -1357,7 +1392,17 @@ width:-moz-max-content;
         margin-bottom: 10vh;
     }
     /* Eight-Mobile: End */ 
-
+    .right:hover{
+        transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+    }
+    .left:hover{
+        transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+    
+    }
 }
 .rest{
     position: relative;
