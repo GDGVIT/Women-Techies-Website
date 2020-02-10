@@ -982,20 +982,20 @@ nav{
         width: 55vw;
     }
     .top{
-        height: 50px;
-        width: 50px;
+        height: 7vh;
+        width: 7vh;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
         -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .middle{
-        height: 100px;
-        width: 100px;
+        height: 14vh;
+        width: 14vh;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
         -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .bottom{
-        height: 150px;
-        width: 150px;
+        height: 21vh;
+        width: 21vh;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
         -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
