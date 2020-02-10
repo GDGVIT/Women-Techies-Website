@@ -573,12 +573,12 @@ nav{
     position: relative;
     width: 70%;
     transition: transform 0.2s ease-out;
-    -webkit-transition: -webkit-transfrom 0.2s ease-out;
-    -moz-transition: -moz-transfrom 0.2s ease-out;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    -moz-transition: -moz-transform 0.2s ease-out;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateY(-50%);
+    -moz-transform: translateX(-50%);
 }
 .content-video > video:hover{
     transform: translateX(-50%) scale(1.04);
