@@ -1396,7 +1396,20 @@ nav{
         padding-top: 60px;
     }
     .content-video > video{
+        left: 0;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         width: 100%;
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition:none ;
+        
+    }
+    .content-video > video:hover{
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
     }
 
 
