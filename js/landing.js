@@ -20,6 +20,7 @@ window.onload = function () {
         mobile.classList.add("display");
         preloader.classList.remove("display");
         preloader.classList.add("display-none")
+        document.querySelector(".main-register").style.bottom = document.querySelector(".women-img").clientHeight + "px";
     }
     /* function lochasChanged(){
         console.log("okay")
@@ -86,6 +87,7 @@ window.onload = function () {
             desktopNav.classList.add("display-none")
             preloader.classList.remove("display");
             preloader.classList.add("display-none")
+            document.querySelector(".main-register").style.bottom = document.querySelector(".women-img").clientHeight + "px";
         }
         heights[0] = 0;
         heights[1] = document.querySelector("#one").clientHeight;

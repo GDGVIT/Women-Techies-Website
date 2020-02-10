@@ -978,7 +978,7 @@ nav{
     -moz-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
         min-width: 0;
-        width: 60vw;
+        width: 55vw;
     }
     .top{
         height: 50px;
@@ -1031,7 +1031,6 @@ nav{
     }
     .main-register{
         position: absolute;
-    top: calc(35% + 20vh);
     margin: 0;
     height: 5vh;
     width: 50vw;
@@ -1420,5 +1419,8 @@ width:-moz-max-content;
 @media screen and (min-width: 490px) and (max-width: 850px){
     .women-img{
         width: 65vw;
+    }
+    .women-techies-logo{
+        width: 37vw;
     }
 }
