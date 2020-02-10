@@ -1388,6 +1388,7 @@ nav{
     .content-video{
         position: relative;
         margin: 0 5vw 0 5vw;
+        top: 0;
         width: 90%;
         transform: none;
         -webkit-transform: none;
