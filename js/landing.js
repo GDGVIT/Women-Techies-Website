@@ -33,8 +33,8 @@ window.onload = function () {
     const lines = document.querySelectorAll(".ham div");
     const navlinks = document.querySelectorAll(".nav-items a");
     const body = document.querySelector("body");
-    const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87)", "rgb(252,37,126)", "rgb(164,27,228)"];
-    let heights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)"];
+    let heights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     heights[0] = 0;
     heights[1] = document.querySelector("#one").clientHeight;
     heights[2] = document.querySelector("#two").clientHeight;
@@ -43,14 +43,15 @@ window.onload = function () {
     heights[5] = document.querySelector("#five").clientHeight;
     heights[6] = document.querySelector("#six").clientHeight;
     heights[7] = document.querySelector("#seven").clientHeight;
-    heights[8] = document.querySelector("#eight").clientHeight;
-    heights[9] = document.querySelector("#nine").clientHeight;
-    let height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    heights[8] = document.querySelector("#video").clientHeight;
+    heights[9] = document.querySelector("#eight").clientHeight;
+    heights[10] = document.querySelector("#nine").clientHeight;
+    let height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     /* let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; */
-    let height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    for (j = 0; j <= 9; j++) {
+    let height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    for (j = 0; j <= 10; j++) {
         for (o = 0; o <= j; o++) {
-            if (o == 9) {
+            if (o == 10) {
                 height_color_desk[o] += 3 * heights[j];
                 height_color[o] += 5 * heights[j];
             }
@@ -67,7 +68,7 @@ window.onload = function () {
         }
     }
     let i = 0;
-    window.addEventListener("resize", ()=>{
+    window.addEventListener("resize", () => {
         if (window.innerWidth > 850) {
             main.classList.remove("display-none");
             main.classList.add("display");
@@ -97,14 +98,15 @@ window.onload = function () {
         heights[5] = document.querySelector("#five").clientHeight;
         heights[6] = document.querySelector("#six").clientHeight;
         heights[7] = document.querySelector("#seven").clientHeight;
-        heights[8] = document.querySelector("#eight").clientHeight;
-        heights[9] = document.querySelector("#nine").clientHeight;
-        height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        /* height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; */
-        height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        for (j = 0; j <= 9; j++) {
+        heights[8] = document.querySelector("#video").clientHeight;
+        heights[9] = document.querySelector("#eight").clientHeight;
+        heights[10] = document.querySelector("#nine").clientHeight;
+        let height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        /* let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; */
+        let height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        for (j = 0; j <= 10; j++) {
             for (o = 0; o <= j; o++) {
-                if (o == 9) {
+                if (o == 10) {
                     height_color_desk[o] += 3 * heights[j];
                     height_color[o] += 5 * heights[j];
                 }
@@ -121,11 +123,11 @@ window.onload = function () {
             }
         }
     })
-    
+
     button.addEventListener("click", () => {
         openclose();
     });
-    for(ok = 0; ok < 9; ok++){
+    for (ok = 0; ok < 10; ok++) {
         navlinks[ok].addEventListener("click", openclose);
     }
     function openclose() {
