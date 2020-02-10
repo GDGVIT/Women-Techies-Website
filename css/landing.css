@@ -560,6 +560,7 @@ nav{
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
 }
 .content-video > h1{
     text-align: center;
@@ -572,13 +573,17 @@ nav{
     position: relative;
     width: 70%;
     transition: transform 0.2s ease-out;
+    -webkit-transition: -webkit-transfrom 0.2s ease-out;
+    -moz-transition: -moz-transfrom 0.2s ease-out;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+    -moz-transform: translateY(-50%);
 }
 .content-video > video:hover{
     transform: translateX(-50%) scale(1.04);
     -webkit-transform: translateX(-50%) scale(1.04);
+    -moz-transform: translateX(-50%) scale(1.04);
 }
 
 
@@ -1373,6 +1378,7 @@ nav{
 
     /* Video-Mobile: Start */
     #video{
+        height: -moz-max-content;
         height: fit-content;
     }
     .content-video > h1{
@@ -1384,6 +1390,8 @@ nav{
         margin: 0 5vw 0 5vw;
         width: 90%;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
         padding-top: 60px;
     }
     .content-video > video{
