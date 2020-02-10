@@ -565,6 +565,7 @@ nav{
     text-align: center;
     color: var(--about-color);
     margin-bottom: 6vh;
+    font-size: var(--desk-heading-size);
 }
 .content-video > video{
     display: block;
@@ -1374,11 +1375,16 @@ nav{
     #video{
         height: fit-content;
     }
+    .content-video > h1{
+        text-align: left;
+        font-size: var(--heading-font-size);
+    }
     .content-video{
         position: relative;
         margin: 0 5vw 0 5vw;
         width: 90%;
         transform: none;
+        padding-top: 60px;
     }
     .content-video > video{
         width: 100%;

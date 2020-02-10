@@ -90,6 +90,7 @@ window.onload = function () {
             preloader.classList.add("display-none")
             document.querySelector(".main-register").style.bottom = document.querySelector(".women-img").clientHeight + "px";
         }
+        heights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         heights[0] = 0;
         heights[1] = document.querySelector("#one").clientHeight;
         heights[2] = document.querySelector("#two").clientHeight;
@@ -101,9 +102,9 @@ window.onload = function () {
         heights[8] = document.querySelector("#video").clientHeight;
         heights[9] = document.querySelector("#eight").clientHeight;
         heights[10] = document.querySelector("#nine").clientHeight;
-        let height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         /* let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; */
-        let height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         for (j = 0; j <= 10; j++) {
             for (o = 0; o <= j; o++) {
                 if (o == 10) {
