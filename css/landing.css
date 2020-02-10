@@ -20,6 +20,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: none;
+    -webkit-overflow-scrolling: touch;
     
 }
 .women-techies-logo-preloader{
@@ -79,7 +80,7 @@ nav{
     position: relative;
     margin: 16vh 0 auto 2.8vw;
     display: grid;
-    grid-template-rows: repeat(9, auto);
+    grid-template-rows: repeat(10, auto);
     height: 60vh;
     align-items: center;
 }
@@ -549,6 +550,38 @@ nav{
 }
 /* Seven: End */
 
+/* Video: Start */
+
+.content-video{
+    position: relative;
+    margin: 0 4vw 0 4vw;
+    width: 92%;
+    height: fit-content;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.content-video > h1{
+    text-align: center;
+    color: var(--about-color);
+    margin-bottom: 6vh;
+}
+.content-video > video{
+    display: block;
+    position: relative;
+    width: 70%;
+    transition: transform 0.2s ease-out;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.content-video > video:hover{
+    transform: translateX(-50%) scale(1.04);
+    -webkit-transform: translateX(-50%) scale(1.04);
+}
+
+
+/* Video: End */
 
 /* Eight: End */
 .eight{
@@ -934,12 +967,13 @@ nav{
         width: 100vw;
         padding-top: 70px ;
         display: grid;
-        grid-template-rows: repeat(12, auto);
+        grid-template-rows: repeat(13, auto);
         align-items: center;
         justify-items: center;
         clip-path: circle(10px at 100% -10%);
         -webkit-clip-path: circle(10px at 100% -10%);
         transition: clip-path ease-out 1s;
+-webkit-transition: -webkit-clip-path ease-out 1s;
         
     }
     .nav-items > a{
@@ -977,23 +1011,23 @@ nav{
     -moz-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
         min-width: 0;
-        width: 60vw;
+        width: 55vw;
     }
     .top{
-        height: 50px;
-        width: 50px;
+        height: 7vh;
+        width: 7vh;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
         -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .middle{
-        height: 100px;
-        width: 100px;
+        height: 14vh;
+        width: 14vh;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
         -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
     .bottom{
-        height: 150px;
-        width: 150px;
+        height: 21vh;
+        width: 21vh;
         clip-path: polygon(0% 0, 100% 0, 100% 100%);
         -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%);
     }
@@ -1030,7 +1064,6 @@ nav{
     }
     .main-register{
         position: absolute;
-    top: calc(35% + 20vh);
     margin: 0;
     height: 5vh;
     width: 50vw;
@@ -1334,6 +1367,25 @@ nav{
     -webkit-transform: translateX(-50%);
     }
     /* Seven-Mobile: End */
+
+
+
+    /* Video-Mobile: Start */
+    #video{
+        height: fit-content;
+    }
+    .content-video{
+        position: relative;
+        margin: 0 5vw 0 5vw;
+        width: 90%;
+        transform: none;
+    }
+    .content-video > video{
+        width: 100%;
+    }
+
+
+    /* Video-Mobile: End */
     .showmore{
         width: 50vw;
         height: 6vh;
@@ -1419,5 +1471,8 @@ width:-moz-max-content;
 @media screen and (min-width: 490px) and (max-width: 850px){
     .women-img{
         width: 65vw;
+    }
+    .women-techies-logo{
+        width: 37vw;
     }
 }
