@@ -206,6 +206,20 @@ window.onload = function () {
             showmore.innerHTML = "Show More";
         }
     });
+    if (window.innerWidth > 850) {
+        const vids = document.querySelector("video");
+        vids.addEventListener("mouseover", function (e) {
+            vids.play()
+        })
+        vids.addEventListener("mouseout", function (e) {
+            vids.pause()
+        })
+        vids.addEventListener('ended', function () {
+            vids.currentTime = 0;
+            vids.play();
+        });
+    }
+
 
 }
 
