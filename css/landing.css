@@ -348,6 +348,7 @@ nav{
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     height: fit-content;
+    height: -moz-max-content;
     overflow: hidden;
 }
 .content-five > h1{
@@ -431,6 +432,7 @@ nav{
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     height: fit-content;
+    height: -moz-max-content;
     margin: 0 4vw 0 4vw;
 }
 .content-six > h1{
@@ -513,6 +515,7 @@ nav{
     align-items: center;
     justify-items: center;
     height: fit-content;
+    height: -moz-max-content;
     grid-template-rows: none;
     grid-template-columns: repeat(2, 50%);
     margin-bottom: 10vh;
@@ -522,12 +525,22 @@ nav{
 }
 .buttons-seven{
     position: relative;
-    height: 20vh;
+    height: fit-content;
+    text-align: center;
+    width: fit-content;
+    height: -moz-max-content;
+    width: -moz-max-content;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+
 }
 .buttons-seven > button{
+    display: block;
     width: 15vw;
-    height: 6vh;
-    max-height: 50px;
+    min-height: 6vh;
     left: 50%;
     outline: none;
     border: none;
@@ -538,18 +551,7 @@ nav{
     cursor: pointer;
 }
 .buttons-seven > button:nth-child(1){
-    position: absolute;
-    top: 30%;
-    transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-}
-.buttons-seven > button:nth-child(2){
-    position: absolute;
-    top: 70%;
-    transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
+    margin-bottom: 2vh;
 }
 /* Seven: End */
 
@@ -560,6 +562,7 @@ nav{
     margin: 0 4vw 0 4vw;
     width: 92%;
     height: fit-content;
+    height: -moz-max-content;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -692,6 +695,7 @@ nav{
 #nine, #ten{
     color: var(--about-color);
     height: fit-content;
+    height: -moz-max-content;
     min-height: 100vh;
 }
 .content-nine{
@@ -767,6 +771,7 @@ nav{
     bottom: 10px;
     text-align: center;
     width: fit-content;
+    width: -moz-max-content;
     left: 50%;
     transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -1103,6 +1108,7 @@ nav{
         top: 0;
         position: relative;
         height: fit-content;
+        height: -moz-max-content;
         margin: 0 5vw 0 5vw;
         transform: none;
         -webkit-transform: none;
@@ -1160,6 +1166,7 @@ nav{
         -webkit-transform: none;
         -moz-transform: none;
         height: fit-content;
+        height: -moz-max-content;
         top: inherit;
 
     }
@@ -1174,6 +1181,7 @@ nav{
         -webkit-transform: none;
         -moz-transform: none;
         height: fit-content;
+        height: -moz-max-content;
     }
     .text-3 > p:nth-child(1){
         font-size: var(--heading-font-size);
@@ -1254,6 +1262,7 @@ nav{
         text-align: initial;
         left: 5vw;
         width: fit-content;
+        width: -moz-max-content;
         font-weight: bolder;
         font-size: var(--heading-font-size);
     }
@@ -1273,6 +1282,7 @@ nav{
         -moz-transform: none;
         padding-top: 60px;
         height: fit-content;
+        height: -moz-max-content;
         margin: 0 5vw 0 5vw;
     }
     .ele-seven > p{
@@ -1347,16 +1357,17 @@ nav{
         grid-template-columns: none;
     }
     .grid-whole > h1{
-        margin-bottom: var(--heading-margin);
+        margin-bottom: calc(var(--heading-margin) + 12px);
     }
-    .ele-seven{
-        width: fit-content;
+    .ele-seven > img{
+        width: 40vw;
     }
     .grid-seven{
         display: grid;
         grid-template-rows: repeat(2, auto);
         grid-template-columns: none;
-        /* width: min-content; */
+        justify-items: center;
+        align-items: center;
     }
     .buttons-seven{
         position: relative;
@@ -1367,7 +1378,6 @@ nav{
     }
     .ele-seven{
         width: 100%;
-        text-align: center;
     }
     .buttons-seven > button{
         width: 50vw;
@@ -1477,7 +1487,7 @@ width:-moz-max-content;
         margin-bottom: 10vh;
     }
     .contactus > div > div{
-width:-moz-max-content;
+        width:-moz-max-content;
         width: fit-content;
     }
     .footer{
