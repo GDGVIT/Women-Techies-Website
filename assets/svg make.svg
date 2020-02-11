@@ -5,7 +5,7 @@
     </clipPath>
   </defs>
   <g id="svg_make" data-name="svg make" clip-path="url(#clip-svg_make)">
-    <rect width="4593" height="826" fill="rgba(255,255,255,0)"/>
+    <rect width="4593" height="826" fill="#fff"/>
     <g id="Group_35" data-name="Group 35" transform="translate(-1334 -799)">
       <path id="Path_9" data-name="Path 9" d="M195.741-1222.564l60.215-110.919H541.706" transform="translate(2331.782 2335.392)" fill="none" stroke="#ff9a19" stroke-width="8"/>
       <path id="Path_10" data-name="Path 10" d="M195.741-1222.564l60.215-110.919H541.706" transform="translate(1828.614 2335.392)" fill="none" stroke="#f7295e" stroke-width="8"/>
@@ -128,8 +128,8 @@ Review 1
       <text id="Hack_Like_A_Girl_3:00_-_4:30_pm" data-name="Hack Like A Girl
 3:00 - 4:30 pm" transform="translate(4361.441 1470)" fill="#160e0e" font-size="29" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Hack Like A Girl</tspan><tspan font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="38">3:00 - 4:30 pm</tspan></tspan></text>
       <path id="Path_43" data-name="Path 43" d="M195.741-1222.564l60.215-110.919H541.707" transform="translate(3738.46 2335.906)" fill="none" stroke="#ff9a19" stroke-width="8"/>
-      <text id="Hack_Like_A_Girl_11:00_pm" data-name="Hack Like A Girl
-11:00 pm" transform="translate(3995.4 941)" fill="#160e0e" font-size="29" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Hack Like A Girl</tspan><tspan font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="37">11:00 pm</tspan></tspan></text>
+      <text id="Hack_Like_A_Girl_11:00_am" data-name="Hack Like A Girl
+11:00 am" transform="translate(3995.4 941)" fill="#160e0e" font-size="29" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Hack Like A Girl</tspan><tspan font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="37">11:00 am</tspan></tspan></text>
       <path id="Path_46" data-name="Path 46" d="M533.915-1333.483l-58.859,89.89H195.741" transform="translate(3666.363 2661.197)" fill="none" stroke="#f7295e" stroke-width="8"/>
       <text id="Review_2_12:00_-_2:00_pm" data-name="Review 2
 12:00 - 2:00 pm" transform="translate(3868.405 1471)" fill="#160e0e" font-size="30" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Review 2</tspan><tspan font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="38">12:00 - 2:00 pm</tspan></tspan></text>
