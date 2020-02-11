@@ -451,6 +451,7 @@ nav{
     text-align: center;
     margin-bottom: 8%;
 }
+
 .ele > img{
     border-radius: 300px;
     height: 20vh;
@@ -459,6 +460,21 @@ nav{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+.socials{
+    position: relative;
+    margin-top: 10px;
+    width: fit-content;
+    width: -moz-max-content;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+.socials > img{
+    margin-right: 10px;
+    cursor: pointer;
 }
 .ele > h2, .ele > p{
     color: var(--main-text-color);
@@ -481,7 +497,7 @@ nav{
 }
 .grid-whole > h1{
     text-align: center;
-    margin-bottom: 5vh;
+    margin-bottom: 8vh;
     font-size: var(--desk-heading-size);
 }
 .grid-whole{
@@ -494,28 +510,15 @@ nav{
 .grid-seven{
     position: relative;
     display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: repeat(3, 33%);
     align-items: center;
     justify-items: center;
     height: fit-content;
-    display: block;
-        grid-template-rows: none;
-        grid-template-columns: none;
-        /* width: min-content; */
-        left: 50%;
-        transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, 50%);
+    margin-bottom: 10vh;
 }
 .ele-seven > p{
     text-align: center;
-    margin-bottom: 25vh;
-}
-.ele-seven > img{
-    border-radius: 300px;
-    height: 14vh;
-    margin: 4vh 0 4vh 0;
 }
 .buttons-seven{
     position: relative;
@@ -1289,8 +1292,14 @@ nav{
         position: relative;
         display: grid;
         grid-template-columns: none;
-        grid-template-rows: repeat(2, 25vh);
+        grid-template-rows: repeat(2, auto);
         justify-items: left;
+        left: inherit;
+        -webkit-transform: none;
+        transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        row-gap: 5vh;
     }
     .ele > img{
         border-radius: 140px;
@@ -1301,6 +1310,13 @@ nav{
         transform: none;
         -webkit-transform: none;
         -moz-transform: none;
+    }
+    .socials{
+        left: inherit;
+        -webkit-transform: none;
+        transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
     }
     .ele > h2, .ele > p{
         color: var(--main-text-color);
@@ -1330,15 +1346,17 @@ nav{
         display: block;
         grid-template-columns: none;
     }
+    .grid-whole > h1{
+        margin-bottom: var(--heading-margin);
+    }
+    .ele-seven{
+        width: fit-content;
+    }
     .grid-seven{
-        display: block;
-        grid-template-rows: none;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
         grid-template-columns: none;
         /* width: min-content; */
-        left: 50%;
-        transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
     }
     .buttons-seven{
         position: relative;
@@ -1350,7 +1368,6 @@ nav{
     .ele-seven{
         width: 100%;
         text-align: center;
-        margin-bottom: 5vh;
     }
     .buttons-seven > button{
         width: 50vw;
