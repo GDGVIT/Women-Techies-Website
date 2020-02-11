@@ -564,7 +564,7 @@ nav{
 }
 .content-video > h1{
     text-align: center;
-    color: var(--about-color);
+    color: rgb(255, 167, 87);
     margin-bottom: 6vh;
     font-size: var(--desk-heading-size);
 }
