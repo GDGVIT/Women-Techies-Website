@@ -33,7 +33,7 @@ window.onload = function () {
     const lines = document.querySelectorAll(".ham div");
     const navlinks = document.querySelectorAll(".nav-items a");
     const body = document.querySelector("body");
-    const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)","rgb(255, 167, 87) ", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87)", "rgb(252,37,126)", "rgb(164,27,228)"];
+    const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87) ", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87)", "rgb(252,37,126)", "rgb(164,27,228)"];
     let heights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     heights[0] = 0;
     heights[1] = document.querySelector("#one").clientHeight;
@@ -67,6 +67,32 @@ window.onload = function () {
             } */
         }
     }
+    const left = document.querySelector(".left");
+    const right = document.querySelector(".right");
+    const timeline = document.querySelector(".timeline");
+    z = 0;
+    let width_svg = timeline.clientWidth;
+    let width = window.innerWidth;
+    if(width > 850){
+        width_svg -= 0.8*width;
+    }
+    else{
+        width_svg -= width;
+    }
+    right.addEventListener("click", () => {
+        z += 200;
+        if (z > width_svg) {
+            z = width_svg;
+        }
+        timeline.style.transform = "translateX(-" + z + "px)";
+    });
+    left.addEventListener("click", () => {
+        z -= 200;
+        if (z < 0) {
+            z = 0;
+        }
+        timeline.style.transform = "translateX(-" + z + "px)";
+    });
     let i = 0;
     window.addEventListener("resize", () => {
         if (window.innerWidth > 850) {

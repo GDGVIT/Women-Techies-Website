@@ -1080,13 +1080,13 @@ nav{
     .inner{
         position: relative;
         margin: 0;
-        overflow-y: hidden;
-        overflow-x: scroll;
+        overflow: hidden;
         width: 100vw;
     }
     .inner > img{
         position: relative;
         height: 50vh;
+        transform-origin: 0% 0%;
     }
     
     /* Two-Mobile: Start */
