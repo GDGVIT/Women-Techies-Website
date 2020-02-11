@@ -33,7 +33,7 @@ window.onload = function () {
     const lines = document.querySelectorAll(".ham div");
     const navlinks = document.querySelectorAll(".nav-items a");
     const body = document.querySelector("body");
-    const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)"];
+    const colors = ["rgb(255, 167, 87)", "rgb(164,27,228)", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87) ", "rgb(252,37,126)", "rgb(164,27,228)", "rgb(255, 167, 87)", "rgb(252,37,126)", "rgb(164,27,228)"];
     let heights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     heights[0] = 0;
     heights[1] = document.querySelector("#one").clientHeight;
@@ -67,6 +67,32 @@ window.onload = function () {
             } */
         }
     }
+    const left = document.querySelector(".left");
+    const right = document.querySelector(".right");
+    const timeline = document.querySelector(".timeline");
+    z = 0;
+    let width_svg = timeline.clientWidth;
+    let width = window.innerWidth;
+    if(width > 850){
+        width_svg -= 0.8*width;
+    }
+    else{
+        width_svg -= width;
+    }
+    right.addEventListener("click", () => {
+        z += 200;
+        if (z > width_svg) {
+            z = width_svg;
+        }
+        timeline.style.transform = "translateX(-" + z + "px)";
+    });
+    left.addEventListener("click", () => {
+        z -= 200;
+        if (z < 0) {
+            z = 0;
+        }
+        timeline.style.transform = "translateX(-" + z + "px)";
+    });
     let i = 0;
     window.addEventListener("resize", () => {
         if (window.innerWidth > 850) {
@@ -90,20 +116,21 @@ window.onload = function () {
             preloader.classList.add("display-none")
             document.querySelector(".main-register").style.bottom = document.querySelector(".women-img").clientHeight + "px";
         }
+        heights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         heights[0] = 0;
         heights[1] = document.querySelector("#one").clientHeight;
         heights[2] = document.querySelector("#two").clientHeight;
         heights[3] = document.querySelector("#three").clientHeight;
         heights[4] = document.querySelector("#four").clientHeight;
-        heights[5] = document.querySelector("#five").clientHeight;
-        heights[6] = document.querySelector("#six").clientHeight;
-        heights[7] = document.querySelector("#seven").clientHeight;
-        heights[8] = document.querySelector("#video").clientHeight;
+        heights[5] = document.querySelector("#video").clientHeight;
+        heights[6] = document.querySelector("#five").clientHeight;
+        heights[7] = document.querySelector("#six").clientHeight;
+        heights[8] = document.querySelector("#seven").clientHeight;
         heights[9] = document.querySelector("#eight").clientHeight;
         heights[10] = document.querySelector("#nine").clientHeight;
-        let height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        height_color = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         /* let height_openclose = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; */
-        let height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        height_color_desk = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         for (j = 0; j <= 10; j++) {
             for (o = 0; o <= j; o++) {
                 if (o == 10) {
