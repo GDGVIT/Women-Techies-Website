@@ -522,6 +522,8 @@ nav{
 }
 .ele-seven > p{
     text-align: center;
+    font-size: var(--text-font-size);
+    font-weight: bolder;
 }
 .buttons-seven{
     position: relative;
@@ -573,6 +575,7 @@ nav{
     color: rgb(255, 167, 87);
     margin-bottom: 6vh;
     font-size: var(--desk-heading-size);
+    font-weight: bolder;
 }
 .content-video > video{
     display: block;
