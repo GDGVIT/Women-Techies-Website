@@ -555,6 +555,10 @@ nav{
 .buttons-seven > button:nth-child(1){
     margin-bottom: 2vh;
 }
+.jetbrainslogo{
+    height:200px;
+    width:200px;
+}
 /* Seven: End */
 
 /* Video: Start */
@@ -1364,6 +1368,7 @@ nav{
     }
     .ele-seven > img{
         width: 40vw;
+        height: 40vw;
     }
     .grid-seven{
         display: grid;
