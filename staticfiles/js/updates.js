@@ -124,30 +124,30 @@ const handleUpdates = (e) => {
     updatesSubmitBtn.innerHTML = '<img src="../assets/loading.gif" alt="" height = "30" width = "25">'
   }
 
-	  grecaptcha.ready(() => {
-      grecaptcha.execute(`${config.siteKey}`, {
-        action: '/'
-			}).then((token) => {
+  grecaptcha.ready(() => {
+    grecaptcha.execute(`${config.siteKey}`, {
+      action: '/'
+    }).then((token) => {
 
-  const settings = {
-    method: 'post',
-					mode: 'cors',
-					headers: {
-                  'Content-Type': 'application/json',
-									'g-recaptcha-response': token,
-					},
-    body: JSON.stringify(data),
-  };
+      const settings = {
+        method: 'post',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+          'g-recaptcha-response': token,
+        },
+        body: JSON.stringify(data),
+      };
 
-  fetch(`${config.baseURL}/participants/register`, settings)
-											.then((response) => {
-															console.log(response)
-															return response.json()
-											} )
-    .then((data) => {
-      
-      let mes = "";
-      const message = document.querySelector(".message");
+      fetch(`${config.baseURL}/participants/register`, settings)
+        .then((response) => {
+          console.log(response)
+          return response.json()
+        })
+        .then((data) => {
+
+          let mes = "";
+          const message = document.querySelector(".message");
 
           if (data.message == "Error: Document already exists") {
             mes = "Already Registered!";
@@ -241,8 +241,8 @@ const handleUpdates = (e) => {
         });
 
 
-			})
-		})
+    })
+  })
 
 }
 window.onload = () => {
