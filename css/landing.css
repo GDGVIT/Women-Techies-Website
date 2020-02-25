@@ -443,7 +443,8 @@ nav{
 .grid-six{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 48%);
+    column-gap: 4%;
     left: 50%;
     transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -490,7 +491,7 @@ nav{
 /* Seven: Start */
 #seven{
     height: fit-content;
-    
+
 }
 .content-seven{
     position: relative;
