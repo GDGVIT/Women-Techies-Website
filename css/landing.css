@@ -487,6 +487,7 @@ nav{
 }
 .ele > h1{
     color: var(--about-color);
+    font-size: 1.6rem;
     text-align: center;
     margin-bottom: 30px;
 }
