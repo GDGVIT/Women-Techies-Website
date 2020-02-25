@@ -241,6 +241,7 @@ nav{
     top: 30px;
     right: 50px;
     width: 8vw;
+    z-index: 1;
 }
 .content-three{
     position: absolute;
@@ -442,7 +443,8 @@ nav{
 .grid-six{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 48%);
+    column-gap: 4%;
     left: 50%;
     transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -487,13 +489,12 @@ nav{
 
 
 /* Seven: Start */
+#seven{
+    height: fit-content;
 
+}
 .content-seven{
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
     margin: 0 4vw 0 4vw;
     color: orange;
 }
@@ -554,6 +555,10 @@ nav{
 }
 .buttons-seven > button:nth-child(1){
     margin-bottom: 2vh;
+}
+.jetbrainslogo{
+    height:200px;
+    width:200px;
 }
 /* Seven: End */
 
@@ -834,6 +839,10 @@ nav{
 
 
 @media(max-width: 850px){
+    .jetbrainslogo{
+        height: initial;
+        margin-top: 2vh;
+    }
     .preloader{
         display: block;
         height: 100vh;
@@ -1367,10 +1376,11 @@ nav{
     }
     .grid-seven{
         display: grid;
-        grid-template-rows: repeat(2, auto);
+        grid-template-rows: repeat(6, auto);
         grid-template-columns: none;
         justify-items: center;
         align-items: center;
+        /* row-gap: 2vh; */
     }
     .buttons-seven{
         position: relative;
