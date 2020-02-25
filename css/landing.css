@@ -488,13 +488,12 @@ nav{
 
 
 /* Seven: Start */
-
+#seven{
+    height: fit-content;
+    
+}
 .content-seven{
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
     margin: 0 4vw 0 4vw;
     color: orange;
 }
