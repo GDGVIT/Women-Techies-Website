@@ -499,7 +499,8 @@ nav{
 
 /* Seven: Start */
 #seven{
-    height: fit-content;
+    height: -moz-max-content;
+        height: fit-content;
 
 }
 .content-seven{
