@@ -597,7 +597,6 @@ nav{
 .buttons-seven > button:nth-child(1){
     margin-bottom: 2vh;
 }
-
 /* Seven: End */
 
 /* Video: Start */
@@ -1649,6 +1648,7 @@ width:-moz-max-content;
 .display{
     display: block;
 }
+
 @media screen and (min-width: 490px) and (max-width: 850px){
     .women-img{
         width: 65vw;
@@ -1656,4 +1656,5 @@ width:-moz-max-content;
     .women-techies-logo{
         width: 37vw;
     }
+    
 }
