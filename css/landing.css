@@ -890,6 +890,9 @@ nav{
         -moz-transition: all 1s;
         -webkit-transition: all 1s;
     }
+    #five{
+        min-height: initial;
+    }
     .women-techies-logo-preloader{
         position: absolute;
         margin: 0;
