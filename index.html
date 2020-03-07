@@ -134,7 +134,7 @@
             <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
             <div class="content-video">
                 <h1>Teaser</h1>
-                <video controls preload="none">
+                <video preload="none" controls poster="./assets/thumbnail.jpg">
                     <source src="./assets/women-techies-promo-vid.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -148,15 +148,19 @@
                     <img src="./assets/svg make.svg"
                         alt="Vellore Institute of Technology's only WomenCentric hackathon." class="timeline"
                         style="z-index: -10;">
+                        <button class="left"> <img src="./assets/angle-left.png" alt="" height="15px" width="15px"
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+                    </button>
+                    <button class="right"> <img src="./assets/angle-left.png" alt="" height="15px"
+                            width="15px"
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(180deg);">
+                    </button>
                 </div>
             </div>
-            <button class="left"> <img src="./assets/angle-left.png" alt="" height="15px" width="15px"
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
-            </button>
-            <button class="right"> <img src="./assets/angle-left.png" alt="" height="15px"
-                    width="15px"
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(180deg);">
-            </button>
+            
+            <div class="calendar">
+                <button  class = "" onclick="window.open('https://calendar.google.com/calendar/r?cid=dscvitvellore@gmail.com')">Add to Calendar</button>
+            </div>
         </div>
         <div class="six" id="six">
             <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
@@ -165,26 +169,30 @@
                 <div class="grid-six">
                     <div class="ele">
                         <img src="./assets/speaker1.jpeg" alt="Aayushma Agrawal">
-                        <p>Aayushma Agrawal is an active public speaker and writer. She is currently working as an Android
-                            Developer at Lenskart.</p>
+                        <h1>Aayushma Agrawal</h1>
+                        <p>She is an active public speaker and writer, and an interactive speaker at GDG Bangalore. She currently is an android developer in Lenskart. She has got adventurous genes and a curious heart to explore new things.</p>
                         <div class="socials">
                             <img src="./assets/twitter.png" alt="" onclick = "window.open('https://twitter.com/AgrawalAayushma')">
                             <img src="./assets/linkedin.png" alt="" onclick="window.open('https://www.linkedin.com/in/aayushma-agrawal/')">
                         </div>
                     </div>
                     <div class="ele">
-                        <img src="./assets/speaker2.JPG" alt="Aishwarya Ramachandran">
-                        <p>Aishwarya Ramachandran is an active public speaker and writer. She is currently working as Senior Data Analyst at Cerner.</p>
+                        <img src="./assets/speaker2.JPG" alt="Aiswarya Ramachandran">
+                        <h1>Aiswarya Ramachandran</h1>
+                        <p>She is a Senior Data Analyst at Cerner, with strong foundations in Machine Learning and Artificial Intelligence. She specialises in NLP with experience in working on Financial News Data and on Social Media Analytics.</p>
                         <div class="socials">
-                            <img src="./assets/twitter.png" alt="">
                             <img src="./assets/linkedin.png" alt="" onclick="window.open('https://www.linkedin.com/in/aiswarya-ramachandran')">
                         </div>
                     </div>
-                    <!-- <div class="ele">
-                        <p style="position: relative;
-                        top: 50%; transform: translateY(-50%); font-weight: bold;">Details about other speakers will
-                            be released soon.</p>
-                    </div> -->
+                    <div class="ele">
+                        <img src="./assets/speaker3.jpg" alt="Aiswarya Ramachandran">
+                        <h1>Pooja Bhaumik</h1>
+                        <p>She is a Google Developer Expert for Flutter Mobile App Development and currently works as a senior developer at Bounce. She is also a Co-founder of WomenDroid, a community of Women Android app Developers. She holds keen interest in blogging.</p>
+                        <div class="socials">
+                            <img src="./assets/twitter.png" alt="" onclick = "window.open('https://twitter.com/pblead26')">
+                            <img src="./assets/linkedin.png" alt="" onclick="window.open('https://www.linkedin.com/in/poojab26/')">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,13 +201,33 @@
             <div class="content-seven">
                 <div class="grid-whole">
                     <h1>Sponsors</h1>
-                    <div></div>
                     <div class="grid-seven">
                         <div class="ele-seven">
-                            <img src="./assets/Bugsee-Logo.svg" alt="">
+                            <img src="./assets/Bugsee-Logo.svg" alt="" id="bug">
                         </div>
                         <div class="ele-seven">
-                            <img src="./assets/jetbrains.PNG" alt="" class="jetbrainslogo">
+                            <img src="./assets/cloudsploit.png" alt="" id="cloud">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="./assets/balsamiq.png" alt="" id="balsamiq">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="./assets/sketch.png" alt="" id="sketch">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="./assets/jetbrains.PNG" alt="" id="jet">  
+                        </div>
+                        <div class="ele-seven">
+                            <img src="./assets/CMR.png" alt="" class="cmr" id = "cmr">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="./assets/GOEL.png" alt="" class="goel" id="goel">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="./assets/NKCC.png" alt="" class="nkcc" id="nkcc">
+                        </div>
+                        <div class="ele-seven">
+                            <img src="./assets/msg-logo-blue.svg" alt="" id="msg">
                         </div>
                         <!-- <div class="ele-seven">
                             <p style="font-weight: bold; color: black;">Details about other sponsors will be released soon.</p>
@@ -213,12 +241,11 @@
                 </div>
             </div>
         </div>
-        
+        <br><br><br><br>
         <div class="eight" id="eight">
             <img src="./assets/logo-orange-b.png" alt="" class="logo-topright">
             <div class="content-eight">
-                
-                <h1 style="color: rgb(255, 167, 87);">Contact Us</h1>
+             <h1 style="color: rgb(255, 167, 87);padding-top: 40px;">Contact Us</h1>
                 <div class="contactus">
                     <div class="club">
                         <p>Angad Sharma</p>

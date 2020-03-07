@@ -241,6 +241,7 @@ nav{
     top: 30px;
     right: 50px;
     width: 8vw;
+    z-index: 1;
 }
 .content-three{
     position: absolute;
@@ -337,16 +338,29 @@ nav{
 /* Four: End */
 
 /* Five: Start */
-
+#five{
+    height: fit-content;
+    min-height: 100vh;
+    height: -moz-max-content;
+}
+.calendar{
+    position: relative;
+    width: 100%;
+}
+.calendar > iframe{
+    position: relative;
+    width: 60vw;
+    min-height: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
 .five{
     color: var(--hackathon-color);
 }
 .content-five{
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
     height: fit-content;
     height: -moz-max-content;
     overflow: hidden;
@@ -387,7 +401,7 @@ nav{
 .right{
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 17px;
     transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -425,28 +439,32 @@ nav{
 .six{
     color: var(--about-color);
 }
-.content-six{
-    position: relative;
-    top: 40%;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+#six{
     height: fit-content;
     height: -moz-max-content;
-    margin: 0 4vw 0 4vw;
+    min-height: 100vh;
+}
+.content-six{
+    position: relative;
+    height: fit-content;
+    height: -moz-max-content;
+    margin: 0 4vw 200px 4vw;
 }
 .content-six > h1{
     text-align: center;
+    padding-top: 5vh;
     font-size: var(--desk-heading-size);
 }
 .grid-six{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 48%);
+    column-gap: 4%;
     left: 50%;
     transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+    row-gap: 30px;
     justify-items: center;
 }
 .content-six > h1{
@@ -457,8 +475,8 @@ nav{
 .ele > img{
     border-radius: 300px;
     height: 20vh;
-    border: 10px solid var(--hackathon-color);
-    margin-bottom: 40px;
+    border: 6px solid var(--hackathon-color);
+    margin-bottom: 10px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -483,17 +501,23 @@ nav{
     font-size: var(--desk-text-size);
     text-align: center;
 }
+.ele > h1{
+    color: var(--about-color);
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
 /* Six: End */
 
 
 /* Seven: Start */
+#seven{
+    height: -moz-max-content;
+        height: fit-content;
 
+}
 .content-seven{
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
     margin: 0 4vw 0 4vw;
     color: orange;
 }
@@ -520,10 +544,28 @@ nav{
     grid-template-columns: repeat(2, 50%);
     margin-bottom: 10vh;
 }
+#msg{
+    padding-top: 10px;
+    width: 250px;
+}
 .ele-seven > p{
     text-align: center;
     font-size: var(--text-font-size);
     font-weight: bolder;
+}
+#jet{
+    max-width: 180px;
+    padding: 10px 0;
+}
+
+.cmr{
+    max-width: 200px;
+}
+.goel{
+    max-width: 300px;
+}
+.nkcc{
+    max-width: 350px;
 }
 .buttons-seven{
     position: relative;
@@ -554,10 +596,6 @@ nav{
 }
 .buttons-seven > button:nth-child(1){
     margin-bottom: 2vh;
-}
-.jetbrainslogo{
-    height:200px;
-    width:200px;
 }
 /* Seven: End */
 
@@ -696,7 +734,24 @@ nav{
 }
 
 /* Eight: End */
-
+.calendar > button{
+    position: relative;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--hackathon-color);
+    color: white;
+    width: fit-content;
+    min-width: 15vw;
+    height: 6vh;
+    font-size: calc(var(--desk-text-size));
+    cursor: pointer;
+}
 /* Nine: End */
 
 #nine, #ten{
@@ -838,6 +893,10 @@ nav{
 
 
 @media(max-width: 850px){
+    .jetbrainslogo{
+        height: initial;
+        margin-top: 2vh;
+    }
     .preloader{
         display: block;
         height: 100vh;
@@ -846,6 +905,14 @@ nav{
         transition: all 1s;
         -moz-transition: all 1s;
         -webkit-transition: all 1s;
+    }
+    #five{
+        min-height: initial;
+    }
+    .calendar > button{
+        width: 50vw;
+        font-size: calc(var(--text-font-size) - 0.1rem);
+        height: 6vh;
     }
     .women-techies-logo-preloader{
         position: absolute;
@@ -866,6 +933,9 @@ nav{
         animation-iteration-count: infinite;
         -moz-animation-iteration-count: infinite;
         -webkit-animation-iteration-count: infinite;
+    }
+    #balsamiq{
+        width: 70vw;
     }
     @keyframes preloader {
         0%{
@@ -1011,7 +1081,10 @@ nav{
         top: 25px;
     }
     /* Nav-Mobile: End */
-
+    .calendar > iframe{
+        margin-top: 10px;
+        width: 80vw;
+    }
     /* One-Mobile: Start */
 
     .one{
@@ -1062,10 +1135,13 @@ nav{
         left: inherit;
     }
     .right, .left{
+        
         height: 5vh;
         width: 5vh;
         border-radius: 5vh;
         top: 100%;
+        top: initial;
+        bottom: 3px;
         transform: none;
     }
     .right{
@@ -1097,6 +1173,7 @@ nav{
         margin: 0;
         overflow: hidden;
         width: 100vw;
+        padding-bottom: 30px;
     }
     .inner > img{
         position: relative;
@@ -1298,6 +1375,17 @@ nav{
         font-weight: bold;
         padding-top: 5vh;
     }
+    
+    
+    .cmr{
+        max-width: 40vw;
+    }
+    .goel{
+        max-width: 40vw;
+    }
+    .nkcc{
+        max-width: 40vw;
+    }
     .content-six > h1{
         text-align: initial;
         margin-bottom: calc(var(--heading-margin) + 12px);
@@ -1321,12 +1409,15 @@ nav{
     .ele > img{
         border-radius: 140px;
         height: 13vh;
-        border: 5px solid var(--hackathon-color);
+        border: 4px solid var(--hackathon-color);
         margin-bottom: 12px;
         left: inherit;
         transform: none;
         -webkit-transform: none;
         -moz-transform: none;
+    }
+    .ele > h1{
+        text-align: left;
     }
     .socials{
         left: inherit;
@@ -1367,15 +1458,32 @@ nav{
         margin-bottom: calc(var(--heading-margin) + 12px);
     }
     .ele-seven > img{
-        width: 40vw;
-        height: 40vw;
+        width: 60vw;
+    }
+    #bug{
+        width: 50vw;
+    }
+    #cmr{
+        max-width: 100vw;
+        width: 55vw;
+    }
+    #goel{
+        max-width: 90vw;
+        width: 65vw;
+    }
+    
+    #nkcc{
+        max-width: 90vw;
+        width: 65vw;
     }
     .grid-seven{
         display: grid;
-        grid-template-rows: repeat(2, auto);
+        grid-template-rows: repeat(9, auto);
+        row-gap: 3vh;
         grid-template-columns: none;
         justify-items: center;
         align-items: center;
+        /* row-gap: 2vh; */
     }
     .buttons-seven{
         position: relative;
@@ -1406,6 +1514,15 @@ nav{
         transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+    }
+    #msg{
+        padding-top: 0px;
+        width: 60vw;
+        max-width: 90vw;
+    }
+    #jet{
+        width: 40vw;
+        max-width: 200px;
     }
     /* Seven-Mobile: End */
 
